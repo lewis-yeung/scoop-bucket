@@ -1,0 +1,18 @@
+name: AutoUpdater
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */12 * * *"
+jobs:
+  autoupdate:
+    name: AutoUpdate
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: ScoopInstaller/GithubActions@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_BRANCH: main
+          SCOOP_BRANCH: "develop"
+          SKIP_UPDATED: "1"
+          THROW_ERROR: "1"
