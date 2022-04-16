@@ -1,0 +1,34 @@
+{
+    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "7.62.1",
+    "description": "A prompt theme engine for any shell.",
+    "homepage": "https://ohmyposh.dev",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/COPYING"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v7.62.1/posh-windows-amd64.7z",
+            "hash": "0f77635ef5c663b523ce8b7b8fb9b311d2b89fad4f7b57d4b875397713ac0c9f"
+        }
+    },
+    "env_add_path": "bin",
+    "post_install": [
+        "Write-Host 'Thanks for installing Oh My Posh.'",
+        "Write-Host 'Have a look at https://ohmyposh.dev for detailed instructions for your shell.'"
+    ],
+    "checkver": {
+        "github": "https://github.com/JanDeDobbeleer/oh-my-posh"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$version/posh-windows-amd64.7z",
+                "hash": {
+                    "url": "$url.sha256"
+                }
+            }
+        }
+    }
+}
