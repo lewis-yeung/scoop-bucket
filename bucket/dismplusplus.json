@@ -1,12 +1,9 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "10.1.1002.1",
-    "description": "A gatis Windows utility similar to DISM, but with a GUI and based on CBS",
+    "description": "A Windows utility similar to DISM, but with a GUI and based on CBS.",
     "homepage": "https://www.chuyu.me/",
-    "license": {
-        "identifier": "MIT",
-        "url": "https://github.com/Chuyu-Team/Dism-Multi-language/blob/master/LICENSE"
-    },
+    "license": "Freeware",
     "url": "https://ghproxy.com/https://github.com/Chuyu-Team/Dism-Multi-language/releases/download/v10.1.1002.1/Dism++10.1.1002.1.zip",
     "hash": "bd782ba834a77661db0b272c00afd5377404b23cb26783507ded145f4c72f9a6",
     "architecture": {
