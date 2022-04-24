@@ -1,0 +1,48 @@
+{
+    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "1.4.1.1015",
+    "description": "Locate files and folders by name instantly.",
+    "homepage": "https://www.voidtools.com",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.voidtools.com/Everything-1.4.1.1015.x64.zip",
+            "hash": "656ff3946222048a5558160023da6fd8abc6fa9569f7ac1dff058410a3db6f28"
+        },
+        "32bit": {
+            "url": "https://www.voidtools.com/Everything-1.4.1.1015.x86.zip",
+            "hash": "3198ba7a685c9cbd0457cb89abd9d81bed9f9642f2289a181eddd6c8a68f5cdd"
+        }
+    },
+    "post_install": [
+        "Invoke-ExternalCommand \"$dir\\Everything.exe\" -Args @('-app-data') | Out-Null",
+        "Write-Host \"- Your configs will be stored in '$env:APPDATA\\Everything\\Everything.ini'.\"",
+        "Write-Host \"- You can enable folder context menu manually if you need it.\"",
+        "Write-Host \"- For more settings, go to [Tools -> Options] in Everything.\""
+    ],
+    "uninstaller": {
+        "script": [
+            "Invoke-ExternalCommand \"$dir\\Everything.exe\" -Args @('-uninstall-folder-context-menu') | Out-Null"
+        ]
+    },
+    "shortcuts": [
+        [
+            "Everything.exe",
+            "Everything"
+        ]
+    ],
+    "checkver": "Everything ([\\d.]+)",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.voidtools.com/Everything-$version.x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.voidtools.com/Everything-$version.x86.zip"
+            }
+        },
+        "hash": {
+            "url": "https://www.voidtools.com/Everything-$version.sha256"
+        }
+    }
+}
