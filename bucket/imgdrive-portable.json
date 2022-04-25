@@ -6,11 +6,11 @@
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://download.yubsoft.com/ImgDrivePortable_x64.exe",
+            "url": "https://download.yubsoft.com/ImgDrivePortable_x64.exe#/ImgDrivePortable.exe",
             "hash": "0c01f1d81bb00e79f202da85a50f22f1f28482153d129e9087e91eb9f725d42a"
         },
         "32bit": {
-            "url": "https://download.yubsoft.com/ImgDrivePortable_x86.exe",
+            "url": "https://download.yubsoft.com/ImgDrivePortable_x86.exe#/ImgDrivePortable.exe",
             "hash": "e6f6399a2d21a457ad097835d577f0a6dcc4b63e4ffbef072c87ec164dcfd518"
         }
     },
@@ -27,10 +27,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.yubsoft.com/ImgDrivePortable_x64.exe"
+                "url": "https://download.yubsoft.com/ImgDrivePortable_x64.exe#/ImgDrivePortable.exe"
             },
             "32bit": {
-                "url": "https://download.yubsoft.com/ImgDrivePortable_x86.exe"
+                "url": "https://download.yubsoft.com/ImgDrivePortable_x86.exe#/ImgDrivePortable.exe"
             }
         }
     }
