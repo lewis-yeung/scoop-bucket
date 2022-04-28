@@ -1,0 +1,37 @@
+{
+    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "2.9.0",
+    "description": "GitHub's official command line tool.",
+    "homepage": "https://cli.github.com/",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/cli/cli/blob/trunk/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://ghproxy.com/https://github.com/cli/cli/releases/download/v2.9.0/gh_2.9.0_windows_amd64.zip",
+            "hash": "349ef29f1112de0a7c33d8cc19733cd476e85a298fd17efc6c068d11383a7b47"
+        },
+        "32bit": {
+            "url": "https://ghproxy.com/https://github.com/cli/cli/releases/download/v2.9.0/gh_2.9.0_windows_386.zip",
+            "hash": "f515b87955cbbe6eaac6863fd90320465fe61ff88f186102ad6041433133fccc"
+        }
+    },
+    "bin": "bin\\gh.exe",
+    "checkver": {
+        "github": "https://github.com/cli/cli"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://ghproxy.com/https://github.com/cli/cli/releases/download/v$version/gh_$version_windows_amd64.zip"
+            },
+            "32bit": {
+                "url": "https://ghproxy.com/https://github.com/cli/cli/releases/download/v$version/gh_$version_windows_386.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/gh_$version_checksums.txt"
+        }
+    }
+}
