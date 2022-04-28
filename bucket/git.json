@@ -1,0 +1,39 @@
+{
+    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "2.36.0.windows.1",
+    "description": "The Windows port of Git, a free and open source distributed version control system.",
+    "homepage": "https://gitforwindows.org/",
+    "license": {
+        "identifier": "GPL-2.0-only",
+        "url": "https://github.com/git-for-windows/git/blob/main/COPYING"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://ghproxy.com/https://github.com/git-for-windows/git/releases/download/v2.36.0.windows.1/PortableGit-2.36.0-64-bit.7z.exe#/dl.7z",
+            "hash": "2257df41991f07c33176e2af8240181dab44cc713afe0fd95a0e12964fc46bda"
+        },
+        "32bit": {
+            "url": "https://ghproxy.com/https://github.com/git-for-windows/git/releases/download/v2.36.0.windows.1/PortableGit-2.36.0-32-bit.7z.exe#/dl.7z",
+            "hash": "27522261de1666e99d2c9708351de8e25638d6bc2f41e4d9a28bcede4c8eec75"
+        }
+    },
+    "env_add_path": "bin",
+    "checkver": {
+        "github": "https://github.com/git-for-windows/git",
+        "regex": "v([\\w.]+)/PortableGit-(?<full>[\\w.]+)-"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://ghproxy.com/https://github.com/git-for-windows/git/releases/download/v$version/PortableGit-$matchFull-64-bit.7z.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://ghproxy.com/https://github.com/git-for-windows/git/releases/download/v$version/PortableGit-$matchFull-32-bit.7z.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/git-for-windows/git/releases/tag/v$version",
+            "regex": "<td>$basename</td>\\s*<td>$sha256</td>"
+        }
+    }
+}
