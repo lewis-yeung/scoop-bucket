@@ -19,6 +19,12 @@
             "extract_dir": "llvm-mingw-20220323-ucrt-i686"
         }
     },
+    "bin": [
+        [
+            "bin\\mingw32-make.exe",
+            "make"
+        ]
+    ],
     "env_add_path": "bin",
     "checkver": "github",
     "autoupdate": {
