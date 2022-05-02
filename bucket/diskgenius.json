@@ -3,7 +3,7 @@
     "version": "5.4.3.1342",
     "description": "A Utility for data recovery, disk partition management, backup and restore.",
     "homepage": "https://www.diskgenius.com/",
-    "license": "Unknown",
+    "license": "Shareware",
     "architecture": {
         "64bit": {
             "url": "https://engdownload.eassos.cn/winpe/DGEng5431342_x64.zip",
