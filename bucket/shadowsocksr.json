@@ -1,0 +1,59 @@
+{
+    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "6.0.3",
+    "description": "ShadowsocksR for Windows (C#).",
+    "homepage": "https://github.com/HMBSbige/ShadowsocksR-Windows",
+    "license": {
+        "identifier": "GPL-3.0-only",
+        "url": "https://github.com/HMBSbige/ShadowsocksR-Windows/blob/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://ghproxy.com/https://github.com/HMBSbige/ShadowsocksR-Windows/releases/download/6.0.3/ShadowsocksR-Win64-6.0.3.7z",
+            "hash": "b2d903afff55922bf0d87d6591d1a7d981d4be06dcd53ba9fbd815e19f76250d"
+        },
+        "32bit": {
+            "url": "https://ghproxy.com/https://github.com/HMBSbige/ShadowsocksR-Windows/releases/download/6.0.3/ShadowsocksR-Win32-6.0.3.7z",
+            "hash": "11fd7b6df864ffd5118875ed7a91ef1e312939460d496a6542b49336c0e45d2b"
+        }
+    },
+    "extract_dir": "ShadowsocksR",
+    "shortcuts": [
+        [
+            "ShadowsocksR.exe",
+            "ShadowsocksR"
+        ]
+    ],
+    "pre_install": [
+        "@('gui-config.json', 'pac.txt', 'transfer_log.json', 'user-rule.txt') | ForEach-Object {",
+        "  if (!(Test-Path \"$persist_dir\\$_\")) {",
+        "    if ($_ -match '.json$') {",
+        "      Set-Content -Encoding utf8 -Path \"$dir\\$_\" -Value '{}'",
+        "    } else {",
+        "      New-Item \"$dir\\$_\" | Out-Null",
+        "    }",
+        "  }",
+        "}"
+    ],
+    "persist": [
+        "gui-config.json",
+        "pac.txt",
+        "transfer_log.json",
+        "user-rule.txt"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://ghproxy.com/https://github.com/HMBSbige/ShadowsocksR-Windows/releases/download/$version/ShadowsocksR-Win64-$version.7z"
+            },
+            "32bit": {
+                "url": "https://ghproxy.com/https://github.com/HMBSbige/ShadowsocksR-Windows/releases/download/$version/ShadowsocksR-Win32-$version.7z"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/HMBSbige/ShadowsocksR-Windows/releases/tag/$version",
+            "regex": "(?sm)$basename.*?$sha256"
+        }
+    }
+}
