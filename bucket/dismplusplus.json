@@ -4,7 +4,7 @@
     "description": "A Windows utility similar to DISM, but with a GUI and based on CBS.",
     "homepage": "https://www.chuyu.me/",
     "license": "Freeware",
-    "url": "https://ghproxy.com/https://github.com/Chuyu-Team/Dism-Multi-language/releases/download/v10.1.1002.1/Dism++10.1.1002.1.zip",
+    "url": "https://ghproxy.com/https://github.com/Chuyu-Team/Dism-Multi-language/releases/download/v10.1.1002.1/Dism%2B%2B10.1.1002.1.zip",
     "hash": "bd782ba834a77661db0b272c00afd5377404b23cb26783507ded145f4c72f9a6",
     "architecture": {
         "64bit": {
@@ -30,6 +30,6 @@
         "github": "https://github.com/Chuyu-Team/Dism-Multi-language"
     },
     "autoupdate": {
-        "url": "https://ghproxy.com/https://github.com/Chuyu-Team/Dism-Multi-language/releases/download/v$version/Dism++$version.zip"
+        "url": "https://ghproxy.com/https://github.com/Chuyu-Team/Dism-Multi-language/releases/download/v$version/Dism%2B%2B$version.zip"
     }
 }
