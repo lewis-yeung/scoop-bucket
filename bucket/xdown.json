@@ -1,0 +1,23 @@
+{
+    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "2.0.4.7",
+    "description": "A free and adless file downloading/sharing tool.",
+    "homepage": "https://xdown.org/",
+    "license": "Freeware",
+    "url": "https://dl.xdown.org/windows/i386/xdown-2.0.4.7.zip",
+    "hash": "d67666e054d298b0dd18a1f7948a1d22740bcb697e4b98b8498ffa27762850ba",
+    "extract_dir": "xdown",
+    "shortcuts": [
+        [
+            "XDown.exe",
+            "XDown"
+        ]
+    ],
+    "persist": "profile",
+    "checkver": {
+        "regex": "Latest update version number:([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://dl.xdown.org/windows/i386/xdown-$version.zip"
+    }
+}
