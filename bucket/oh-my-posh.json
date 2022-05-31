@@ -8,8 +8,8 @@
         "url": "https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/COPYING"
     },
     "notes": [
-        "- Thanks for installing Oh My Posh.",
-        "- Have a look at https://ohmyposh.dev for detailed instructions for your shell."
+        "Thanks for installing Oh My Posh.",
+        "Have a look at https://ohmyposh.dev/docs/installation/customize for detailed instructions for your shell."
     ],
     "architecture": {
         "64bit": {
