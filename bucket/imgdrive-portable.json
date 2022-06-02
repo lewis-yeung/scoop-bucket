@@ -6,12 +6,12 @@
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://download.yubsoft.com/ImgDrivePortable_x64.exe#/ImgDrivePortable.exe",
-            "hash": "96d88c20d2f8fa358eba0307c3ec216c5969111af0ccb62b618585a0fd05dba3"
+            "url": "https://download.yubsoft.com/ImgDrivePortable_x64_1.7.6.exe#/ImgDrivePortable.exe",
+            "hash": "5057d93c4c83f8e119504e49ee78301b2954f9fb44927392adf3c82444114741"
         },
         "32bit": {
-            "url": "https://download.yubsoft.com/ImgDrivePortable_x86.exe#/ImgDrivePortable.exe",
-            "hash": "96d88c20d2f8fa358eba0307c3ec216c5969111af0ccb62b618585a0fd05dba3"
+            "url": "https://download.yubsoft.com/ImgDrivePortable_x86_1.7.6.exe#/ImgDrivePortable.exe",
+            "hash": "0cbedfb8ff0b72cc9b7f41a3dd76d713734d9d8de70a5095c7b870a85e2d350b"
         }
     },
     "shortcuts": [
@@ -27,10 +27,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.yubsoft.com/ImgDrivePortable_x64.exe#/ImgDrivePortable.exe"
+                "url": "https://download.yubsoft.com/ImgDrivePortable_x64_$version.exe#/ImgDrivePortable.exe"
             },
             "32bit": {
-                "url": "https://download.yubsoft.com/ImgDrivePortable_x86.exe#/ImgDrivePortable.exe"
+                "url": "https://download.yubsoft.com/ImgDrivePortable_x86_$version.exe#/ImgDrivePortable.exe"
             }
         }
     }
