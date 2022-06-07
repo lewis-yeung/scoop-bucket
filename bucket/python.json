@@ -1,6 +1,6 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "3.10.4",
+    "version": "3.10.5",
     "description": "A programming language that lets you work quickly and integrate systems more effectively.",
     "homepage": "https://www.python.org/",
     "license": {
@@ -11,21 +11,21 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://www.python.org/ftp/python/3.10.4/python-3.10.4-amd64.exe#/setup.exe",
+                "https://www.python.org/ftp/python/3.10.5/python-3.10.5-amd64.exe#/setup.exe",
                 "https://ghproxy.com/https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/reg_python.ps1"
             ],
             "hash": [
-                "md5:53fea6cfcce86fb87253364990f22109",
+                "md5:9a99ae597902b70b1273e88cc8d41abd",
                 "48a4f7e69e2f485f3cc57d4c0ae72ac7f433837c00b0b65f28a49cc53d2561c0"
             ]
         },
         "32bit": {
             "url": [
-                "https://www.python.org/ftp/python/3.10.4/python-3.10.4.exe#/setup.exe",
+                "https://www.python.org/ftp/python/3.10.5/python-3.10.5.exe#/setup.exe",
                 "https://ghproxy.com/https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/reg_python.ps1"
             ],
             "hash": [
-                "md5:977b91d2e0727952d5e8e4ff07eee34e",
+                "md5:eb59401a8da40051ec3b429897ae1203",
                 "48a4f7e69e2f485f3cc57d4c0ae72ac7f433837c00b0b65f28a49cc53d2561c0"
             ]
         }
