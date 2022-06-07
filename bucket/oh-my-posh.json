@@ -2,14 +2,14 @@
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "8.3.1",
     "description": "A prompt theme engine for any shell.",
-    "homepage": "https://ohmyposh.dev",
+    "homepage": "https://ohmyposh.dev/",
     "license": {
         "identifier": "MIT",
         "url": "https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/COPYING"
     },
     "notes": [
-        "Thanks for installing Oh My Posh.",
-        "Have a look at https://ohmyposh.dev/docs/installation/customize for detailed instructions for your shell."
+        "- Thanks for installing Oh My Posh.",
+        "- Have a look at https://ohmyposh.dev/docs/installation/customize for detailed instructions for your shell."
     ],
     "architecture": {
         "64bit": {
