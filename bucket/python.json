@@ -7,57 +7,42 @@
         "identifier": "Python-2.0",
         "url": "https://docs.python.org/3/license.html#terms-and-conditions-for-accessing-or-otherwise-using-python"
     },
-    "notes": "Use \"$dir\\reg_python.ps1\" to write/remove the installation info to/from the registry, which allows/disallows apps and third-party installers to discover this Python installation.",
     "architecture": {
         "64bit": {
             "url": [
                 "https://www.python.org/ftp/python/3.10.5/python-3.10.5-amd64.exe#/setup.exe",
-                "https://ghproxy.com/https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/reg_python.ps1"
+                "https://ghproxy.com/https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
             ],
             "hash": [
                 "md5:9a99ae597902b70b1273e88cc8d41abd",
-                "48a4f7e69e2f485f3cc57d4c0ae72ac7f433837c00b0b65f28a49cc53d2561c0"
+                "c4ff47f4a843b015ec77f2ea3ebb017b077f59fac33a760a9eb2ba4c413215b4"
             ]
         },
         "32bit": {
             "url": [
                 "https://www.python.org/ftp/python/3.10.5/python-3.10.5.exe#/setup.exe",
-                "https://ghproxy.com/https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/reg_python.ps1"
+                "https://ghproxy.com/https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
             ],
             "hash": [
                 "md5:eb59401a8da40051ec3b429897ae1203",
-                "48a4f7e69e2f485f3cc57d4c0ae72ac7f433837c00b0b65f28a49cc53d2561c0"
+                "c4ff47f4a843b015ec77f2ea3ebb017b077f59fac33a760a9eb2ba4c413215b4"
             ]
         }
     },
-    "pre_install": [
-        "$pythonArch = switch ($architecture) {",
-        "  '32bit' { '32' }",
-        "  '64bit' { '64' }",
-        "}",
-        "$content = Get-Content \"$dir\\reg_python.ps1\"",
-        "$content = $content.Replace('::PYTHON_VERSION::', (($version -split '\\.')[0..1] -join '.'))",
-        "$content = $content.Replace('::PYTHON_VERSION_FULL::', $version)",
-        "$content = $content.Replace('::PYTHON_VERSION_CLEAN::', ($version -replace '\\.'))",
-        "$content = $content.Replace('::PYTHON_ARCH::', \"$pythonArch\")",
-        "Set-Content \"$dir\\reg_python.ps1\" $content -Encoding Ascii"
-    ],
+    "depends": "gsudo",
     "installer": {
         "script": [
             "Expand-DarkArchive \"$dir\\setup.exe\" \"$dir\\_tmp\"",
             "@('path.msi', 'pip.msi') | ForEach-Object { Remove-Item \"$dir\\_tmp\\AttachedContainer\\$_\" }",
             "(Get-ChildItem \"$dir\\_tmp\\AttachedContainer\\*.msi\").FullName | ForEach-Object { Expand-MsiArchive $_ \"$dir\" }",
             "Remove-Item \"$dir\\_tmp\", \"$dir\\setup.exe\" -Force -Recurse",
-            "if ($global) { env 'PATHEXT' $true \"$((env 'PATHEXT' $true) -replace ';.PYW?', '');.PY;.PYW\" }"
+            "Invoke-ExternalCommand \"gsudo.exe\" -Args @(\"$dir\\python.exe\", \"$dir\\pyreg.py\", '-w') | Out-Null"
         ]
     },
-    "post_install": [
-        "python -E -s -m ensurepip -U --default-pip | Out-Null",
-        "Write-Output \"`e[0m`e[1F\""
-    ],
     "uninstaller": {
-        "script": "if ($global) { env 'PATHEXT' $true ((env 'PATHEXT' $true) -replace ';.PYW?', '') }"
+        "script": "Invoke-ExternalCommand \"gsudo.exe\" -Args @(\"$dir\\python.exe\", \"$dir\\pyreg.py\", '-r') | Out-Null"
     },
+    "post_install": "& \"$dir\\python.exe\" -E -s -m ensurepip -U --default-pip | Out-Null",
     "bin": [
         [
             "python.exe",
