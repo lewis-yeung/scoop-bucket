@@ -9,7 +9,8 @@
     },
     "notes": [
         "- Thanks for installing Oh My Posh.",
-        "- Have a look at https://ohmyposh.dev/docs/installation/customize for detailed instructions for your shell."
+        "- Have a look at https://ohmyposh.dev/docs/installation/customize for detailed instructions for your shell.",
+        "- Sample themes can be found in `$dir\\themes`."
     ],
     "architecture": {
         "64bit": {
