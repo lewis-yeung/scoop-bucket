@@ -7,11 +7,11 @@
     "architecture": {
         "64bit": {
             "url": "https://download.yubsoft.com/ImgDrivePortable_x64_1.7.9.exe#/ImgDrivePortable.exe",
-            "hash": "1acef8d873b90743ba8eb10f05ccb3fa4a41a49673e357519e80fcc51aad49c0"
+            "hash": "f139824cb87588ad0241d5f58989107e0fcbef7f9bfe14df79d68ea03d763ff3"
         },
         "32bit": {
             "url": "https://download.yubsoft.com/ImgDrivePortable_x86_1.7.9.exe#/ImgDrivePortable.exe",
-            "hash": "7392d89966764f281f59b8dc2c5bd94db4cd2e77b9affea95f070b47ad05f0ff"
+            "hash": "9316ef1ae2b6c44c2b7d3f07173fa48abc812af384c71363d750338446147c6c"
         }
     },
     "shortcuts": [
