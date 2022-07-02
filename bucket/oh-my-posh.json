@@ -1,6 +1,6 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "8.8.0",
+    "version": "8.10.0",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -14,8 +14,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.8.0/posh-windows-amd64.7z",
-            "hash": "0b6a1305155680ffda105bc978deef236cdaf9ba3f7ccda519da04082af48926"
+            "url": "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.10.0/posh-windows-amd64.7z",
+            "hash": "4f82f60f13cdfbd1572f3fac03d788f3a0edd2c14488c7dfb4507860bf117dd7"
         }
     },
     "env_add_path": "bin",
