@@ -21,7 +21,7 @@
         "Write-Host \"- For more settings, go to [Tools -> Options] in Everything.\""
     ],
     "uninstaller": {
-        "script": "Invoke-ExternalCommand \"$dir\\Everything.exe\" -Args @('-uninstall-folder-context-menu') | Out-Null"
+        "script": "if ($cmd -eq 'uninstall') { Invoke-ExternalCommand \"$dir\\Everything.exe\" -Args @('-uninstall-folder-context-menu') | Out-Null }"
     },
     "shortcuts": [
         [
