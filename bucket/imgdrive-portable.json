@@ -4,34 +4,33 @@
     "description": "A CD/DVD/BD emulator.",
     "homepage": "http://www.yubsoft.com/imgdrive/portable.htm",
     "license": "Freeware",
+    "url": "https://download.yubsoft.com/ImgDrivePortable_1.8.2.zip",
+    "hash": "5f5381c83cbd04ffaccf1ef660ab84f6800298298a5196416d504efe1aba8dab",
     "architecture": {
         "64bit": {
-            "url": "https://download.yubsoft.com/ImgDrivePortable_x64_1.8.2.exe#/ImgDrivePortable.exe",
-            "hash": "9f23d5443ea5f41d7d04fae320c7014a5bbf384b12edadaa7f657964b6c4caf4"
+            "shortcuts": [
+                [
+                    "ImgDrivePortable64.exe",
+                    "ImgDrive Portable"
+                ]
+            ],
+            "post_install": "Remove-Item \"$dir\\ImgDrivePortable32.exe\""
         },
         "32bit": {
-            "url": "https://download.yubsoft.com/ImgDrivePortable_x86_1.8.2.exe#/ImgDrivePortable.exe",
-            "hash": "9f23d5443ea5f41d7d04fae320c7014a5bbf384b12edadaa7f657964b6c4caf4"
+            "shortcuts": [
+                [
+                    "ImgDrivePortable32.exe",
+                    "ImgDrive Portable"
+                ]
+            ],
+            "post_install": "Remove-Item \"$dir\\ImgDrivePortable64.exe\""
         }
     },
-    "shortcuts": [
-        [
-            "ImgDrivePortable.exe",
-            "ImgDrive Portable"
-        ]
-    ],
     "checkver": {
         "url": "http://www.yubsoft.com/imgdrive/portable.htm",
         "regex": "ImgDrive Portable ([\\d.]+)"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://download.yubsoft.com/ImgDrivePortable_x64_$version.exe#/ImgDrivePortable.exe"
-            },
-            "32bit": {
-                "url": "https://download.yubsoft.com/ImgDrivePortable_x86_$version.exe#/ImgDrivePortable.exe"
-            }
-        }
+        "url": "https://download.yubsoft.com/ImgDrivePortable_$version.zip"
     }
 }
