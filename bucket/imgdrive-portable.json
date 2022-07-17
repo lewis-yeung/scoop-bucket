@@ -13,8 +13,7 @@
                     "ImgDrivePortable64.exe",
                     "ImgDrive Portable"
                 ]
-            ],
-            "post_install": "Remove-Item \"$dir\\ImgDrivePortable32.exe\""
+            ]
         },
         "32bit": {
             "shortcuts": [
@@ -22,8 +21,7 @@
                     "ImgDrivePortable32.exe",
                     "ImgDrive Portable"
                 ]
-            ],
-            "post_install": "Remove-Item \"$dir\\ImgDrivePortable64.exe\""
+            ]
         }
     },
     "checkver": {
