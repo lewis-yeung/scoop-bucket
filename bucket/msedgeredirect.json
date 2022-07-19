@@ -17,6 +17,29 @@
             "hash": "4ac6483048bb72f72092e05036b6cc48ebafe4d658bc44fc0a5deae25323e37e"
         }
     },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\Setup.ini\")) {",
+        "  Set-Content -Encoding utf8 -Path \"$dir\\Setup.ini\" -Value @'",
+        "[Config]",
+        "Managed=False",
+        "Mode=Service",
+        "",
+        "[Settings]",
+        "NoTray=True",
+        "NoUpdates=True",
+        "StartMenu=None",
+        "Startup=True",
+        "'@",
+        "}"
+    ],
+    "installer": {
+        "script": "Invoke-ExternalCommand \"$dir\\MSEdgeRedirect.exe\" -Args @('/silentinstall', \"$persist_dir\\Setup.ini\") | Out-Null"
+    },
+    "uninstaller": {
+        "file": "MSEdgeRedirect.exe",
+        "args": "/uninstall"
+    },
+    "persist": "Setup.ini",
     "shortcuts": [
         [
             "MSEdgeRedirect.exe",
