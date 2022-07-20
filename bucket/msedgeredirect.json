@@ -19,7 +19,7 @@
     },
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\Setup.ini\")) {",
-        "  Set-Content -Encoding utf8 -Path \"$dir\\Setup.ini\" -Value @'",
+        "  Set-Content -Encoding utf8 -Path \"$persist_dir\\Setup.ini\" -Value @'",
         "[Config]",
         "Managed=False",
         "Mode=Service",
