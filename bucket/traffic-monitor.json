@@ -19,8 +19,8 @@
     },
     "extract_dir": "TrafficMonitor",
     "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\config.ini\")) { Set-Content -Encoding utf8 \"$dir\\config.ini\" @('[general]', 'check_update_when_start = false') }",
-        "if (!(Test-Path \"$persist_dir\\global_cfg.ini\")) { Set-Content -Encoding utf8 \"$dir\\global_cfg.ini\" @('[config]', 'portable_mode = true') }",
+        "if (!(Test-Path \"$persist_dir\\config.ini\")) { Set-Content -Encoding Ascii \"$dir\\config.ini\" @('[general]', 'check_update_when_start = false') }",
+        "if (!(Test-Path \"$persist_dir\\global_cfg.ini\")) { Set-Content -Encoding Ascii \"$dir\\global_cfg.ini\" @('[config]', 'portable_mode = true') }",
         "if (!(Test-Path \"$persist_dir\\history_traffic.dat\")) { New-Item \"$dir\\history_traffic.dat\" | Out-Null }"
     ],
     "shortcuts": [
