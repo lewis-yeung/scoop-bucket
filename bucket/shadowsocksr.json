@@ -28,7 +28,7 @@
         "@('gui-config.json', 'pac.txt', 'transfer_log.json', 'user-rule.txt') | ForEach-Object {",
         "  if (!(Test-Path \"$persist_dir\\$_\")) {",
         "    if ($_ -match '.json$') {",
-        "      Set-Content -Encoding utf8 -Path \"$dir\\$_\" -Value '{}'",
+        "      Set-Content -Encoding Ascii -Path \"$dir\\$_\" -Value '{}'",
         "    } else {",
         "      New-Item \"$dir\\$_\" | Out-Null",
         "    }",
