@@ -27,7 +27,7 @@
     ],
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\defaults\\pref\\channel-prefs.js\")) {",
-        "  Set-Content -Encoding utf8 -Path \"$dir\\defaults\\pref\\channel-prefs.js\" -Value 'pref(\"app.update.channel\", \"default\");'",
+        "  Set-Content -Encoding Ascii -Path \"$dir\\defaults\\pref\\channel-prefs.js\" -Value 'pref(\"app.update.channel\", \"default\");'",
         "  Write-Host -ForegroundColor Green \"The auto-update will be disabled. You can change the update channel in '$persist_dir\\defaults\\pref\\channel-prefs.js'.\"",
         "}"
     ],
