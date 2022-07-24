@@ -29,7 +29,7 @@
             }
         }
     },
-    "pre_install": "if (!(Test-Path \"$persist_dir\\FastCopy2.ini\")) { Set-Content -Encoding utf8 -Path \"$dir\\FastCopy2.ini\" -Value '[main]' }",
+    "pre_install": "if (!(Test-Path \"$persist_dir\\FastCopy2.ini\")) { Set-Content -Encoding Ascii -Path \"$dir\\FastCopy2.ini\" -Value '[main]' }",
     "shortcuts": [
         [
             "FastCopy.exe",
