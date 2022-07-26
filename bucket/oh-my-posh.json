@@ -1,6 +1,6 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "8.22.3",
+    "version": "8.22.4",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.3/posh-windows-amd64.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.3/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.4/posh-windows-amd64.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.4/themes.zip"
             ],
             "hash": [
-                "8cf2687e9e36c327360b09d9bd03bbd2f0313ebca2eb05b8b3aa7d97535c8a5a",
-                "a92dafa3b571d2b99f6f8b328c2909351ad635337fb0b35aaca2efd7896066ad"
+                "d08ce54d206fc58203f39c5d9036d26991ccc55b39d4d6231974a0a702844265",
+                "a6860f0d69a0bbfa803afbc74bacf4e962c718b60647838c2077f5621206d2a7"
             ]
         },
         "32bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.3/posh-windows-386.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.3/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.4/posh-windows-386.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.4/themes.zip"
             ],
             "hash": [
-                "4379575a6ca36d88c2e2f3670b4edd59a795c8059e5835ee0e8b2df8b097ce9f",
-                "a92dafa3b571d2b99f6f8b328c2909351ad635337fb0b35aaca2efd7896066ad"
+                "a32def2982f01d01300dc711f0cc61b9547a02f1df2eaf82812a0fcba44261be",
+                "a6860f0d69a0bbfa803afbc74bacf4e962c718b60647838c2077f5621206d2a7"
             ]
         }
     },
