@@ -1,6 +1,6 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "8.22.4",
+    "version": "8.22.6",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.4/posh-windows-amd64.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.4/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.6/posh-windows-amd64.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.6/themes.zip"
             ],
             "hash": [
-                "d08ce54d206fc58203f39c5d9036d26991ccc55b39d4d6231974a0a702844265",
-                "a6860f0d69a0bbfa803afbc74bacf4e962c718b60647838c2077f5621206d2a7"
+                "82bcb2af246498edb52cdbebdae826b3ff503b9aca519139ac3c0fae23744eec",
+                "aaabbc2aab4855bf225123cdd7547b5d5eb4236d0dc43589793ee8ee94cefc5b"
             ]
         },
         "32bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.4/posh-windows-386.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.4/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.6/posh-windows-386.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.6/themes.zip"
             ],
             "hash": [
-                "a32def2982f01d01300dc711f0cc61b9547a02f1df2eaf82812a0fcba44261be",
-                "a6860f0d69a0bbfa803afbc74bacf4e962c718b60647838c2077f5621206d2a7"
+                "fb743159a9d9c957ba55adc19d23081596ee704af46e433ac52ef663e2056e22",
+                "aaabbc2aab4855bf225123cdd7547b5d5eb4236d0dc43589793ee8ee94cefc5b"
             ]
         }
     },
