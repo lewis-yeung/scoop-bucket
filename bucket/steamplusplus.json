@@ -9,8 +9,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghproxy.com/https://github.com/BeyondDimension/SteamTools/releases/download/2.8.3/Steam%2B%2B_win_x64_v2.8.3.7z",
-            "hash": "3ca5bc116a1604583f59d3b956794df668f65710d575421beaf9d18c0f990529"
+            "url": "https://ghproxy.com/https://github.com/BeyondDimension/SteamTools/releases/download/2.8.3/Steam%2B%2B_win_x64_v2.8.3.1.7z",
+            "hash": "6d40af8a3e58caa32c2c5f1c03fd21e9c3b637f1eaebe9b7dbf7e08735f77bdd"
+        },
+        "32bit": {
+            "url": "https://ghproxy.com/https://github.com/BeyondDimension/SteamTools/releases/download/2.8.3/Steam%2B%2B_win_x86_v2.8.3.1.7z",
+            "hash": "3ed7284ffb62a8fdddaad9e9de310f09b2a703b6d8950e92f5a52c005cc46c01"
         }
     },
     "shortcuts": [
@@ -29,6 +33,13 @@
         "architecture": {
             "64bit": {
                 "url": "https://ghproxy.com/https://github.com/BeyondDimension/SteamTools/releases/download/$version/Steam%2B%2B_win_x64_v$version.7z",
+                "hash": {
+                    "url": "https://github.com/BeyondDimension/SteamTools/releases/tag/$version",
+                    "regex": "(?sm)$basename.*?$sha256"
+                }
+            },
+            "32bit": {
+                "url": "https://ghproxy.com/https://github.com/BeyondDimension/SteamTools/releases/download/$version/Steam%2B%2B_win_x86_v$version.7z",
                 "hash": {
                     "url": "https://github.com/BeyondDimension/SteamTools/releases/tag/$version",
                     "regex": "(?sm)$basename.*?$sha256"
