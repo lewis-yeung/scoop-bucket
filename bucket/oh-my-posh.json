@@ -1,6 +1,6 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "8.32.2",
+    "version": "8.32.3",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.32.2/posh-windows-amd64.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.32.2/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.32.3/posh-windows-amd64.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.32.3/themes.zip"
             ],
             "hash": [
-                "76c2600561d6be71deac18b3915d18fd1787a71ae8599d37b1dd946383d87a95",
-                "dc7528718af691b9e660b55e50145f7c86671a6cda4185b20ee2fda54aff94dd"
+                "4d5d014bff3903264cd5966b9f4011bda4ea9151cb028839982d07493150dcd5",
+                "58c36db2cb800aed0e1c22e809e49cdf67c26c540ac1a4db856fa833dd096d2b"
             ]
         },
         "32bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.32.2/posh-windows-386.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.32.2/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.32.3/posh-windows-386.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.32.3/themes.zip"
             ],
             "hash": [
-                "69a982f6ae3cffa5c6d790a06ecd68672c217a184727cde8b663410f1886199e",
-                "dc7528718af691b9e660b55e50145f7c86671a6cda4185b20ee2fda54aff94dd"
+                "a0da1ca05e6a1c286f374af226c113fd3203f39ce450c80f85cc88f1320d25a5",
+                "58c36db2cb800aed0e1c22e809e49cdf67c26c540ac1a4db856fa833dd096d2b"
             ]
         }
     },
