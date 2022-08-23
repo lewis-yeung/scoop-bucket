@@ -1,6 +1,6 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "8.33.0",
+    "version": "8.33.1",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.33.0/posh-windows-amd64.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.33.0/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.33.1/posh-windows-amd64.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.33.1/themes.zip"
             ],
             "hash": [
-                "1f290d4c7f22192db79456cdb18f447fb757ec4650603e1c7027e1e926707351",
-                "4017d56d61341afe349124770df0d391aa3772e9726c577fe849e584870dafae"
+                "43156c30c53cb7bac9d7cab92938e87f839fb479208354d9d87b7fae6ab0c10a",
+                "7cf9a0bf6174bdc51c04eb579bdb2809947af0e4bff00ceb82226efad889693b"
             ]
         },
         "32bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.33.0/posh-windows-386.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.33.0/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.33.1/posh-windows-386.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.33.1/themes.zip"
             ],
             "hash": [
-                "958ac6b80be32196f939a7b8e156b13efe368b428a1253bdaa72e86064375064",
-                "4017d56d61341afe349124770df0d391aa3772e9726c577fe849e584870dafae"
+                "c19b015f96ececf70c13c66a4e9e6cbed808fe1cb216280f3896bd5207304c98",
+                "7cf9a0bf6174bdc51c04eb579bdb2809947af0e4bff00ceb82226efad889693b"
             ]
         }
     },
