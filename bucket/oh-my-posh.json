@@ -1,6 +1,6 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "8.33.1",
+    "version": "8.33.2",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.33.1/posh-windows-amd64.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.33.1/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.33.2/posh-windows-amd64.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.33.2/themes.zip"
             ],
             "hash": [
-                "43156c30c53cb7bac9d7cab92938e87f839fb479208354d9d87b7fae6ab0c10a",
-                "7cf9a0bf6174bdc51c04eb579bdb2809947af0e4bff00ceb82226efad889693b"
+                "87799b5bb34e53dc78cadf7b28027c49ee0c67b24d27a7ee96deb847ebe70808",
+                "1548c670dfa8f46b3e3aa836ffd25edbeead2ad0a9a4cb35dfc62da834c10ade"
             ]
         },
         "32bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.33.1/posh-windows-386.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.33.1/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.33.2/posh-windows-386.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.33.2/themes.zip"
             ],
             "hash": [
-                "c19b015f96ececf70c13c66a4e9e6cbed808fe1cb216280f3896bd5207304c98",
-                "7cf9a0bf6174bdc51c04eb579bdb2809947af0e4bff00ceb82226efad889693b"
+                "20ba47ffd5dedc60a0012f29247fbc24a5f8da64bd17f7ac4d91198d37e03c07",
+                "1548c670dfa8f46b3e3aa836ffd25edbeead2ad0a9a4cb35dfc62da834c10ade"
             ]
         }
     },
