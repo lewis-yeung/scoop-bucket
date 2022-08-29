@@ -1,6 +1,6 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "8.36.1",
+    "version": "8.36.3",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.36.1/posh-windows-amd64.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.36.1/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.36.3/posh-windows-amd64.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.36.3/themes.zip"
             ],
             "hash": [
-                "58e54944fd87f81b699e49ce586ecf533e3959c7d1807359e3b2431fdd5bef60",
-                "0760a8ee5537e207f259cb8182b27420984afee6b2fc21c7667e5eb476945256"
+                "02c7ea94500c15952c40fb5f78bcc811ca3e1188247e6452f6e8746ea317712a",
+                "af717253253a36c13151a03977414fd5de1e23b5e791aebc7d8823a2ba8dda80"
             ]
         },
         "32bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.36.1/posh-windows-386.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.36.1/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.36.3/posh-windows-386.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.36.3/themes.zip"
             ],
             "hash": [
-                "42ab891ac2e460b3de75da989d57159125977eeb6d5ab6a9e647e730b6d1b98d",
-                "0760a8ee5537e207f259cb8182b27420984afee6b2fc21c7667e5eb476945256"
+                "edeba7a469928f14ea183a342a434888f256c2e70bc629d50afd968d6229a35a",
+                "af717253253a36c13151a03977414fd5de1e23b5e791aebc7d8823a2ba8dda80"
             ]
         }
     },
