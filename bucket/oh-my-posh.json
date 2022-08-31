@@ -1,6 +1,6 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "8.36.4",
+    "version": "8.36.5",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.36.4/posh-windows-amd64.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.36.4/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.36.5/posh-windows-amd64.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.36.5/themes.zip"
             ],
             "hash": [
-                "ffd98fb449e7564f358e8f302d1638f2570cfdfd6d2d88f325146cfdcb4247d4",
-                "4dbdeefe2d9185c4e089fc59df3042130a26c7515e3ea547d1c9a2f2a2c4c050"
+                "5c30b4847250ff0fa6171a44d3884fdc03b7a30d0e4621a3256dd659028c5358",
+                "8bdbecaa06b830da556e2de56d72e68f187b25ce793786c598810043d6ac383e"
             ]
         },
         "32bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.36.4/posh-windows-386.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.36.4/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.36.5/posh-windows-386.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.36.5/themes.zip"
             ],
             "hash": [
-                "dff5f354e6e006d43ca37cbd76bb16304ff58f28b257e720a0553b79b0b4a43c",
-                "4dbdeefe2d9185c4e089fc59df3042130a26c7515e3ea547d1c9a2f2a2c4c050"
+                "7461b5fcfb6b52811d7d019ba6c4164fb0079cf02569472a99145a45a9b742c3",
+                "8bdbecaa06b830da556e2de56d72e68f187b25ce793786c598810043d6ac383e"
             ]
         }
     },
