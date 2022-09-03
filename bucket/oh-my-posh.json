@@ -1,6 +1,6 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "8.37.0",
+    "version": "8.37.1",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.37.0/posh-windows-amd64.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.37.0/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.37.1/posh-windows-amd64.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.37.1/themes.zip"
             ],
             "hash": [
-                "a6c78615b677a826d681d5d78b0135a3d10892e60b6526a979533b1f12d30e22",
-                "48dc59ea1d8a26d77985d58aac9b324aaeb1bc14a534af41d81d05565e7093f3"
+                "7567c12e3ecf85cac2fc7f494b4ce845e3905a4c2ebae29a7b130060e9d66df7",
+                "cc7c44af7b2d19fdcee21a06d5ec5cc8683ef5523370fff2a3bb331bd4e2951d"
             ]
         },
         "32bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.37.0/posh-windows-386.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.37.0/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.37.1/posh-windows-386.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.37.1/themes.zip"
             ],
             "hash": [
-                "79730b2013febbd022e92ae0445a8703af2f88b8d5b7faa3bee68c10174c296e",
-                "48dc59ea1d8a26d77985d58aac9b324aaeb1bc14a534af41d81d05565e7093f3"
+                "41d88582f896d738f8a8a94da45792064096a8d47a0002883a62393269b3fd75",
+                "cc7c44af7b2d19fdcee21a06d5ec5cc8683ef5523370fff2a3bb331bd4e2951d"
             ]
         }
     },
