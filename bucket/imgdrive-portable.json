@@ -1,11 +1,11 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "1.8.6",
+    "version": "1.8.7",
     "description": "A CD/DVD/BD emulator.",
     "homepage": "http://www.yubsoft.com/imgdrive/portable.htm",
     "license": "Freeware",
-    "url": "https://download.yubsoft.com/ImgDrivePortable_1.8.6.zip",
-    "hash": "2d996351071e68c5c23efc2d4a99ee74bc4b99765cf24258e1b42d60a711d13d",
+    "url": "https://download.yubsoft.com/ImgDrivePortable_1.8.7.zip",
+    "hash": "aeca8cf76530d4376f780390c06736eb47a28e818c1e011f88b3e92114e2ecde",
     "architecture": {
         "64bit": {
             "shortcuts": [
