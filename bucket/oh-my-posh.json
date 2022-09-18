@@ -1,6 +1,6 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "9.3.4",
+    "version": "9.4.0",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v9.3.4/posh-windows-amd64.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v9.3.4/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v9.4.0/posh-windows-amd64.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v9.4.0/themes.zip"
             ],
             "hash": [
-                "a49805a8aa18251bd3d83635f3817c141e40f7f405563604c8d8910ab39d6d5b",
-                "05784488117508f2021085a95504d2654cc9c7955772efb97396eac7a8535067"
+                "d84b5abe365bbaf4bd731a00d676087f245a0a31f9fd4002e84974003629a4ab",
+                "80eae9a87212a5d5c2e0f4a40cabaa11eb309e233fbb0f271bd0b273ed4afbaf"
             ]
         },
         "32bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v9.3.4/posh-windows-386.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v9.3.4/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v9.4.0/posh-windows-386.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v9.4.0/themes.zip"
             ],
             "hash": [
-                "75c65ff42e1bbb6e6d74cd14ac7fb8baadc3b59a1494716eaf2b0f8aeeaf6d04",
-                "05784488117508f2021085a95504d2654cc9c7955772efb97396eac7a8535067"
+                "b24e0483aa3e41c940ef1c4ef78f4c2f6611e25aed2fef560803344844df4b27",
+                "80eae9a87212a5d5c2e0f4a40cabaa11eb309e233fbb0f271bd0b273ed4afbaf"
             ]
         }
     },
