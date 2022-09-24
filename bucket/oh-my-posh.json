@@ -1,6 +1,6 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "10.0.1",
+    "version": "10.1.0",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v10.0.1/posh-windows-amd64.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v10.0.1/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v10.1.0/posh-windows-amd64.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v10.1.0/themes.zip"
             ],
             "hash": [
-                "a9115b761fe167f3dcc815f0aa024cddc6fc4cbbe1496de86626d36a5b4cfea6",
-                "45591f07fb2f99e547394d98daf481d2443b35bd2cfc5306d1deb2dfedd529cf"
+                "b705718e95803b5571c21029d9a5d28906b5deedf10ee7027e951d66c72a2cf2",
+                "a17098001a53b321537912e39bb1a93f2f45407823ad041f45028568a721c2a4"
             ]
         },
         "32bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v10.0.1/posh-windows-386.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v10.0.1/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v10.1.0/posh-windows-386.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v10.1.0/themes.zip"
             ],
             "hash": [
-                "672d1ebc4cb014d70c34e265b3b1199a2e6f5d13698e63a5b4d26cd35c776c8d",
-                "45591f07fb2f99e547394d98daf481d2443b35bd2cfc5306d1deb2dfedd529cf"
+                "6984267899d18e292039601ce21e0f19f0f079076353f01f9949bae571e92ec3",
+                "a17098001a53b321537912e39bb1a93f2f45407823ad041f45028568a721c2a4"
             ]
         }
     },
