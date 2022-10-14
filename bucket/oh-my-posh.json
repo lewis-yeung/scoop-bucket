@@ -1,6 +1,6 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "12.2.0",
+    "version": "12.2.1",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.2.0/posh-windows-amd64.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.2.0/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.2.1/posh-windows-amd64.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.2.1/themes.zip"
             ],
             "hash": [
-                "87312964261f7fd4bf2fcb18d95670a626d815c76704b3c28ad0c939021f94ce",
-                "89c870133cd2a98b7de4743dfcc8172c44efdc2595a6f532147b3ad743653338"
+                "ee7585d920c3b72f31d82d6544c4361481a9ae28eacb42d6ffdbe9da0b144ea2",
+                "ef241be0a463dc07e76e1445a227ad817a14c139602abb9e939b70926de3d047"
             ]
         },
         "32bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.2.0/posh-windows-386.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.2.0/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.2.1/posh-windows-386.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.2.1/themes.zip"
             ],
             "hash": [
-                "adef3e3347bad8f224db91406aa8ec778b000a3e307ae25bbb29f04754855169",
-                "89c870133cd2a98b7de4743dfcc8172c44efdc2595a6f532147b3ad743653338"
+                "e9e2d25173a488e1d1df334d3d96ae3ab363377640653f91f3c2c43fc992138e",
+                "ef241be0a463dc07e76e1445a227ad817a14c139602abb9e939b70926de3d047"
             ]
         }
     },
