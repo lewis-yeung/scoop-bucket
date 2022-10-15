@@ -1,6 +1,6 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "12.2.2",
+    "version": "12.3.0",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.2.2/posh-windows-amd64.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.2.2/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.3.0/posh-windows-amd64.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.3.0/themes.zip"
             ],
             "hash": [
-                "379640f1160c769605b4516051222a9bb54075e475f76031c69a34b05f66b8b9",
-                "86a79ac3b9af48650341d043ef71df3cc6fe4ed5c26dfb3c8ac8cb8840112cab"
+                "bcd9419c42119282bec3890dc0ff06dbede17695449fb64e93e0f737104cbf1c",
+                "31d04d0f7a64d13028587c37d0ece0c765510a6b5336b391387ca70107f8b7e9"
             ]
         },
         "32bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.2.2/posh-windows-386.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.2.2/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.3.0/posh-windows-386.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.3.0/themes.zip"
             ],
             "hash": [
-                "0edbb1da074e92b4b2801923ee8237fd80a80671d0f2291ae90245f047ea0ba3",
-                "86a79ac3b9af48650341d043ef71df3cc6fe4ed5c26dfb3c8ac8cb8840112cab"
+                "8a501337bca6a542a9a2993d2fc693dfc011d1994f33530a4beebf07b3cb9e9b",
+                "31d04d0f7a64d13028587c37d0ece0c765510a6b5336b391387ca70107f8b7e9"
             ]
         }
     },
