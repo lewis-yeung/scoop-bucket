@@ -10,7 +10,7 @@
         "64bit": {
             "shortcuts": [
                 [
-                    "ImgDrivePortable64.exe",
+                    "imgdriveportable_x64.exe",
                     "ImgDrive Portable"
                 ]
             ]
@@ -18,7 +18,15 @@
         "32bit": {
             "shortcuts": [
                 [
-                    "ImgDrivePortable32.exe",
+                    "imgdriveportable_x86.exe",
+                    "ImgDrive Portable"
+                ]
+            ]
+        },
+        "arm64": {
+            "shortcuts": [
+                [
+                    "imgdriveportable_arm64.exe",
                     "ImgDrive Portable"
                 ]
             ]
