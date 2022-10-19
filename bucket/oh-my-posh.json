@@ -1,6 +1,6 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "12.5.0",
+    "version": "12.6.1",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,32 +15,32 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.5.0/posh-windows-amd64.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.5.0/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.6.1/posh-windows-amd64.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.6.1/themes.zip"
             ],
             "hash": [
-                "5b9bd81e02e4cf9a66ba11607e9be91a6b83490a9aaf08f0c76a66e4d2b4448f",
-                "3038e0721bcbf9526a08c799d206126a0c5b2943b3b875790c36a78966866438"
+                "cbd38b7ce3ffaf1b04d13bca5d2eb9ffeda922a4f2243344e62f7825e87de702",
+                "ea4f1d89187ea223a8b265e6cfa45fd30c38fa1675d57993549947d2f4d33254"
             ]
         },
         "32bit": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.5.0/posh-windows-386.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.5.0/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.6.1/posh-windows-386.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.6.1/themes.zip"
             ],
             "hash": [
-                "ed6ef8c66b355e31398e4ec932fc1d10339a55d66ca40a7a46b8ba70621b9811",
-                "3038e0721bcbf9526a08c799d206126a0c5b2943b3b875790c36a78966866438"
+                "b2381a34f2ca113d8ecce5b170dc20808504cce287d094aaa57f9443e16c534c",
+                "ea4f1d89187ea223a8b265e6cfa45fd30c38fa1675d57993549947d2f4d33254"
             ]
         },
         "arm64": {
             "url": [
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.5.0/posh-windows-arm64.exe",
-                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.5.0/themes.zip"
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.6.1/posh-windows-arm64.exe",
+                "https://ghproxy.com/https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.6.1/themes.zip"
             ],
             "hash": [
-                "962e465454631852852f1cf852c484ae14b66593f33eeec995855605d2c2e8dd",
-                "3038e0721bcbf9526a08c799d206126a0c5b2943b3b875790c36a78966866438"
+                "6798bbdcf801459e884edeae3a699a5fbb04a7f795ce098d450f77e6e0bacb1a",
+                "ea4f1d89187ea223a8b265e6cfa45fd30c38fa1675d57993549947d2f4d33254"
             ]
         }
     },
