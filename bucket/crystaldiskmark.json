@@ -1,11 +1,11 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "8.0.4b",
+    "version": "8.0.4c",
     "description": "A simple disk benchmark software.",
     "homepage": "https://crystalmark.info/en/software/crystaldiskmark/",
     "license": "BSD-3-Clause",
-    "url": "https://free.nchc.org.tw/osdn/crystaldiskmark/77539/CrystalDiskMark8_0_4b.zip",
-    "hash": "b45b0fbb2c12a500f489e8fc4e4a083740bed4518d235acd511ead3116ea8d66",
+    "url": "https://free.nchc.org.tw/osdn/crystaldiskmark/77936/CrystalDiskMark8_0_4c.zip",
+    "hash": "0513b11acde65e3c26cefaa90edea4896b4fce1d67478af16b23f5a8cf9c7512",
     "architecture": {
         "64bit": {
             "shortcuts": [
