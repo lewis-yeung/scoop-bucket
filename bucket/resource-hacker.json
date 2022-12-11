@@ -16,12 +16,5 @@
             "Resource Hacker"
         ]
     ],
-    "persist": "ResourceHacker.ini",
-    "checkver": {
-        "regex": "Version ([\\d.]+)\\s+\\((\\d+)\\)",
-        "replace": "$1.$2"
-    },
-    "autoupdate": {
-        "url": "http://www.angusj.com/resourcehacker/resource_hacker.zip"
-    }
+    "persist": "ResourceHacker.ini"
 }
