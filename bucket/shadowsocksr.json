@@ -10,7 +10,7 @@
     "architecture": {
         "64bit": {
             "url": "https://ghproxy.com/https://github.com/HMBSbige/ShadowsocksR-Windows/releases/download/6.1.0/ShadowsocksR-Win64-6.1.0.7z",
-            "hash": "0f039c5f476ff0828c2e72e1dbb17824c25646a1c9714557a9f3430842a27467"
+            "hash": "d62593da0aa39970213997694cb811a19a68341b4b10c42e9040064f4fdf1e48"
         },
         "32bit": {
             "url": "https://ghproxy.com/https://github.com/HMBSbige/ShadowsocksR-Windows/releases/download/6.1.0/ShadowsocksR-Win32-6.1.0.7z",
@@ -52,8 +52,8 @@
             }
         },
         "hash": {
-            "url": "https://github.com/HMBSbige/ShadowsocksR-Windows/releases/tag/$version",
-            "regex": "(?sm)$basename.*?$sha256"
+            "url": "https://api.github.com/repos/HMBSbige/ShadowsocksR-Windows/releases/latest",
+            "regex": "(?sm)<sub>$basename</sub> \\| <sub>$sha256</sub>"
         }
     }
 }
