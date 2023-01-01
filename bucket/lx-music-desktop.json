@@ -1,6 +1,6 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "1.22.3",
+    "version": "2.0.0",
     "description": "一个基于 Electron 的音乐软件。",
     "homepage": "https://github.com/lyswhut/lx-music-desktop",
     "license": {
@@ -9,12 +9,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghproxy.com/https://github.com/lyswhut/lx-music-desktop/releases/download/v1.22.3/lx-music-desktop-v1.22.3-win_x64-green.7z",
-            "hash": "md5:bf68dff35e3527d33f7ad4e3c2d8bd36"
+            "url": "https://ghproxy.com/https://github.com/lyswhut/lx-music-desktop/releases/download/v2.0.0/lx-music-desktop-v2.0.0-win_x64-green.7z",
+            "hash": "md5:1f51fb239ae702fa031dfdb2de8ea446"
         },
         "32bit": {
-            "url": "https://ghproxy.com/https://github.com/lyswhut/lx-music-desktop/releases/download/v1.22.3/lx-music-desktop-v1.22.3-win_x86-green.7z",
-            "hash": "md5:0706fee575a8b90ed2af928aa5553e78"
+            "url": "https://ghproxy.com/https://github.com/lyswhut/lx-music-desktop/releases/download/v2.0.0/lx-music-desktop-v2.0.0-win_x86-green.7z",
+            "hash": "md5:beee26317eabd76c22a45de6530dc614"
         }
     },
     "shortcuts": [
