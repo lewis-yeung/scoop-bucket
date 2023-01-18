@@ -18,6 +18,7 @@
         }
     },
     "env_add_path": "bin",
+    "persist": "etc\\gitconfig",
     "checkver": {
         "github": "https://github.com/git-for-windows/git",
         "regex": "v([\\w.]+)/PortableGit-(?<full>[\\w.]+)-"
