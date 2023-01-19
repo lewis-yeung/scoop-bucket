@@ -11,10 +11,13 @@
     "hash": "d06ebb4f230cfaa7e39a446f633645c354a513a7f58ecc974f5342230fc0607b",
     "architecture": {
         "64bit": {
-            "extract_dir": "64bit"
+            "extract_dir": "amd64"
         },
         "32bit": {
-            "extract_dir": "32bit"
+            "extract_dir": "i386"
+        },
+        "arm64": {
+            "extract_dir": "arm64"
         }
     },
     "post_install": [
