@@ -15,4 +15,4 @@ jobs:
           GITHUB_BRANCH: main
           SCOOP_BRANCH: "develop"
           SKIP_UPDATED: "1"
-          THROW_ERROR: "1"
+          THROW_ERROR: "0"
