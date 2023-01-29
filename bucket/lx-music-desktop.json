@@ -1,7 +1,7 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "2.0.5",
-    "description": "一个基于 Electron 的音乐软件。",
+    "description": "A music software developed on Electron and Vue.",
     "homepage": "https://github.com/lyswhut/lx-music-desktop",
     "license": {
         "identifier": "Apache-2.0",
@@ -20,7 +20,7 @@
     "shortcuts": [
         [
             "lx-music-desktop.exe",
-            "洛雪音乐助手桌面版"
+            "LX Music"
         ]
     ],
     "persist": "portable",
