@@ -4,7 +4,7 @@
     "description": "A CD/DVD/BD emulator.",
     "homepage": "http://www.yubsoft.com/imgdrive/portable.htm",
     "license": "Freeware",
-    "url": "https://download.yubsoft.com/ImgDrivePortable_1.9.9.9.zip",
+    "url": "https://download.yubsoft.com/imgdriveportable_1.9.9.9.zip",
     "hash": "ff9a36908d9f3e25fc081c33f63dd7c4dac0526f4b06ef651527da9bd4643d92",
     "architecture": {
         "64bit": {
@@ -37,6 +37,6 @@
         "regex": "ImgDrive Portable ([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://download.yubsoft.com/ImgDrivePortable_$version.zip"
+        "url": "https://download.yubsoft.com/imgdriveportable_$version.zip"
     }
 }
