@@ -1,6 +1,6 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "2.0.5",
+    "version": "2.1.2",
     "description": "A music software developed on Electron and Vue.",
     "homepage": "https://github.com/lyswhut/lx-music-desktop",
     "license": {
@@ -9,12 +9,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghproxy.com/https://github.com/lyswhut/lx-music-desktop/releases/download/v2.0.5/lx-music-desktop-v2.0.5-win_x64-green.7z",
-            "hash": "md5:03407ace2086636f35102545f9f3abeb"
+            "url": "https://ghproxy.com/https://github.com/lyswhut/lx-music-desktop/releases/download/v2.1.2/lx-music-desktop-v2.1.2-win_x64-green.7z",
+            "hash": "md5:b6fa6543a7f069d7e226e598bd3429a7"
         },
         "32bit": {
-            "url": "https://ghproxy.com/https://github.com/lyswhut/lx-music-desktop/releases/download/v2.0.5/lx-music-desktop-v2.0.5-win_x86-green.7z",
-            "hash": "md5:0fa168c9588b03eb62a519d3b36b3e1d"
+            "url": "https://ghproxy.com/https://github.com/lyswhut/lx-music-desktop/releases/download/v2.1.2/lx-music-desktop-v2.1.2-win_x86-green.7z",
+            "hash": "md5:0a335d1a1de7c55967398e31c4c4b67d"
         }
     },
     "shortcuts": [
