@@ -1,6 +1,9 @@
 <div align="center">
-	<h1 align="center">📦 Scoop Bucket</h1>
-	<p align="center">Just a <a href="https://scoop.sh">Scoop</a> <a href="https://github.com/ScoopInstaller/Scoop/wiki/Buckets">bucket</a>.</p>
+
+# 📦 Scoop Bucket
+
+Just a [Scoop][scoop] [bucket][scoop-buckets].
+
 </div>
 
 - **OPTIMIZED FOR USERS IN CHINA:** The download URLs of some apps use proxies/mirrors (e.g., [GitHub Proxy][ghproxy]).
@@ -30,9 +33,12 @@
 
 ## Credits
 
-- [GitHub Proxy][ghproxy] maintained by [stilleshan](https://github.com/stilleshan)
-- [TUNA Mirrors][tuna-mirrors] maintained by [TUNA](https://github.com/tuna)
+- [GitHub Proxy][ghproxy] maintained by [stilleshan][stilleshan]
+- [TUNA Mirrors][tuna-mirrors] maintained by [TUNA][tuna]
 
 [scoop]: https://scoop.sh/
+[scoop-buckets]: https://github.com/ScoopInstaller/Scoop/wiki/Buckets
 [ghproxy]: https://ghproxy.com/
+[stilleshan]: https://github.com/stilleshan
 [tuna-mirrors]: https://mirrors.tuna.tsinghua.edu.cn/
+[tuna]: https://github.com/tuna
