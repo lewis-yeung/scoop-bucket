@@ -3,7 +3,10 @@
     "version": "1.4.1.1022",
     "description": "Locate files and folders by name instantly.",
     "homepage": "https://www.voidtools.com",
-    "license": "Freeware",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.voidtools.com/en-us/License.txt"
+    },
     "architecture": {
         "64bit": {
             "url": "https://www.voidtools.com/Everything-1.4.1.1022.x64.zip",
