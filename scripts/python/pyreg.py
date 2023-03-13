@@ -6,7 +6,7 @@ import signal
 import sys
 import winreg
 import logging
-from typing import Union
+from typing import Union, List, Dict
 
 class RegValueInfo:
 	def __init__(
@@ -60,7 +60,7 @@ class Installer:
 		  cls.FLAG_REMOVE: cls.remove_installation_info,
 		}
 		cls.failed_installation = False
-		cls.original_regs: dict[str, list[RegValueInfo]] = {}
+		cls.original_regs: Dict[str, List[RegValueInfo]] = {}
 		cls.base_key_name = 'HKLM' if cls.args[cls.FLAG_GLOBAL] else 'HKCU'
 		sys.exit(cls.actions[cls.action]())
 
@@ -117,7 +117,7 @@ NOTES:
 
 	@classmethod
 	def write_installation_info(cls) -> int:
-		regs: dict[str, list[RegValueInfo]] = {
+		regs: Dict[str, List[RegValueInfo]] = {
 		  f'{cls.base_key_name}\\Software\\Python\\PythonCore': [
 		    RegValueInfo('DisplayName', winreg.REG_SZ, 'Python Software Foundation'),
 		    RegValueInfo('SupportUrl', winreg.REG_SZ, 'http://www.python.org/'),
@@ -154,7 +154,7 @@ NOTES:
 
 	@classmethod
 	def remove_installation_info(cls) -> int:
-		regs: dict[str, list[RegValueInfo]] = {
+		regs: Dict[str, List[RegValueInfo]] = {
 		  f'-{cls.base_key_name}\\Software\\Python\\PythonCore\\{cls.PYTHON_VERSION}': None,
 		}
 		logging.info('Removing installation info...')
@@ -165,7 +165,7 @@ NOTES:
 		return 0
 
 	@classmethod
-	def add_reg_key(cls, full_key_path: str, values: list[RegValueInfo], backup: bool):
+	def add_reg_key(cls, full_key_path: str, values: List[RegValueInfo], backup: bool):
 		if cls.failed_installation:
 			backup = False
 		new_key = False
@@ -268,7 +268,7 @@ NOTES:
 		return True
 
 	@classmethod
-	def write_regs(cls, regs: dict[str, list[RegValueInfo]], backup: bool):
+	def write_regs(cls, regs: Dict[str, List[RegValueInfo]], backup: bool):
 		for (full_key_path, values) in regs.items():
 			# Check if a keytree should be deleted.
 			if full_key_path.startswith('-'):
