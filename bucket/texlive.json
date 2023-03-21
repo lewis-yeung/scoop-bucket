@@ -1,14 +1,14 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "2022",
+    "version": "2023",
     "description": "A cross-platform, free software distribution for the TeX typesetting system that includes major TeX-related programs, macro packages, and fonts.",
     "homepage": "https://tug.org/texlive/",
     "license": {
         "identifier": "LPPL-1.3c,GPL-2.0-only",
         "url": "https://tug.org/texlive/LICENSE.TL"
     },
-    "url": "https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2022.iso",
-    "hash": "sha512:b3d4d2e9b0e3d34a7ca0763fb5c669bb9a26518f86af5cc292c56f7d61ff25dc5fce3373f814d970d99b0d40df393ad594336cf1b35a95a9655289666d964d59",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2023.iso",
+    "hash": "sha512:3a78cc59d562a9224543b90318ecb28d3ae7f975c2a031e15304a20b8fb0abac6e0ed63012c0bdf8f5edd39380caf122a17c948c05b28ea38fe90f2f0b19bdba",
     "extract_to": "installer",
     "installer": {
         "script": [
