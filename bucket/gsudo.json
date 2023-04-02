@@ -2,7 +2,7 @@
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "2.0.6",
     "description": "A Sudo for Windows.",
-    "homepage": "https://github.com/gerardog/gsudo",
+    "homepage": "https://gerardog.github.io/gsudo/",
     "license": {
         "identifier": "MIT",
         "url": "https://github.com/gerardog/gsudo/blob/master/LICENSE.txt"
@@ -28,7 +28,9 @@
     ],
     "post_install": "try { & \"$dir\\gsudo.exe\" -k 2>&1 | Out-Null } catch { info $_.Exception.Message }",
     "env_add_path": ".",
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/gerardog/gsudo"
+    },
     "autoupdate": {
         "url": "https://ghproxy.com/https://github.com/gerardog/gsudo/releases/download/v$version/gsudo.portable.zip",
         "hash": {
