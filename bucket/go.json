@@ -5,7 +5,7 @@
     "homepage": "https://go.dev/",
     "license": {
         "identifier": "BSD-3-Clause",
-        "url": "https://github.com/golang/go/blob/master/LICENSE"
+        "url": "https://go.dev/LICENSE"
     },
     "architecture": {
         "64bit": {
