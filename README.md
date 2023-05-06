@@ -16,16 +16,16 @@ Just a [Scoop][scoop] [bucket][scoop-buckets].
 
 2. Run any of the following commands in PowerShell to add this bucket:
 
-	``` powershell
-	scoop bucket add "lewis-yeung" "https://github.com/lewis-yeung/scoop-bucket"
-	scoop bucket add "lewis-yeung" "https://ghproxy.com/https://github.com/lewis-yeung/scoop-bucket" # FOR USERS IN CHINA
-	```
+   ``` powershell
+   scoop bucket add "lewis-yeung" "https://github.com/lewis-yeung/scoop-bucket"
+   scoop bucket add "lewis-yeung" "https://ghproxy.com/https://github.com/lewis-yeung/scoop-bucket" # FOR USERS IN CHINA
+   ```
 
 3. Install apps from this bucket:
 
-	``` powershell
-	scoop install "lewis-yeung/<app_name>"
-	```
+   ``` powershell
+   scoop install "lewis-yeung/<app_name>"
+   ```
 
 ### How to add an app manifest to this bucket?
 
