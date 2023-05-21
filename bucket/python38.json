@@ -1,0 +1,72 @@
+{
+    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "3.8.10",
+    "description": "A programming language that lets you work quickly and integrate systems more effectively.",
+    "homepage": "https://www.python.org/",
+    "license": {
+        "identifier": "Python-2.0",
+        "url": "https://docs.python.org/3/license.html#terms-and-conditions-for-accessing-or-otherwise-using-python"
+    },
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe#/setup.exe",
+                "https://ghproxy.com/https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
+            ],
+            "hash": [
+                "md5:62cf1a12a5276b0259e8761d4cf4fe42",
+                "32a9a38837daabfd9e06a341ac9bc76c948fcd453b090ba0bc3408fbdeba617d"
+            ]
+        },
+        "32bit": {
+            "url": [
+                "https://www.python.org/ftp/python/3.8.10/python-3.8.10.exe#/setup.exe",
+                "https://ghproxy.com/https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
+            ],
+            "hash": [
+                "md5:b355cfc84b681ace8908ae50908e8761",
+                "32a9a38837daabfd9e06a341ac9bc76c948fcd453b090ba0bc3408fbdeba617d"
+            ]
+        }
+    },
+    "depends": "gsudo",
+    "installer": {
+        "script": [
+            "Expand-DarkArchive \"$dir\\setup.exe\" \"$dir\\_tmp\"",
+            "@('path.msi', 'pip.msi') | ForEach-Object { Remove-Item \"$dir\\_tmp\\AttachedContainer\\$_\" }",
+            "(Get-ChildItem \"$dir\\_tmp\\AttachedContainer\\*.msi\").FullName | ForEach-Object { Expand-MsiArchive $_ \"$dir\" }",
+            "Remove-Item \"$dir\\_tmp\", \"$dir\\setup.exe\" -Force -Recurse",
+            "Invoke-ExternalCommand \"gsudo.exe\" -Args @(\"$dir\\python.exe\", \"$dir\\pyreg.py\", $(if ($global) {'-wg'} else {'-w'})) | Out-Null"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if ($cmd -eq 'uninstall') {",
+            "  remove_from_path \"$env:USERPROFILE\\AppData\\Roaming\\Python\\Python$($version -replace '([\\d]+)\\.([\\d]+)\\.[\\d]+', '$1$2')\\Scripts\" $global",
+            "  Invoke-ExternalCommand \"gsudo.exe\" -Args @(\"$dir\\python.exe\", \"$dir\\pyreg.py\", $(if ($global) {'-rg'} else {'-r'})) | Out-Null",
+            "}"
+        ]
+    },
+    "post_install": [
+        "add_first_in_path \"$env:USERPROFILE\\AppData\\Roaming\\Python\\Python$($version -replace '([\\d]+)\\.([\\d]+)\\.[\\d]+', '$1$2')\\Scripts\" $global",
+        "& \"$dir\\python.exe\" -E -s -m ensurepip -U --default-pip | Out-Null"
+    ],
+    "bin": [
+        [
+            "python.exe",
+            "python3"
+        ],
+        [
+            "python.exe",
+            "python38"
+        ]
+    ],
+    "env_add_path": [
+        "Scripts",
+        "."
+    ],
+    "persist": [
+        "Scripts",
+        "Lib\\site-packages"
+    ]
+}
