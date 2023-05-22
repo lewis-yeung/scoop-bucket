@@ -40,17 +40,9 @@
         ]
     },
     "uninstaller": {
-        "script": [
-            "if ($cmd -eq 'uninstall') {",
-            "  remove_from_path \"$env:USERPROFILE\\AppData\\Roaming\\Python\\Python$($version -replace '([\\d]+)\\.([\\d]+)\\.[\\d]+', '$1$2')\\Scripts\" $global",
-            "  Invoke-ExternalCommand \"gsudo.exe\" -Args @(\"$dir\\python.exe\", \"$dir\\pyreg.py\", $(if ($global) {'-rg'} else {'-r'})) | Out-Null",
-            "}"
-        ]
+        "script": "if ($cmd -eq 'uninstall') { Invoke-ExternalCommand \"gsudo.exe\" -Args @(\"$dir\\python.exe\", \"$dir\\pyreg.py\", $(if ($global) {'-rg'} else {'-r'})) | Out-Null }"
     },
-    "post_install": [
-        "add_first_in_path \"$env:USERPROFILE\\AppData\\Roaming\\Python\\Python$($version -replace '([\\d]+)\\.([\\d]+)\\.[\\d]+', '$1$2')\\Scripts\" $global",
-        "& \"$dir\\python.exe\" -E -s -m ensurepip -U --default-pip | Out-Null"
-    ],
+    "post_install": "& \"$dir\\python.exe\" -E -s -m ensurepip -U --default-pip | Out-Null",
     "bin": [
         [
             "python.exe",
