@@ -1,0 +1,36 @@
+{
+    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "0.23.1",
+    "description": "A rewrite of GNU ls with lots of added features like colors, icons, tree-view, more formatting options etc.",
+    "homepage": "https://github.com/Peltoche/lsd",
+    "license": {
+        "identifier": "Apache-2.0",
+        "url": "https://github.com/lsd-rs/lsd/blob/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://ghproxy.com/https://github.com/Peltoche/lsd/releases/download/0.23.1/lsd-0.23.1-x86_64-pc-windows-msvc.zip",
+            "hash": "4666763af99d7867aa9795101560baeb053ccba12ba99a906e9a197b70e756a5",
+            "extract_dir": "lsd-0.23.1-x86_64-pc-windows-msvc"
+        },
+        "32bit": {
+            "url": "https://ghproxy.com/https://github.com/Peltoche/lsd/releases/download/0.23.1/lsd-0.23.1-i686-pc-windows-msvc.zip",
+            "hash": "e6aff15f93a3ac7d183c1f4bbaa8081fcbe1f4dc8e4e12248859c85449258566",
+            "extract_dir": "lsd-0.23.1-i686-pc-windows-msvc"
+        }
+    },
+    "bin": "lsd.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://ghproxy.com/https://github.com/Peltoche/lsd/releases/download/$version/lsd-$version-x86_64-pc-windows-msvc.zip",
+                "extract_dir": "lsd-$version-x86_64-pc-windows-msvc"
+            },
+            "32bit": {
+                "url": "https://ghproxy.com/https://github.com/Peltoche/lsd/releases/download/$version/lsd-$version-i686-pc-windows-msvc.zip",
+                "extract_dir": "lsd-$version-i686-pc-windows-msvc"
+            }
+        }
+    }
+}
