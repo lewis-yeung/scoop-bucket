@@ -4,7 +4,7 @@
     "description": "A multi-format file archiver with a high compression ratio.",
     "homepage": "https://www.7-zip.org/",
     "license": {
-        "identifier": "LGPL-2.1-or-later|BSD-3-Clause",
+        "identifier": "LGPL-2.1-or-later,BSD-3-Clause",
         "url": "https://www.7-zip.org/license.txt"
     },
     "notes": "For shell context menu integration, go to [Tools -> Options] in 7-Zip.",
