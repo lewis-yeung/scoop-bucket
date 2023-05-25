@@ -1,0 +1,54 @@
+{
+    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "3.17.0",
+    "description": "A file list program that supports multiple storage, powered by Gin and Solidjs.",
+    "homepage": "https://alist.nn.ci",
+    "license": {
+        "identifier": "AGPL-3.0-or-later",
+        "url": "https://github.com/alist-org/alist/blob/main/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://ghproxy.com/https://github.com/alist-org/alist/releases/download/v3.17.0/alist-windows-amd64.zip",
+            "hash": "md5:00c71dc7a67011d83651845dc103691c"
+        },
+        "32bit": {
+            "url": "https://ghproxy.com/https://github.com/alist-org/alist/releases/download/v3.17.0/alist-windows-386.zip",
+            "hash": "md5:462311b92683cc56477456302abff76a"
+        },
+        "arm64": {
+            "url": "https://ghproxy.com/https://github.com/alist-org/alist/releases/download/v3.17.0/alist-windows-arm64.zip",
+            "hash": "md5:26579253417dc5891715187520db5a58"
+        }
+    },
+    "bin": [
+        [
+            "alist.exe",
+            "alist",
+            "--force-bin-dir"
+        ]
+    ],
+    "persist": [
+        "data",
+        "log"
+    ],
+    "checkver": {
+        "github": "https://github.com/alist-org/alist"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://ghproxy.com/https://github.com/alist-org/alist/releases/download/v$version/alist-windows-amd64.zip"
+            },
+            "32bit": {
+                "url": "https://ghproxy.com/https://github.com/alist-org/alist/releases/download/v$version/alist-windows-386.zip"
+            },
+            "arm64": {
+                "url": "https://ghproxy.com/https://github.com/alist-org/alist/releases/download/v$version/alist-windows-arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/md5.txt"
+        }
+    }
+}
