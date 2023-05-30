@@ -7,7 +7,7 @@
         "identifier": "Freeware",
         "url": "https://fastcopy.jp/help/fastcopy_eng.htm#license"
     },
-    "url": "https://fastcopy.jp/archive/FastCopy5.1.1_installer.exe",
+    "url": "https://ghproxy.com/https://raw.githubusercontent.com/FastCopyLab/FastCopyDist2/main/FastCopy5.1.1_installer.exe",
     "hash": "9f1dbc17adddb471936db1e178f3b5353c5095b9f349c72061a9d1c6d5874cc2",
     "architecture": {
         "64bit": {
@@ -39,6 +39,6 @@
     "persist": "FastCopy2.ini",
     "checkver": "FastCopy ver ([\\d.]+)",
     "autoupdate": {
-        "url": "https://fastcopy.jp/archive/FastCopy$version_installer.exe"
+        "url": "https://ghproxy.com/https://raw.githubusercontent.com/FastCopyLab/FastCopyDist2/main/FastCopy$version_installer.exe"
     }
 }
