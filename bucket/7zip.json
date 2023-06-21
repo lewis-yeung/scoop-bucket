@@ -16,7 +16,7 @@
             ],
             "hash": [
                 "26cb6e9f56333682122fafe79dbcdfd51e9f47cc7217dccd29ac6fc33b5598cd",
-                "89fe813d8a27ccc7f261e32bf1acd605d55523579c3c0662104c083bfe710d8b"
+                "72c98287b2e8f85ea7bb87834b6ce1ce7ce7f41a8c97a81b307d4d4bf900922b"
             ]
         },
         "32bit": {
@@ -26,7 +26,7 @@
             ],
             "hash": [
                 "9b6682255bed2e415bfa2ef75e7e0888158d1aaf79370defaa2e2a5f2b003a59",
-                "89fe813d8a27ccc7f261e32bf1acd605d55523579c3c0662104c083bfe710d8b"
+                "72c98287b2e8f85ea7bb87834b6ce1ce7ce7f41a8c97a81b307d4d4bf900922b"
             ]
         },
         "arm64": {
@@ -36,7 +36,7 @@
             ],
             "hash": [
                 "6fa4cb35cbebb0a46b8bbc22d1686a340e183c1f875d8b714efdc39af93debda",
-                "89fe813d8a27ccc7f261e32bf1acd605d55523579c3c0662104c083bfe710d8b"
+                "72c98287b2e8f85ea7bb87834b6ce1ce7ce7f41a8c97a81b307d4d4bf900922b"
             ]
         }
     },
@@ -61,13 +61,22 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.7-zip.org/a/7z$cleanVersion-x64.exe#/setup.exe"
+                "url": [
+                    "https://www.7-zip.org/a/7z$cleanVersion-x64.exe#/setup.exe",
+                    "https://www.7-zip.org/a/7zr.exe"
+                ]
             },
             "32bit": {
-                "url": "https://www.7-zip.org/a/7z$cleanVersion.exe#/setup.exe"
+                "url": [
+                    "https://www.7-zip.org/a/7z$cleanVersion.exe#/setup.exe",
+                    "https://www.7-zip.org/a/7zr.exe"
+                ]
             },
             "arm64": {
-                "url": "https://www.7-zip.org/a/7z$cleanVersion-arm64.exe#/setup.exe"
+                "url": [
+                    "https://www.7-zip.org/a/7z$cleanVersion-arm64.exe#/setup.exe",
+                    "https://www.7-zip.org/a/7zr.exe"
+                ]
             }
         }
     }
