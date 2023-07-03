@@ -14,12 +14,19 @@ Just a [Scoop][scoop] [bucket][scoop-buckets].
 
 1. You should have [Scoop][scoop] properly installed.
 
-2. Run any of the following commands in PowerShell to add this bucket:
+2. Run the following command in PowerShell to add this bucket:
 
    ```powershell
    scoop bucket add "lewis-yeung" "https://github.com/lewis-yeung/scoop-bucket"
-   scoop bucket add "lewis-yeung" "https://ghproxy.com/https://github.com/lewis-yeung/scoop-bucket" # FOR USERS IN CHINA
    ```
+
+   <details><summary>For users in <b>Chinese mainland</b></summary>
+   If you have an internet connection issue, try this:
+
+   ```powershell
+   scoop bucket add "lewis-yeung" "https://ghproxy.com/https://github.com/lewis-yeung/scoop-bucket"
+   ```
+   </details>
 
 3. Install apps from this bucket:
 
