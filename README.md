@@ -6,8 +6,6 @@ Just a [Scoop][scoop] [bucket][scoop-buckets].
 
 </div>
 
-- **OPTIMIZED FOR USERS IN CHINA:** The download URLs of some apps use proxies/mirrors (e.g., [GitHub Proxy][ghproxy]).
-
 ## Q&A
 
 ### How to install apps from this bucket?
@@ -34,9 +32,9 @@ Just a [Scoop][scoop] [bucket][scoop-buckets].
    scoop install "lewis-yeung/<app_name>"
    ```
 
-### How to add an app manifest to this bucket?
+### Anything special about this bucket?
 
-📃 Please create a PR.
+The download URLs of some apps are optimized for users in **Chinese mainland**, which means using mirrors (e.g., [GitHub Proxy][ghproxy]).
 
 ## Credits
 
