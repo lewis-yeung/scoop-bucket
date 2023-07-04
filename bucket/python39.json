@@ -50,7 +50,7 @@
         ],
         [
             "python.exe",
-            "python39"
+            "python3.9"
         ]
     ],
     "env_add_path": [
