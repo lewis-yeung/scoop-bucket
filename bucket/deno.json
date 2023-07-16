@@ -1,0 +1,27 @@
+{
+    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "1.35.1",
+    "description": "A JavaScript, TypeScript, and WebAssembly runtime with secure defaults and a great developer experience.",
+    "homepage": "https://deno.land/",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/denoland/deno/blob/main/LICENSE.md"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://ghproxy.com/https://github.com/denoland/deno/releases/download/v1.35.1/deno-x86_64-pc-windows-msvc.zip",
+            "hash": "3e28460c9d4103ac3a32d10e9b193e9cf594850adf8f0d966ade8b2572f8861f"
+        }
+    },
+    "bin": "deno.exe",
+    "checkver": {
+        "github": "https://github.com/denoland/deno"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://ghproxy.com/https://github.com/denoland/deno/releases/download/v$version/deno-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
