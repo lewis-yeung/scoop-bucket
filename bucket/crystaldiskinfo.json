@@ -25,6 +25,14 @@
                     "CrystalDiskInfo"
                 ]
             ]
+        },
+        "arm64": {
+            "shortcuts": [
+                [
+                    "DiskInfoA64.exe",
+                    "CrystalDiskInfo"
+                ]
+            ]
         }
     },
     "pre_install": "if (!(Test-Path \"$persist_dir\\DiskInfo.ini\")) { New-Item \"$dir\\DiskInfo.ini\" | Out-Null }",
