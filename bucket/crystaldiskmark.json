@@ -3,9 +3,12 @@
     "version": "8.0.4c",
     "description": "A simple disk benchmark software.",
     "homepage": "https://crystalmark.info/en/software/crystaldiskmark/",
-    "license": "BSD-3-Clause",
-    "url": "https://free.nchc.org.tw/osdn/crystaldiskmark/77936/CrystalDiskMark8_0_4c.zip",
-    "hash": "0513b11acde65e3c26cefaa90edea4896b4fce1d67478af16b23f5a8cf9c7512",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://crystalmark.info/en/software/crystaldiskmark/crystaldiskmark-license/"
+    },
+    "url": "https://crystalmark.info/download/zz/CrystalDiskMark8_0_4c.zip",
+    "hash": "989ba4455bf258263c1783d8d4084e9f20e17e53270d43b78efbf36e195a1dba",
     "architecture": {
         "64bit": {
             "shortcuts": [
@@ -30,14 +33,10 @@
         "DiskMark64.ini"
     ],
     "checkver": {
-        "url": "https://osdn.net/projects/crystaldiskmark/",
-        "regex": "releases/(?<release>\\d+)\">CrystalDiskMark\\s+([\\w.]+)<"
+        "url": "https://crystalmark.info/en/download/",
+        "regex": "\\[\\d{4}/\\d{2}/\\d{2}\\]\\s+CrystalDiskMark\\s+([\\w.]+)"
     },
     "autoupdate": {
-        "url": "https://free.nchc.org.tw/osdn/crystaldiskmark/$matchRelease/CrystalDiskMark$underscoreVersion.zip",
-        "hash": {
-            "url": "https://osdn.net/projects/crystaldiskmark/downloads/$matchRelease/CrystalDiskMark$underscoreVersion.zip/",
-            "regex": "<dd>$sha256</dd>"
-        }
+        "url": "https://crystalmark.info/download/zz/CrystalDiskMark$underscoreVersion.zip"
     }
 }
