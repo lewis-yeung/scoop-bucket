@@ -25,6 +25,14 @@
                     "CrystalDiskMark"
                 ]
             ]
+        },
+        "arm64": {
+            "shortcuts": [
+                [
+                    "DiskMarkA64.exe",
+                    "CrystalDiskMark"
+                ]
+            ]
         }
     },
     "pre_install": "'64', '32' | ForEach-Object { if (!(Test-Path \"$persist_dir\\DiskMark$_.ini\")) { New-Item \"$dir\\DiskMark$_.ini\" | Out-Null } }",
