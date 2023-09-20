@@ -1,6 +1,6 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "1.36.4",
+    "version": "1.37.0",
     "description": "A JavaScript, TypeScript, and WebAssembly runtime with secure defaults and a great developer experience.",
     "homepage": "https://deno.land/",
     "license": {
@@ -9,8 +9,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghproxy.com/https://github.com/denoland/deno/releases/download/v1.36.4/deno-x86_64-pc-windows-msvc.zip",
-            "hash": "f5b5aca801e5f102876fa56b600bc8fa833f41436c68fa45875e8a9b43b188b1"
+            "url": "https://ghproxy.com/https://github.com/denoland/deno/releases/download/v1.37.0/deno-x86_64-pc-windows-msvc.zip",
+            "hash": "8436d5dcfcb21c7717523d59888ad7b3b816c363e6b34993173429c526ae35c6"
         }
     },
     "bin": "deno.exe",
