@@ -1,14 +1,14 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "3.0.7148",
+    "version": "3.0.7251",
     "description": "A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware.",
     "homepage": "https://systeminformer.sourceforge.io/nightly.php",
     "license": {
         "identifier": "GPL-3.0-only",
         "url": "https://github.com/winsiderss/systeminformer/blob/master/LICENSE.txt"
     },
-    "url": "https://ghproxy.com/https://github.com/winsiderss/si-builds/releases/download/3.0.7148/systeminformer-3.0.7148-bin.zip",
-    "hash": "ed0189172017ff256c712e336560fd0ae2908320486a0f486d6f090bdcf8796b",
+    "url": "https://ghproxy.com/https://github.com/winsiderss/si-builds/releases/download/3.0.7251/systeminformer-3.0.7251-bin.zip",
+    "hash": "fe77f573efa29155c6c40a1b5310a334dbe9c7f913e8968f4be5dc7c8e92b600",
     "architecture": {
         "64bit": {
             "extract_dir": "amd64"
