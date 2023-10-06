@@ -48,11 +48,7 @@
     "installer": {
         "script": [
             "New-Item -ItemType Directory -Path \"$dir\\bin\" -Force | Out-Null",
-            "$(if ($architecture -eq '64bit') {",
-            "  \"posh-windows-amd64.exe\"",
-            "} else {",
-            "  \"posh-windows-386.exe\"",
-            "}) | ForEach-Object { Move-Item -Path \"$dir\\$_\" -Destination \"$dir\\bin\\oh-my-posh.exe\" -Force }"
+            "Move-Item -Path \"$dir\\posh-windows-*.exe\" -Destination \"$dir\\bin\\oh-my-posh.exe\" -Force"
         ]
     },
     "env_add_path": "bin",
