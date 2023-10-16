@@ -1,14 +1,14 @@
 {
     "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "5.4.1",
+    "version": "5.4.2",
     "description": "The fastest copy/backup software on Windows.",
     "homepage": "https://fastcopy.jp",
     "license": {
         "identifier": "Freeware",
         "url": "https://fastcopy.jp/help/fastcopy_eng.htm#license"
     },
-    "url": "https://ghproxy.com/https://raw.githubusercontent.com/FastCopyLab/FastCopyDist2/main/FastCopy5.4.1_installer.exe",
-    "hash": "5e331238b2cb9e90d1548b61d1e09b5534c0219fa4e76b5b3e7b9634a056b523",
+    "url": "https://ghproxy.com/https://raw.githubusercontent.com/FastCopyLab/FastCopyDist2/main/FastCopy5.4.2_installer.exe",
+    "hash": "378b93f3d80a09b6f7f80423363bf8add13a1e40dc92862b5dfc260ab665c7f8",
     "architecture": {
         "64bit": {
             "installer": {
