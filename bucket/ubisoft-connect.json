@@ -1,5 +1,5 @@
 {
-    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "nightly",
     "description": "The ecosystem of players services for Ubisoft games across all platforms.",
     "homepage": "https://ubisoftconnect.com",

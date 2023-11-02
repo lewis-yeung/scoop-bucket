@@ -1,5 +1,5 @@
 {
-    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "1.3.4.0",
     "description": "A portable utility that allows you to modify, backup and restore the MBR (Master Boot Record) and the PBR (Partition Boot Record) of local or removable drives.",
     "homepage": "http://www.ipauly.com/",

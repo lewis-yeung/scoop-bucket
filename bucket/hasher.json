@@ -1,5 +1,5 @@
 {
-    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "4.1",
     "description": "A hashing utility for verifying integrity of files using a wide range of supported algorithms.",
     "homepage": "https://www.den4b.com/products/hasher",

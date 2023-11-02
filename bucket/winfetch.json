@@ -1,5 +1,5 @@
 {
-    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "2.5.1",
     "description": "A command-line system information utility for Windows.",
     "homepage": "https://github.com/lptstr/winfetch",

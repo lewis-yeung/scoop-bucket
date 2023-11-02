@@ -1,5 +1,5 @@
 {
-    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "0.7.5.0",
     "description": "A tool to redirect News, Search, Widgets, Weather and more to your default browser.",
     "homepage": "https://github.com/rcmaehl/MSEdgeRedirect",
@@ -9,11 +9,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghproxy.com/https://github.com/rcmaehl/MSEdgeRedirect/releases/download/0.7.5.0/MSEdgeRedirect.exe",
+            "url": "https://github.com/rcmaehl/MSEdgeRedirect/releases/download/0.7.5.0/MSEdgeRedirect.exe",
             "hash": "35575a8faceb15ccef026d1043546424ae7b24e9ca94b0042b13f7cb012e56fd"
         },
         "32bit": {
-            "url": "https://ghproxy.com/https://github.com/rcmaehl/MSEdgeRedirect/releases/download/0.7.5.0/MSEdgeRedirect_x86.exe#/MSEdgeRedirect.exe",
+            "url": "https://github.com/rcmaehl/MSEdgeRedirect/releases/download/0.7.5.0/MSEdgeRedirect_x86.exe#/MSEdgeRedirect.exe",
             "hash": "471718190cd6ddc3417db0250b20785dae9fa5afd38a9499a6a2d1e4a39ef222"
         }
     },
@@ -50,10 +50,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghproxy.com/https://github.com/rcmaehl/MSEdgeRedirect/releases/download/$version/MSEdgeRedirect.exe"
+                "url": "https://github.com/rcmaehl/MSEdgeRedirect/releases/download/$version/MSEdgeRedirect.exe"
             },
             "32bit": {
-                "url": "https://ghproxy.com/https://github.com/rcmaehl/MSEdgeRedirect/releases/download/$version/MSEdgeRedirect_x86.exe#/MSEdgeRedirect.exe"
+                "url": "https://github.com/rcmaehl/MSEdgeRedirect/releases/download/$version/MSEdgeRedirect_x86.exe#/MSEdgeRedirect.exe"
             }
         },
         "hash": {

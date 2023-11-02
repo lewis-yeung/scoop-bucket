@@ -1,5 +1,5 @@
 {
-    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "1.55.0.0",
     "description": "The ultimate all-in-one app for tuning Windows 11/10/8/7.",
     "homepage": "https://winaerotweaker.com/",

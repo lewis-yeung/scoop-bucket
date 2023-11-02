@@ -1,5 +1,5 @@
 {
-    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "20231031",
     "description": "An LLVM/Clang/LLD based MinGW-w64 toolchain.",
     "homepage": "https://github.com/mstorsjo/llvm-mingw",
@@ -9,12 +9,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghproxy.com/https://github.com/mstorsjo/llvm-mingw/releases/download/20231031/llvm-mingw-20231031-ucrt-x86_64.zip",
+            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20231031/llvm-mingw-20231031-ucrt-x86_64.zip",
             "hash": "b9deb02aca5a9625d17dc0ac1bfc21ba3a4b9f7521002836e3fe248cfddc5ae6",
             "extract_dir": "llvm-mingw-20231031-ucrt-x86_64"
         },
         "32bit": {
-            "url": "https://ghproxy.com/https://github.com/mstorsjo/llvm-mingw/releases/download/20231031/llvm-mingw-20231031-ucrt-i686.zip",
+            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20231031/llvm-mingw-20231031-ucrt-i686.zip",
             "hash": "521377f8a49292fec15ea622d497ad12e9ce12956246d210cea68792391ff115",
             "extract_dir": "llvm-mingw-20231031-ucrt-i686"
         }
@@ -30,11 +30,11 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghproxy.com/https://github.com/mstorsjo/llvm-mingw/releases/download/$version/llvm-mingw-$version-ucrt-x86_64.zip",
+                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$version/llvm-mingw-$version-ucrt-x86_64.zip",
                 "extract_dir": "llvm-mingw-$version-ucrt-x86_64"
             },
             "32bit": {
-                "url": "https://ghproxy.com/https://github.com/mstorsjo/llvm-mingw/releases/download/$version/llvm-mingw-$version-ucrt-i686.zip",
+                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$version/llvm-mingw-$version-ucrt-i686.zip",
                 "extract_dir": "llvm-mingw-$version-ucrt-i686"
             }
         }

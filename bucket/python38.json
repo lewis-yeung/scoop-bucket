@@ -1,5 +1,5 @@
 {
-    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "3.8.10",
     "description": "A programming language that lets you work quickly and integrate systems more effectively.",
     "homepage": "https://www.python.org/",
@@ -11,7 +11,7 @@
         "64bit": {
             "url": [
                 "https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe#/setup.exe",
-                "https://ghproxy.com/https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
+                "https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
             ],
             "hash": [
                 "md5:62cf1a12a5276b0259e8761d4cf4fe42",
@@ -21,7 +21,7 @@
         "32bit": {
             "url": [
                 "https://www.python.org/ftp/python/3.8.10/python-3.8.10.exe#/setup.exe",
-                "https://ghproxy.com/https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
+                "https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
             ],
             "hash": [
                 "md5:b355cfc84b681ace8908ae50908e8761",

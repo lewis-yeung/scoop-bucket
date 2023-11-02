@@ -1,5 +1,5 @@
 {
-    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "0.43.0",
     "description": "A general-purpose command-line fuzzy finder.",
     "homepage": "https://github.com/junegunn/fzf",
@@ -9,7 +9,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghproxy.com/https://github.com/junegunn/fzf/releases/download/0.43.0/fzf-0.43.0-windows_amd64.zip",
+            "url": "https://github.com/junegunn/fzf/releases/download/0.43.0/fzf-0.43.0-windows_amd64.zip",
             "hash": "3b815f3f842ddd712da2968948df524b1ebc3df72eba02b80a215a5bf7882f2a"
         }
     },
@@ -18,7 +18,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghproxy.com/https://github.com/junegunn/fzf/releases/download/$version/fzf-$version-windows_amd64.zip",
+                "url": "https://github.com/junegunn/fzf/releases/download/$version/fzf-$version-windows_amd64.zip",
                 "hash": {
                     "url": "$baseurl/fzf_$version_checksums.txt"
                 }

@@ -1,5 +1,5 @@
 {
-    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "3.11.2",
     "description": "A tool that converts a Windows Installer database into a set of WiX source files.",
     "homepage": "https://wixtoolset.org/",
@@ -7,7 +7,7 @@
         "identifier": "MS-RL",
         "url": "https://github.com/wixtoolset/wix/blob/develop/LICENSE.TXT"
     },
-    "url": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Binary/master/dark/dark-3.11.2.zip",
+    "url": "https://raw.githubusercontent.com/ScoopInstaller/Binary/master/dark/dark-3.11.2.zip",
     "hash": "93ce1a4d962acaf85997829581de3f9354d215067ca4578fc92d618d721c085c",
     "bin": "dark.exe",
     "checkver": {
@@ -16,7 +16,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Binary/master/dark/dark-$version.zip",
+        "url": "https://raw.githubusercontent.com/ScoopInstaller/Binary/master/dark/dark-$version.zip",
         "hash": {
             "url": "$url.sha256"
         }

@@ -1,5 +1,5 @@
 {
-    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "2023",
     "description": "A cross-platform, free software distribution for the TeX typesetting system that includes major TeX-related programs, macro packages, and fonts.",
     "homepage": "https://tug.org/texlive/",

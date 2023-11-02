@@ -1,10 +1,10 @@
 {
-    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "10.1.1002.1B",
     "description": "A Windows utility similar to DISM, but with a GUI and based on CBS.",
     "homepage": "https://www.chuyu.me/",
     "license": "Freeware",
-    "url": "https://ghproxy.com/https://github.com/Chuyu-Team/Dism-Multi-language/releases/download/v10.1.1002.2/Dism%2B%2B10.1.1002.1B.zip",
+    "url": "https://github.com/Chuyu-Team/Dism-Multi-language/releases/download/v10.1.1002.2/Dism%2B%2B10.1.1002.1B.zip",
     "hash": "5bbab96d60704854efd8246a7d9371688b9102261544827fc8884126d70bcb3b",
     "architecture": {
         "64bit": {

@@ -1,5 +1,5 @@
 {
-    "$schema": "https://ghproxy.com/https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "3.0.4953",
     "description": "A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware.",
     "homepage": "https://processhacker.sourceforge.io/nightly.php",
@@ -7,7 +7,7 @@
         "identifier": "GPL-3.0-only",
         "url": "https://processhacker.sourceforge.io/gpl.php"
     },
-    "url": "https://ghproxy.com/https://github.com/ProcessHackerRepoTool/nightly-builds-mirror/releases/download/3.0.4953/processhacker-3.0.4953-bin.zip",
+    "url": "https://github.com/ProcessHackerRepoTool/nightly-builds-mirror/releases/download/3.0.4953/processhacker-3.0.4953-bin.zip",
     "hash": "a5c3eecb80afc94cd28511dbca55b297dbd414ec061d309b1777730bbd8933ea",
     "architecture": {
         "64bit": {
