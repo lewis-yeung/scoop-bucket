@@ -1,296 +1,296 @@
-import argparse
+if __name__ != '__main__':
+  raise RuntimeError('not allowed to be imported')
+
+import sys
+
+if sys.platform != 'win32':
+  raise RuntimeError('cannot run on OS other than Windows')
+if sys.version_info < (3, 8):
+  raise RuntimeError('cannot run with Python version lower than 3.8')
+
 import ctypes
 import os
 import platform
-import signal
-import sys
 import winreg
-import logging
-from typing import Union, List, Dict
+from argparse import (
+  ArgumentParser,
+  RawTextHelpFormatter,
+)
+from enum import (
+  Enum,
+  IntEnum,
+)
+from typing import (
+  Callable,
+  cast,
+)
 
-class RegValueInfo:
-  def __init__(
-    self,
-    name: Union[str, None],
-    type: Union[int, None] = None,
-    data: Union[str, int, None] = None,
-    delete: bool = False,
-  ):
-    self.name = name
-    self.type = type
-    self.data = data
-    self.delete = delete
+PYTHON_ROOT = os.path.realpath(os.path.dirname(sys.executable))
+PYTHON_ARCH_BIT = platform.architecture()[0][:2]
+PYTHON_VERSION_TUPLE = platform.python_version_tuple()
+PYTHON_VERSION_FULL = '.'.join(PYTHON_VERSION_TUPLE)
 
-class Installer:
-  REG_BASE_KEYS = {
-    'HKCR': winreg.HKEY_CLASSES_ROOT,
-    'HKCU': winreg.HKEY_CURRENT_USER,
-    'HKLM': winreg.HKEY_LOCAL_MACHINE,
-    'HKU': winreg.HKEY_USERS,
-    'HKCC': winreg.HKEY_CURRENT_CONFIG,
-  }
-  PYTHON_ROOT = os.path.realpath(os.path.dirname(sys.executable))
-  PYTHON_VERSION_TUPLE = platform.python_version_tuple()
-  PYTHON_VERSION = '.'.join(PYTHON_VERSION_TUPLE[:2])
-  PYTHON_VERSION_FULL = '.'.join(PYTHON_VERSION_TUPLE)
-  PYTHON_VERSION_CLEAN = ''.join(PYTHON_VERSION_TUPLE)
-  PYTHON_ARCH = platform.architecture()[0][:2]
-  REG_VIEW = winreg.KEY_WOW64_64KEY if PYTHON_ARCH == '64' else winreg.KEY_WOW64_32KEY
+class StringEnum(str, Enum):
+  def __str__(self):
+    return cast(str, self.value)
 
-  FLAG_WRITE = 'write'
-  FLAG_REMOVE = 'remove'
-  FLAG_GLOBAL = 'global'
+class CLIName(StringEnum):
+  USAGE = 'USAGE'
+  FLAGS = 'FLAGS'
+  WRITE = 'write'
+  REMOVE = 'remove'
+  GLOBAL = 'global'
 
-  @classmethod
-  def run(cls):
-    if sys.platform != 'win32':
-      logging.error('Cannot run on OS other than Windows.')
-      sys.exit(1)
-    if sys.version_info < (3, 8):
-      logging.error('This script requires Python 3.8 or higher.')
-      sys.exit(1)
-    signal.signal(signal.SIGINT, signal.SIG_IGN)
-    signal.signal(signal.SIGBREAK, signal.SIG_IGN)
-    cls.parse_args()
-    if not cls.is_admin():
-      logging.error('The operation requires administrator privileges.')
-      sys.exit(1)
-    cls.actions = {
-      cls.FLAG_WRITE: cls.write_installation_info,
-      cls.FLAG_REMOVE: cls.remove_installation_info,
-    }
-    cls.failed_installation = False
-    cls.original_regs: Dict[str, List[RegValueInfo]] = {}
-    cls.base_key_name = 'HKLM' if cls.args[cls.FLAG_GLOBAL] else 'HKCU'
-    sys.exit(cls.actions[cls.action]())
+class BaseRegKey(IntEnum):
+  HKLM = winreg.HKEY_LOCAL_MACHINE
+  HKCU = winreg.HKEY_CURRENT_USER
 
-  @classmethod
-  def is_admin(cls) -> bool:
-    return ctypes.windll.shell32.IsUserAnAdmin()
+def parse_args():
+  help_formatter = RawTextHelpFormatter
+  original_add_usage = cast(Callable, getattr(help_formatter, 'add_usage'))
 
-  @classmethod
-  def parse_args(cls):
-    parser = argparse.ArgumentParser(
-      description='Write/Remove Python installation info to/from Windows registry, which allows/disallows apps and third-party installers to discover the Python installation that runs this script.',
-      epilog=f'''
+  def _add_usage(*args, **kwargs):
+    if len(args) < 5:
+      kwargs['prefix'] = f'{CLIName.USAGE}: '
+    return original_add_usage(*args, **kwargs)
+
+  help_formatter.add_usage = _add_usage
+  root_parser = ArgumentParser(
+    description='Write/Remove Python installation info to/from Windows registry, which allows/disallows apps and third-party installers to discover the installation of Python that runs this script.',
+    epilog=f'''
 NOTES:
   - Elevated privileges are required for modifying the registry.
-  - Run this script as:
-      <path_to_python_exe> "{os.path.basename(__file__)}" [flags]
-    where `<path_to_python_exe>` should be an absolute path to the Python executable that you want to register/unregister.
-''',
-      formatter_class=argparse.RawTextHelpFormatter,
-    )
-    group_actions = parser.add_mutually_exclusive_group()
-    group_actions.add_argument(
-      '-w',
-      '--write',
-      action='store_true',
-      help='write installation info to registry',
-      dest=cls.FLAG_WRITE,
-    )
-    group_actions.add_argument(
-      '-r',
-      '--remove',
-      action='store_true',
-      help='remove installation info from registry',
-      dest=cls.FLAG_REMOVE,
-    )
-    parser.add_argument(
-      '-g',
-      '--global',
-      action='store_true',
-      help='operate on subkeys under "HKLM" (for all users)',
-      dest=cls.FLAG_GLOBAL,
-    )
-    if len(sys.argv) == 1:
-      parser.print_help()
-      sys.exit(0)
-    cls.args = vars(parser.parse_args())
-    if cls.args[cls.FLAG_WRITE]:
-      cls.action = cls.FLAG_WRITE
-    elif cls.args[cls.FLAG_REMOVE]:
-      cls.action = cls.FLAG_REMOVE
-    else:
-      logging.error('No operation specified.')
-      sys.exit(1)
-
-  @classmethod
-  def write_installation_info(cls) -> int:
-    regs: Dict[str, List[RegValueInfo]] = {
-      f'{cls.base_key_name}\\Software\\Python\\PythonCore': [
-        RegValueInfo('DisplayName', winreg.REG_SZ, 'Python Software Foundation'),
-        RegValueInfo('SupportUrl', winreg.REG_SZ, 'http://www.python.org/'),
-      ],
-      f'{cls.base_key_name}\\Software\\Python\\PythonCore\\{cls.PYTHON_VERSION}': [
-        RegValueInfo('DisplayName', winreg.REG_SZ, f'Python {cls.PYTHON_VERSION} ({cls.PYTHON_ARCH}-bit)'),
-        RegValueInfo('SupportUrl', winreg.REG_SZ, 'http://www.python.org/'),
-        RegValueInfo('SysArchitecture', winreg.REG_SZ, f'{cls.PYTHON_ARCH}bit'),
-        RegValueInfo('SysVersion', winreg.REG_SZ, cls.PYTHON_VERSION),
-        RegValueInfo('Version', winreg.REG_SZ, cls.PYTHON_VERSION_FULL),
-      ],
-      f'{cls.base_key_name}\\Software\\Python\\PythonCore\\{cls.PYTHON_VERSION}\\Help\\Main Python Documentation': [
-        RegValueInfo(None, winreg.REG_SZ, f'{cls.PYTHON_VERSION}\\Doc\\python{cls.PYTHON_VERSION_CLEAN}.chm'),
-        RegValueInfo('DisplayName', winreg.REG_SZ, f'Python {cls.PYTHON_VERSION_FULL} Documentation'),
-      ],
-      f'{cls.base_key_name}\\Software\\Python\\PythonCore\\{cls.PYTHON_VERSION}\\InstallPath': [
-        RegValueInfo(None, winreg.REG_SZ, cls.PYTHON_ROOT),
-        RegValueInfo('ExecutablePath', winreg.REG_SZ, f'{cls.PYTHON_ROOT}\\python.exe'),
-        RegValueInfo('WindowedExecutablePath', winreg.REG_SZ, f'{cls.PYTHON_ROOT}\\pythonw.exe'),
-      ],
-      f'{cls.base_key_name}\\Software\\Python\\PythonCore\\{cls.PYTHON_VERSION}\\PythonPath': [
-        RegValueInfo(None, winreg.REG_SZ, f'{cls.PYTHON_ROOT}\\Lib\\;{cls.PYTHON_ROOT}\\DLLs\\'),
-      ],
-    }
-    logging.info('Writing installation info...')
-    if not cls.write_regs(regs, True):
-      cls.failed_installation = True
-      logging.error('Aborted.')
-      logging.info('Cleaning up...')
-      cls.write_regs(cls.original_regs, False)
-      return 1
-    logging.info('All done.')
-    return 0
-
-  @classmethod
-  def remove_installation_info(cls) -> int:
-    regs: Dict[str, List[RegValueInfo]] = {
-      f'-{cls.base_key_name}\\Software\\Python\\PythonCore\\{cls.PYTHON_VERSION}': None,
-    }
-    logging.info('Removing installation info...')
-    if not cls.write_regs(regs, False):
-      logging.error('Aborted.')
-      return 1
-    logging.info('All done.')
-    return 0
-
-  @classmethod
-  def add_reg_key(cls, full_key_path: str, values: List[RegValueInfo], backup: bool):
-    if cls.failed_installation:
-      backup = False
-    new_key = False
-    basekey_name, key_path = full_key_path.split('\\', 1)
-    try:
-      winreg.OpenKeyEx(cls.REG_BASE_KEYS[basekey_name], key_path, access=winreg.KEY_READ | winreg.KEY_WRITE | cls.REG_VIEW).Close()
-    except OSError:
-      if backup and (('-' + full_key_path) not in cls.original_regs):
-        # Store the hyphen-prefixed path of an nonexistent key.
-        cls.original_regs['-' + full_key_path] = None
-        new_key = True
-    else:
-      if backup and (full_key_path not in cls.original_regs):
-        # Store the path of an existing key.
-        cls.original_regs[full_key_path] = []
-    try:
-      with winreg.CreateKeyEx(cls.REG_BASE_KEYS[basekey_name], key_path, access=winreg.KEY_READ | winreg.KEY_WRITE | cls.REG_VIEW) as key:
-        if len(values) == 0:
-          return True
-        for v in values:
-          if backup and not new_key:
-            try:
-              data, type = winreg.QueryValueEx(key, v.name)
-            except:
-              cls.original_regs[full_key_path].append(RegValueInfo(v.name, delete=True))
-            else:
-              # Store the original value.
-              cls.original_regs[full_key_path].append(RegValueInfo(v.name, type, data))
-          if v.delete:
-            try:
-              winreg.DeleteValue(key, v.name)
-            except:
-              if cls.failed_installation:
-                continue
-              else:
-                logging.error(f'Failed to remove value [{v.name}] under [{full_key_path}] in the {cls.PYTHON_ARCH}-bit registry view.')
-                return False
-          else:
-            try:
-              winreg.SetValueEx(key, v.name, 0, v.type, v.data)
-            except Exception as e:
-              if cls.failed_installation:
-                continue
-              else:
-                logging.error(f'Failed to set value [{v.name}] (type: [{v.type}], data: [{v.data}]) under [{full_key_path}] in the {cls.PYTHON_ARCH}-bit registry view.')
-                return False
-    except OSError as e:
-      if cls.failed_installation:
-        pass
-      else:
-        logging.error(f'Failed to open/create key [{full_key_path}] in the {cls.PYTHON_ARCH}-bit registry view.')
-        return False
-    return True
-
-  @classmethod
-  def delete_reg_keytree(cls, full_key_path: str, backup: bool):
-    if cls.failed_installation:
-      backup = False
-    basekey_name, key_path = full_key_path.split('\\', 1)
-    try:
-      with winreg.OpenKeyEx(cls.REG_BASE_KEYS[basekey_name], key_path, access=winreg.KEY_READ | winreg.KEY_WRITE | cls.REG_VIEW) as key:
-        if backup and (full_key_path not in cls.original_regs):
-          # Store the path of the key to be deleted.
-          cls.original_regs[full_key_path] = []
-        while True:
-          try:
-            if not cls.delete_reg_keytree(os.path.join(full_key_path, winreg.EnumKey(key, 0)), backup):
-              return False
-          except OSError:
-            break
-        while True:
-          try:
-            value_name, value_data, data_type = winreg.EnumValue(key, 0)
-            if backup:
-              # Store the original value.
-              cls.original_regs[full_key_path].append(RegValueInfo(value_name, data_type, value_data))
-            try:
-              winreg.DeleteValue(key, value_name)
-            except Exception as e:
-              if cls.failed_installation:
-                continue
-              else:
-                logging.error(f'Failed to remove value [{value_name}] under [{full_key_path}] in the {cls.PYTHON_ARCH}-bit registry view.')
-                return False
-          except OSError:
-            break
-    except OSError:
-      # No such key, just return.
-      return True
-    supkey_path, key_name = key_path.rsplit('\\', 1)
-    try:
-      with winreg.OpenKeyEx(cls.REG_BASE_KEYS[basekey_name], supkey_path, access=winreg.KEY_READ | winreg.KEY_WRITE | cls.REG_VIEW) as supkey:
-        winreg.DeleteKey(supkey, key_name)
-    except OSError as e:
-      if cls.failed_installation:
-        pass
-      else:
-        logging.error(f'Failed to remove key [{full_key_path}] in the {cls.PYTHON_ARCH}-bit registry view.')
-        return False
-    return True
-
-  @classmethod
-  def write_regs(cls, regs: Dict[str, List[RegValueInfo]], backup: bool):
-    for (full_key_path, values) in regs.items():
-      # Check if a keytree should be deleted.
-      if full_key_path.startswith('-'):
-        delete_key = True
-        full_key_path = full_key_path[1:]
-      else:
-        delete_key = False
-      if delete_key:
-        if not cls.delete_reg_keytree(full_key_path, backup):
-          return False
-      else:
-        if not cls.add_reg_key(full_key_path, values, backup):
-          return False
-    return True
-
-if __name__ == '__main__':
-  logging.basicConfig(
-    format='[%(asctime)s] (%(levelname)s) {%(module)s}: %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S',
-    level=logging.NOTSET,
+  - This script is intended to be run as:
+    <path_to_python_exe> "{__file__}" [{CLIName.FLAGS}]
+where `<path_to_python_exe>` should be an absolute path to the Python executable that you want to register/unregister.
+  - Info about the current Python running this script:
+    - Installation directory: "{PYTHON_ROOT}"
+    - Architecture: {PYTHON_ARCH_BIT}-bit
+    - Version: {PYTHON_VERSION_FULL}''',
+    formatter_class=help_formatter,
   )
-  for (level, name) in {
+  root_parser._optionals.title = CLIName.FLAGS
+  root_parser.add_argument(
+    '-g',
+    '--global',
+    action='store_true',
+    help='operate on subkeys under "HKLM" (for all users)',
+    dest=CLIName.GLOBAL,
+  )
+  operation_group = root_parser.add_mutually_exclusive_group()
+  operation_group.add_argument(
+    '-w',
+    '--write',
+    action='store_true',
+    help='write installation info to registry',
+    dest=CLIName.WRITE,
+  )
+  operation_group.add_argument(
+    '-r',
+    '--remove',
+    action='store_true',
+    help='remove installation info from registry',
+    dest=CLIName.REMOVE,
+  )
+  formatter = root_parser._get_formatter()
+  formatter.add_usage(
+    usage=root_parser.usage,
+    actions=root_parser._get_positional_actions(),
+    groups=root_parser._mutually_exclusive_groups,
+    prefix='Usage: ',
+  )
+  if len(sys.argv) == 1:
+    root_parser.print_help()
+    root_parser.exit(0)
+  global cli_args
+  cli_args = vars(root_parser.parse_args())
+  if (not cli_args[CLIName.WRITE]) and (not cli_args[CLIName.REMOVE]):
+    root_parser.error('no operation specified')
+  if not bool(ctypes.windll.shell32.IsUserAnAdmin()):
+    root_parser.error('administrator privileges are required for modifying the registry')
+
+parse_args()
+
+import logging
+import signal
+from dataclasses import dataclass
+from typing import (
+  Dict,
+  List,
+  Optional,
+  Union,
+)
+
+OPERATION = CLIName.WRITE if cli_args[CLIName.WRITE] else CLIName.REMOVE
+PYTHON_VERSION = '.'.join(PYTHON_VERSION_TUPLE[:2])
+PYTHON_VERSION_CLEAN = ''.join(PYTHON_VERSION_TUPLE)
+BASE_REG_KEY = BaseRegKey.HKLM if cli_args[CLIName.GLOBAL] else BaseRegKey.HKCU
+REG_ACCESS_MASK = winreg.KEY_READ | winreg.KEY_WRITE | (winreg.KEY_WOW64_64KEY if PYTHON_ARCH_BIT == '64' else winreg.KEY_WOW64_32KEY)
+
+@dataclass
+class RegValue:
+  name: Optional[str] = None
+  type: Optional[int] = None
+  data: Optional[Union[str, int]] = None
+  delete: bool = False
+
+def write_installation_info():
+  regs = {
+    fr'Software\Python\PythonCore': [
+      RegValue(
+        name='DisplayName',
+        type=winreg.REG_SZ,
+        data='Python Software Foundation',
+      ),
+      RegValue(
+        name='SupportUrl',
+        type=winreg.REG_SZ,
+        data='http://www.python.org/',
+      ),
+    ],
+    fr'Software\Python\PythonCore\{PYTHON_VERSION}': [
+      RegValue(
+        name='DisplayName',
+        type=winreg.REG_SZ,
+        data=f'Python {PYTHON_VERSION} ({PYTHON_ARCH_BIT}-bit)',
+      ),
+      RegValue(
+        name='SupportUrl',
+        type=winreg.REG_SZ,
+        data='http://www.python.org/',
+      ),
+      RegValue(
+        name='SysArchitecture',
+        type=winreg.REG_SZ,
+        data=f'{PYTHON_ARCH_BIT}bit',
+      ),
+      RegValue(
+        name='SysVersion',
+        type=winreg.REG_SZ,
+        data=PYTHON_VERSION,
+      ),
+      RegValue(
+        name='Version',
+        type=winreg.REG_SZ,
+        data=PYTHON_VERSION_FULL,
+      ),
+    ],
+    fr'Software\Python\PythonCore\{PYTHON_VERSION}\Help\Main Python Documentation': [
+      RegValue(
+        name=None,
+        type=winreg.REG_SZ,
+        data=f'{PYTHON_VERSION}\Doc\python{PYTHON_VERSION_CLEAN}.chm',
+      ),
+      RegValue(
+        name='DisplayName',
+        type=winreg.REG_SZ,
+        data=f'Python {PYTHON_VERSION_FULL} Documentation',
+      ),
+    ],
+    fr'Software\Python\PythonCore\{PYTHON_VERSION}\InstallPath': [
+      RegValue(
+        name=None,
+        type=winreg.REG_SZ,
+        data=PYTHON_ROOT,
+      ),
+      RegValue(
+        name='ExecutablePath',
+        type=winreg.REG_SZ,
+        data=f'{PYTHON_ROOT}\python.exe',
+      ),
+      RegValue(
+        name='WindowedExecutablePath',
+        type=winreg.REG_SZ,
+        data=f'{PYTHON_ROOT}\pythonw.exe',
+      ),
+    ],
+    fr'Software\Python\PythonCore\{PYTHON_VERSION}\PythonPath': [
+      RegValue(
+        name=None,
+        type=winreg.REG_SZ,
+        data=f'{PYTHON_ROOT}\Lib;{PYTHON_ROOT}\DLLs',
+      ),
+    ],
+  }
+  logger.info('Writing installation info to registry...')
+  update_registry(regs=regs)
+
+def remove_installation_info():
+  regs = {
+    fr'Software\Python\PythonCore\{PYTHON_VERSION}': None,
+  }
+  logger.info('Removing installation info from registry...')
+  update_registry(regs=regs)
+
+def update_registry(regs: Dict[str, Optional[List[RegValue]]]):
+  for key_path, values in regs.items():
+    if values is not None:
+      update_registry_keytree(key_path, values)
+    else:
+      delete_registry_keytree(key_path)
+
+def update_registry_keytree(
+  key_path: str,
+  values: List[RegValue],
+):
+  full_key_path = os.path.join(BASE_REG_KEY.name, key_path)
+  try:
+    with winreg.CreateKeyEx(
+        key=BASE_REG_KEY,
+        sub_key=key_path,
+        access=REG_ACCESS_MASK,
+    ) as key:
+      for v in values:
+        value_description = f'value [{v.name}]' if v.name is not None else 'default value'
+        try:
+          if v.delete:
+            winreg.DeleteValue(key, v.name)
+          else:
+            winreg.SetValueEx(key, v.name, 0, v.type, v.data)
+        except:
+          logger.error(f'Failed to {"delete" if v.delete else "set"} {value_description} under [{full_key_path}] in {PYTHON_ARCH_BIT}-bit registry view.')
+  except:
+    logger.error(f'Failed to open/create key [{full_key_path}] in {PYTHON_ARCH_BIT}-bit registry view.')
+
+def delete_registry_keytree(key_path: str):
+  full_key_path = os.path.join(BASE_REG_KEY.name, key_path)
+  try:
+    with winreg.OpenKeyEx(
+        key=BASE_REG_KEY,
+        sub_key=key_path,
+        access=REG_ACCESS_MASK,
+    ) as key:
+      while True:
+        try:
+          delete_registry_keytree(os.path.join(key_path, winreg.EnumKey(key, 0)))
+        except OSError:
+          break
+      while True:
+        try:
+          value_name = winreg.EnumValue(key, 0)[0]
+          value_description = f'value [{value_name}]' if value_name is not None else 'default value'
+          try:
+            winreg.DeleteValue(key, value_name)
+          except:
+            logger.error(f'Failed to delete {value_description} under [{full_key_path}] in {PYTHON_ARCH_BIT}-bit registry view.')
+        except OSError:
+          break
+  except:
+    # No such key, just return.
+    return
+  parent_key_path, key_name = os.path.split(key_path)
+  try:
+    with winreg.OpenKeyEx(
+        key=BASE_REG_KEY,
+        sub_key=parent_key_path,
+        access=REG_ACCESS_MASK,
+    ) as parent_key:
+      winreg.DeleteKey(parent_key, key_name)
+  except:
+    logger.error(f'Failed to delete key [{full_key_path}] in {PYTHON_ARCH_BIT}-bit registry view.')
+
+def configure_logging():
+  for level, name in {
       logging.CRITICAL: 'F',
       logging.ERROR: 'E',
       logging.WARNING: 'W',
@@ -298,4 +298,27 @@ if __name__ == '__main__':
       logging.DEBUG: 'D',
   }.items():
     logging.addLevelName(level, name)
-  Installer.run()
+  handler = logging.StreamHandler()
+  handler.setLevel(logging.DEBUG)
+  handler.setFormatter(logging.Formatter(
+    fmt='[%(asctime)s] (%(levelname)s): %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S',
+  ))
+  global logger
+  logger = logging.getLogger(__name__)
+  logger.setLevel(logging.DEBUG)
+  logger.addHandler(handler)
+  logger.propagate = False
+
+try:
+  configure_logging()
+  signal.signal(signal.SIGINT, signal.SIG_IGN)
+  signal.signal(signal.SIGBREAK, signal.SIG_IGN)
+  if OPERATION is CLIName.WRITE:
+    write_installation_info()
+  else:
+    remove_installation_info()
+  logger.info(f'The operation "{OPERATION}" is complete.')
+except Exception:
+  logger.error(f'The operation "{OPERATION}" failed to complete.')
+  sys.exit(1)
