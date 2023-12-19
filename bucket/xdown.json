@@ -4,7 +4,7 @@
     "description": "A free and adless file downloading/sharing tool.",
     "homepage": "https://xdown.org/",
     "license": "Freeware",
-    "url": "https://raw.githubusercontent.com/xdown-dev/dl/main/dl/windows/i386/xdown-2.0.6.7.zip",
+    "url": "https://dl.xdown.dev/windows/i386/xdown-2.0.6.7.zip",
     "hash": "246c8add6ea4807b96650a7f1a70a27206df4e3edc1e16118db5f7d11338ec7e",
     "extract_dir": "xdown",
     "shortcuts": [
@@ -18,6 +18,6 @@
         "regex": "Latest update version number:([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://raw.githubusercontent.com/xdown-dev/dl/main/dl/windows/i386/xdown-$version.zip"
+        "url": "https://dl.xdown.dev/windows/i386/xdown-$version.zip"
     }
 }
