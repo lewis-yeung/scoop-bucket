@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "0.7.5.1",
+    "version": "0.7.5.2",
     "description": "A tool to redirect News, Search, Widgets, Weather and more to your default browser.",
     "homepage": "https://github.com/rcmaehl/MSEdgeRedirect",
     "license": {
@@ -9,12 +9,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/rcmaehl/MSEdgeRedirect/releases/download/0.7.5.1/MSEdgeRedirect.exe",
-            "hash": "8fe4be5a697b96c85adadd55feda1213f32e57c526363d62cae166e9baa5b593"
+            "url": "https://github.com/rcmaehl/MSEdgeRedirect/releases/download/0.7.5.2/MSEdgeRedirect.exe",
+            "hash": "2058a01453d857a6577fc8d47995c963dd3de4ec2d3828cc5985b81ce41e62a6"
         },
         "32bit": {
-            "url": "https://github.com/rcmaehl/MSEdgeRedirect/releases/download/0.7.5.1/MSEdgeRedirect_x86.exe#/MSEdgeRedirect.exe",
-            "hash": "829ac92986440ee9d041d6b8ad3dc3911ec46c23f3fa01aaece1c788759f0b05"
+            "url": "https://github.com/rcmaehl/MSEdgeRedirect/releases/download/0.7.5.2/MSEdgeRedirect_x86.exe#/MSEdgeRedirect.exe",
+            "hash": "e1e200ae0349124297f2bdbdf0cfe59fccb915e74a796466ac8a82a88ae6b3cc"
         }
     },
     "pre_install": [
