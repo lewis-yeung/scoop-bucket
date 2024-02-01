@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "1.40.2",
+    "version": "1.40.3",
     "description": "A JavaScript, TypeScript, and WebAssembly runtime with secure defaults and a great developer experience.",
     "homepage": "https://deno.land/",
     "license": {
@@ -9,8 +9,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/denoland/deno/releases/download/v1.40.2/deno-x86_64-pc-windows-msvc.zip",
-            "hash": "9f4d40c27050e0b27d2539fd8bc42398553b2a569ff67dfb2aa568c361b55fa5"
+            "url": "https://github.com/denoland/deno/releases/download/v1.40.3/deno-x86_64-pc-windows-msvc.zip",
+            "hash": "b7bd9b078c84a5da813cfae4cf6a7b25bd2962499e21a82a830f60ad0bcef451"
         }
     },
     "bin": "deno.exe",
