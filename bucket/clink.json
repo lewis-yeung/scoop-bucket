@@ -1,14 +1,14 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "1.6.2",
+    "version": "1.6.3",
     "description": "Powerful Bash-style command line editing for cmd.exe.",
     "homepage": "https://chrisant996.github.io/clink/",
     "license": {
         "identifier": "GPL-3.0-only",
         "url": "https://github.com/chrisant996/clink/blob/master/LICENSE"
     },
-    "url": "https://github.com/chrisant996/clink/releases/download/v1.6.2/clink.1.6.2.864f24.zip",
-    "hash": "ba776721ed338630ebcb3ca0ff1d725fb871dacc3750f4ce4505488415d4f30e",
+    "url": "https://github.com/chrisant996/clink/releases/download/v1.6.3/clink.1.6.3.af47db.zip",
+    "hash": "441d65f10db976b136cb46bbd5866ee9f310f189348127a33c232eb3f27a0d89",
     "bin": "clink.bat",
     "checkver": {
         "github": "https://github.com/chrisant996/clink",
