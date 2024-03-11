@@ -19,8 +19,7 @@
     },
     "bin": "elvish.exe",
     "checkver": {
-        "url": "https://elv.sh/get/",
-        "regex": "\\s+([\\d.]+) \\(<a"
+        "github": "https://github.com/elves/elvish"
     },
     "autoupdate": {
         "architecture": {
