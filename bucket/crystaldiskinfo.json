@@ -7,7 +7,7 @@
         "identifier": "MIT",
         "url": "https://crystalmark.info/en/software/crystaldiskinfo/crystaldiskinfo-license/"
     },
-    "url": "https://udomain.dl.sourceforge.net/project/crystaldiskinfo/9.2.3/CrystalDiskInfo9_2_3.zip",
+    "url": "https://onboardcloud.dl.sourceforge.net/project/crystaldiskinfo/9.2.3/CrystalDiskInfo9_2_3.zip",
     "hash": "sha1:c6ebf480c1435ad485b9849c30c3a6985f67584f",
     "architecture": {
         "64bit": {
@@ -45,6 +45,6 @@
         "regex": "\\[\\d{4}/\\d{2}/\\d{2}\\]\\s+CrystalDiskInfo\\s+([\\w.]+)"
     },
     "autoupdate": {
-        "url": "https://udomain.dl.sourceforge.net/project/crystaldiskinfo/$version/CrystalDiskInfo$underscoreVersion.zip"
+        "url": "https://onboardcloud.dl.sourceforge.net/project/crystaldiskinfo/$version/CrystalDiskInfo$underscoreVersion.zip"
     }
 }
