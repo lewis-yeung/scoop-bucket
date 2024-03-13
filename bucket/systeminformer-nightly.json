@@ -1,14 +1,14 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "3.0.7478",
+    "version": "3.0.7479",
     "description": "A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware.",
     "homepage": "https://systeminformer.sourceforge.io/nightly.php",
     "license": {
         "identifier": "GPL-3.0-only",
         "url": "https://github.com/winsiderss/systeminformer/blob/master/LICENSE.txt"
     },
-    "url": "https://github.com/winsiderss/si-builds/releases/download/3.0.7478/systeminformer-3.0.7478-bin.zip",
-    "hash": "cbb610de52e8b03bd705c589fb76a73c839e0273b67986fa4c027e93d8a364b2",
+    "url": "https://github.com/winsiderss/si-builds/releases/download/3.0.7479/systeminformer-3.0.7479-bin.zip",
+    "hash": "91a20c206116d9a392e5105827ddc85a474f768bc0934e75e2c1e40afbc1681b",
     "architecture": {
         "64bit": {
             "extract_dir": "amd64"
