@@ -58,7 +58,13 @@
         "Lib\\site-packages"
     ],
     "checkver": {
-        "url": "https://www.python.org/downloads/windows/",
+        "script": [
+            "$uri = 'https://www.python.org/downloads/windows/'",
+            "$prevProgressPreference = $ProgressPreference",
+            "$ProgressPreference = 'SilentlyContinue'",
+            "(Invoke-WebRequest -Uri $uri).Content",
+            "$ProgressPreference = $prevProgressPreference"
+        ],
         "regex": "Latest Python 3 Release - Python ([\\d.]+)"
     },
     "autoupdate": {
