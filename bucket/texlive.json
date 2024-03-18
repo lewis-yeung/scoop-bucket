@@ -1,14 +1,14 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "2023",
+    "version": "2024",
     "description": "A cross-platform, free software distribution for the TeX typesetting system that includes major TeX-related programs, macro packages, and fonts.",
     "homepage": "https://tug.org/texlive/",
     "license": {
         "identifier": "LPPL-1.3c,GPL-2.0-only",
         "url": "https://tug.org/texlive/LICENSE.TL"
     },
-    "url": "https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2023.iso",
-    "hash": "sha512:3a78cc59d562a9224543b90318ecb28d3ae7f975c2a031e15304a20b8fb0abac6e0ed63012c0bdf8f5edd39380caf122a17c948c05b28ea38fe90f2f0b19bdba",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2024.iso",
+    "hash": "sha512:6e3c3470ee5ca903bb5c31f436b018cd2cfbc526c4ca563ccb15959802f8b1a6c0475c58566c1afaba19dc780fd192ac5511818ef5a89828d935c66c62cfcb2a",
     "extract_to": "installer",
     "installer": {
         "script": [
@@ -47,7 +47,8 @@
     ],
     "persist": "texmf-config",
     "checkver": {
-        "regex": "Current release: TeX Live ([\\d]+)"
+        "url": "https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/",
+        "regex": "texlive([\\d]+).iso"
     },
     "autoupdate": {
         "url": "https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive$version.iso",
