@@ -60,10 +60,10 @@
     "checkver": {
         "script": [
             "$uri = 'https://www.python.org/downloads/windows/'",
-            "$prevProgressPreference = $ProgressPreference",
-            "$ProgressPreference = 'SilentlyContinue'",
+            "$prevProgressPreference = $global:ProgressPreference",
+            "$global:ProgressPreference = 'SilentlyContinue'",
             "(Invoke-WebRequest -Uri $uri).Content",
-            "$ProgressPreference = $prevProgressPreference"
+            "$global:ProgressPreference = $prevProgressPreference"
         ],
         "regex": "Latest Python 3 Release - Python ([\\d.]+)"
     },

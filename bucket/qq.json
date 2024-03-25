@@ -28,8 +28,8 @@
     "checkver": {
         "script": [
             "$uri = 'https://api.github.com/repos/microsoft/winget-pkgs/contents/manifests/t/Tencent/QQ/NT'",
-            "$prevProgressPreference = $ProgressPreference",
-            "$ProgressPreference = 'SilentlyContinue'",
+            "$prevProgressPreference = $global:ProgressPreference",
+            "$global:ProgressPreference = 'SilentlyContinue'",
             "$latestVersion = ((Invoke-WebRequest -Uri $uri).Content |",
             "  ConvertFrom-Json |",
             "  ForEach-Object { $_.name } |",
@@ -38,7 +38,7 @@
             "\"version:$latestVersion\"",
             "$uri = \"https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/t/Tencent/QQ/NT/$latestVersion/Tencent.QQ.NT.installer.yaml\"",
             "$installerInfo = (Invoke-WebRequest -Uri $uri).Content",
-            "$ProgressPreference = $prevProgressPreference",
+            "$global:ProgressPreference = $prevProgressPreference",
             "$installerInfo -split '[\\r\\n]+' | ForEach-Object {",
             "  if ($_ -cmatch '^\\s+InstallerUrl:\\s*https://(.+_x86_.+)$') {",
             "    \"url_x86:$($Matches[1])\"",
