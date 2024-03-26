@@ -1,0 +1,39 @@
+{
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "6.0",
+    "description": "A light weight software that provides complete solution for CD/DVD/Blu-ray burning and disc imaging.",
+    "homepage": "http://www.anyburn.com/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "http://www.anyburn.com/tutorials/eula.htm"
+    },
+    "url": "http://www.anyburn.com/anyburn.zip",
+    "hash": "md5:74ca7d957619e29892b9fd5c35462917",
+    "architecture": {
+        "64bit": {
+            "extract_dir": "AnyBurn(64-bit)"
+        },
+        "32bit": {
+            "extract_dir": "AnyBurn(32-bit)"
+        }
+    },
+    "bin": "abcmd.exe",
+    "shortcuts": [
+        [
+            "AnyBurn.exe",
+            "AnyBurn"
+        ]
+    ],
+    "persist": "anyburn.ini",
+    "checkver": {
+        "url": "http://www.anyburn.com/download.php",
+        "regex": "V ([\\d.]+), Released on"
+    },
+    "autoupdate": {
+        "url": "http://www.anyburn.com/anyburn.zip",
+        "hash": {
+            "url": "http://www.anyburn.com/download.php",
+            "regex": "MD5:\\s+$md5"
+        }
+    }
+}
