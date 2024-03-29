@@ -1,14 +1,14 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "5.7.4",
+    "version": "5.7.5",
     "description": "The fastest copy/backup software on Windows.",
     "homepage": "https://fastcopy.jp",
     "license": {
         "identifier": "Freeware",
         "url": "https://fastcopy.jp/help/fastcopy_eng.htm#license"
     },
-    "url": "https://raw.githubusercontent.com/FastCopyLab/FastCopyDist2/main/FastCopy5.7.4_installer.exe",
-    "hash": "9a01cd0e1a0b29011c0a2c4bf0cf48aa46af48aee0ab40b8e3c42353aa732142",
+    "url": "https://raw.githubusercontent.com/FastCopyLab/FastCopyDist2/main/FastCopy5.7.5_installer.exe",
+    "hash": "189395c4e3b5bf6b54cb74caecf202fdb20449b23c07a13a7924b60e8d45c622",
     "architecture": {
         "64bit": {
             "installer": {
