@@ -47,7 +47,10 @@ class BaseRegKey(IntEnum):
 
 def parse_args():
   help_formatter = RawTextHelpFormatter
-  original_add_usage = cast(Callable, getattr(help_formatter, 'add_usage'))
+  original_add_usage = cast(
+    Callable,
+    getattr(help_formatter, 'add_usage'),
+  )
 
   def _add_usage(*args, **kwargs):
     if len(args) < 5:
@@ -57,8 +60,7 @@ def parse_args():
   help_formatter.add_usage = _add_usage
   root_parser = ArgumentParser(
     description='Write/Remove Python installation info to/from Windows registry, which allows/disallows apps and third-party installers to discover the installation of Python that runs this script.',
-    epilog=f'''
-NOTES:
+    epilog=f'''\nNOTES:
   - Elevated privileges are required for modifying the registry.
   - This script is intended to be run as:
     <path_to_python_exe> "{__file__}" [{CLIName.FLAGS}]
@@ -121,11 +123,22 @@ from typing import (
   Union,
 )
 
-OPERATION = CLIName.WRITE if cli_args[CLIName.WRITE] else CLIName.REMOVE
+if cli_args[CLIName.WRITE]:
+  OPERATION = CLIName.WRITE
+else:
+  OPERATION = CLIName.REMOVE
 PYTHON_VERSION = '.'.join(PYTHON_VERSION_TUPLE[:2])
 PYTHON_VERSION_CLEAN = ''.join(PYTHON_VERSION_TUPLE)
-BASE_REG_KEY = BaseRegKey.HKLM if cli_args[CLIName.GLOBAL] else BaseRegKey.HKCU
-REG_ACCESS_MASK = winreg.KEY_READ | winreg.KEY_WRITE | (winreg.KEY_WOW64_64KEY if PYTHON_ARCH_BIT == '64' else winreg.KEY_WOW64_32KEY)
+if cli_args[CLIName.GLOBAL]:
+  BASE_REG_KEY = BaseRegKey.HKLM
+else:
+  BASE_REG_KEY = BaseRegKey.HKCU
+
+REG_ACCESS_MASK = winreg.KEY_READ | winreg.KEY_WRITE
+if PYTHON_ARCH_BIT == '64':
+  REG_ACCESS_MASK |= winreg.KEY_WOW64_64KEY
+else:
+  REG_ACCESS_MASK |= winreg.KEY_WOW64_32KEY
 
 @dataclass
 class RegValue:
@@ -241,16 +254,29 @@ def update_registry_keytree(
         access=REG_ACCESS_MASK,
     ) as key:
       for v in values:
-        value_description = f'value [{v.name}]' if v.name is not None else 'default value'
         try:
           if v.delete:
             winreg.DeleteValue(key, v.name)
           else:
             winreg.SetValueEx(key, v.name, 0, v.type, v.data)
         except:
-          logger.error(f'Failed to {"delete" if v.delete else "set"} {value_description} under [{full_key_path}] in {PYTHON_ARCH_BIT}-bit registry view.')
+          if v.name is not None:
+            value_description = f'value [{v.name}]'
+          else:
+            value_description = 'default value'
+          logger.error(str.format(
+            'Failed to {} {} under [{}] in {}-bit registry view.',
+            'delete' if v.delete else 'set',
+            value_description,
+            full_key_path,
+            PYTHON_ARCH_BIT,
+          ))
   except:
-    logger.error(f'Failed to open/create key [{full_key_path}] in {PYTHON_ARCH_BIT}-bit registry view.')
+    logger.error(str.format(
+      'Failed to open/create key [{}] in {}-bit registry view.',
+      full_key_path,
+      PYTHON_ARCH_BIT,
+    ))
 
 def delete_registry_keytree(key_path: str):
   full_key_path = os.path.join(BASE_REG_KEY.name, key_path)
@@ -262,17 +288,28 @@ def delete_registry_keytree(key_path: str):
     ) as key:
       while True:
         try:
-          delete_registry_keytree(os.path.join(key_path, winreg.EnumKey(key, 0)))
+          delete_registry_keytree(os.path.join(
+            key_path,
+            winreg.EnumKey(key, 0),
+          ))
         except OSError:
           break
       while True:
         try:
           value_name = winreg.EnumValue(key, 0)[0]
-          value_description = f'value [{value_name}]' if value_name is not None else 'default value'
           try:
             winreg.DeleteValue(key, value_name)
           except:
-            logger.error(f'Failed to delete {value_description} under [{full_key_path}] in {PYTHON_ARCH_BIT}-bit registry view.')
+            if value_name is not None:
+              value_description = f'value [{value_name}]'
+            else:
+              value_description = 'default value'
+            logger.error(str.format(
+              'Failed to delete {} under [{}] in {}-bit registry view.',
+              value_description,
+              full_key_path,
+              PYTHON_ARCH_BIT,
+            ))
         except OSError:
           break
   except:
@@ -287,7 +324,11 @@ def delete_registry_keytree(key_path: str):
     ) as parent_key:
       winreg.DeleteKey(parent_key, key_name)
   except:
-    logger.error(f'Failed to delete key [{full_key_path}] in {PYTHON_ARCH_BIT}-bit registry view.')
+    logger.error(str.format(
+      'Failed to delete key [{}] in {}-bit registry view.',
+      full_key_path,
+      PYTHON_ARCH_BIT,
+    ))
 
 def configure_logging():
   for level, name in {
