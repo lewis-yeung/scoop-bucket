@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "3.12.2",
+    "version": "3.12.3",
     "description": "A programming language that lets you work quickly and integrate systems more effectively.",
     "homepage": "https://www.python.org/",
     "license": {
@@ -10,21 +10,21 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe#/setup.exe",
+                "https://www.python.org/ftp/python/3.12.3/python-3.12.3-amd64.exe#/setup.exe",
                 "https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
             ],
             "hash": [
-                "md5:44abfae489d87cc005d50a9267b5d58d",
+                "edfc6c84dc47eebd4fae9167e96ff5d9c27f8abaa779ee1deab9c3d964d0de3c",
                 "f3cac6c594298b9a31c1ae781f36217b5294112a0155a8da75bacdda353023b3"
             ]
         },
         "32bit": {
             "url": [
-                "https://www.python.org/ftp/python/3.12.2/python-3.12.2.exe#/setup.exe",
+                "https://www.python.org/ftp/python/3.12.3/python-3.12.3.exe#/setup.exe",
                 "https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
             ],
             "hash": [
-                "md5:bc4d721cf44a52fa9e19c1209d45e8c3",
+                "a9f37c55f9922d00ef25af40d5017e86c2d98abd7d599307bccf0f2b3d055983",
                 "f3cac6c594298b9a31c1ae781f36217b5294112a0155a8da75bacdda353023b3"
             ]
         }
