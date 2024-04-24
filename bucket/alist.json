@@ -28,10 +28,7 @@
             "--force-bin-dir"
         ]
     ],
-    "persist": [
-        "data",
-        "log"
-    ],
+    "persist": "data",
     "checkver": {
         "github": "https://github.com/alist-org/alist"
     },
