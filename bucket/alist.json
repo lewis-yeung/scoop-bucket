@@ -21,13 +21,7 @@
             "hash": "md5:f10e7907adbd2da5c4f37bf222bde118"
         }
     },
-    "bin": [
-        [
-            "alist.exe",
-            "alist",
-            "--force-bin-dir"
-        ]
-    ],
+    "bin": "alist.exe",
     "persist": "data",
     "checkver": {
         "github": "https://github.com/alist-org/alist"
