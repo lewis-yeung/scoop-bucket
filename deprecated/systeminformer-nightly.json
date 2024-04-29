@@ -26,15 +26,5 @@
             "SystemInformer.exe",
             "System Informer"
         ]
-    ],
-    "checkver": {
-        "regex": "systeminformer-([\\d.]+)"
-    },
-    "autoupdate": {
-        "url": "https://github.com/winsiderss/si-builds/releases/download/$version/systeminformer-$version-canary-bin.zip",
-        "hash": {
-            "url": "https://systeminformer.sourceforge.io/canary.php",
-            "regex": "(?sm)Binaries .*?>$sha256<"
-        }
-    }
+    ]
 }
