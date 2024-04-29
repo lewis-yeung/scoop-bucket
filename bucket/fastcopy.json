@@ -9,27 +9,21 @@
     },
     "url": "https://raw.githubusercontent.com/FastCopyLab/FastCopyDist2/main/FastCopy5.7.5_installer.exe",
     "hash": "189395c4e3b5bf6b54cb74caecf202fdb20449b23c07a13a7924b60e8d45c622",
-    "architecture": {
-        "64bit": {
-            "installer": {
-                "script": [
-                    "Invoke-ExternalCommand \"$dir\\$fname\" '/EXTRACT64' | Out-Null",
-                    "Get-ChildItem \"$dir\\FastCopy$version*x64\\*\" -Recurse | Move-Item -Destination $dir",
-                    "Remove-Item \"$dir\\$fname\", \"$dir\\FastCopy${version}_x64\""
-                ]
-            }
-        },
-        "32bit": {
-            "installer": {
-                "script": [
-                    "Invoke-ExternalCommand \"$dir\\$fname\" '/EXTRACT32' | Out-Null",
-                    "Get-ChildItem \"$dir\\FastCopy$version\\*\" -Recurse | Move-Item -Destination $dir",
-                    "Remove-Item \"$dir\\$fname\", \"$dir\\FastCopy$version\""
-                ]
-            }
-        }
-    },
-    "pre_install": "if (!(Test-Path \"$persist_dir\\FastCopy2.ini\")) { Set-Content -Encoding Ascii -Path \"$dir\\FastCopy2.ini\" -Value '[main]' }",
+    "pre_install": [
+        "Invoke-ExternalCommand \"$dir\\$fname\" \"/EXTRACT$($architecture.Substring(0, 2))\" | Out-Null",
+        "\"$(if ($architecture -eq '64bit') { '_x64' } else { '' })\" | ForEach-Object {",
+        "  Get-ChildItem \"$dir\\FastCopy$version$_\\*\" -Recurse | Move-Item -Destination $dir",
+        "  Remove-Item @(",
+        "    \"$dir\\$fname\"",
+        "    \"$dir\\FastCopy$version$_\"",
+        "    \"$dir\\msix\"",
+        "    \"$dir\\setup.exe\"",
+        "  ) -Recurse -Force -ErrorAction SilentlyContinue",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\FastCopy2.ini\")) {",
+        "  Set-Content -Encoding Ascii -Path \"$dir\\FastCopy2.ini\" -Value '[main]'",
+        "}"
+    ],
     "shortcuts": [
         [
             "FastCopy.exe",
