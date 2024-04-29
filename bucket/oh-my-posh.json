@@ -45,12 +45,10 @@
         }
     },
     "extract_to": "themes",
-    "installer": {
-        "script": [
-            "New-Item -ItemType Directory -Path \"$dir\\bin\" -Force | Out-Null",
-            "Move-Item -Path \"$dir\\posh-windows-*.exe\" -Destination \"$dir\\bin\\oh-my-posh.exe\" -Force"
-        ]
-    },
+    "pre_install": [
+        "New-Item -ItemType Directory -Path \"$dir\\bin\" -Force | Out-Null",
+        "Move-Item -Path \"$dir\\posh-windows-*.exe\" -Destination \"$dir\\bin\\oh-my-posh.exe\" -Force"
+    ],
     "env_add_path": "bin",
     "env_set": {
         "POSH_THEMES_PATH": "$dir\\themes"
