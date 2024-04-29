@@ -4,7 +4,7 @@
     "description": "A set of tools to create, alter and inspect Matroska files.",
     "homepage": "https://mkvtoolnix.download/",
     "license": {
-        "identifier": "GPL-2.0-only",
+        "identifier": "GPL-2.0-or-later",
         "url": "https://gitlab.com/mbunkus/mkvtoolnix/-/blob/main/COPYING"
     },
     "architecture": {
