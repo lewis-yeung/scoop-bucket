@@ -21,14 +21,20 @@
     "pre_install": [
         "if (Test-Path \"$persist_dir\\mkvtoolnix-gui.ini\") {",
         "  # Persist 'mkvtoolnix-gui.ini' manully because a hard link doesn't work.",
-        "  Copy-Item \"$persist_dir\\mkvtoolnix-gui.ini\" \"$dir\"",
+        "  Copy-Item \"$persist_dir\\mkvtoolnix-gui.ini\" \"$dir\\\"",
         "} else {",
-        "  Set-Content -Encoding Ascii -Path \"$dir\\mkvtoolnix-gui.ini\" -Value @('[settings]', 'updates\\checkForUpdates=false')",
+        "  Set-Content -Encoding Ascii -Path \"$dir\\mkvtoolnix-gui.ini\" -Value @(",
+        "    '[settings]'",
+        "    'updates\\checkForUpdates=false'",
+        "  )",
         "}"
     ],
-    "uninstaller": {
-        "script": "Copy-Item \"$dir\\mkvtoolnix-gui.ini\" \"$persist_dir\" -ErrorAction SilentlyContinue -Force"
-    },
+    "pre_uninstall": [
+        "if (!(Test-Path \"$persist_dir\")) {",
+        "  New-Item -ItemType Directory -Path \"$persist_dir\" -Force | Out-Null",
+        "}",
+        "Copy-Item \"$dir\\mkvtoolnix-gui.ini\" \"$persist_dir\\\" -ErrorAction SilentlyContinue -Force"
+    ],
     "shortcuts": [
         [
             "mkvtoolnix-gui.exe",
