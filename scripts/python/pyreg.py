@@ -25,7 +25,7 @@ from typing import (
   cast,
 )
 
-PYTHON_ROOT = os.path.realpath(os.path.dirname(sys.executable))
+PYTHON_ROOT = os.path.dirname(os.path.realpath(sys.executable))
 PYTHON_ARCH_BIT = platform.architecture()[0][:2]
 PYTHON_VERSION_TUPLE = platform.python_version_tuple()
 PYTHON_VERSION_FULL = '.'.join(PYTHON_VERSION_TUPLE)
