@@ -43,16 +43,22 @@
     "installer": {
         "script": [
             "Expand-DarkArchive \"$dir\\setup.exe\" \"$dir\\_tmp\"",
-            "@('path.msi', 'pip.msi') | ForEach-Object { Remove-Item \"$dir\\_tmp\\AttachedContainer\\$_\" }",
-            "(Get-ChildItem \"$dir\\_tmp\\AttachedContainer\\*.msi\").FullName | ForEach-Object { Expand-MsiArchive $_ \"$dir\" }",
+            "@('path.msi', 'pip.msi') | ForEach-Object {",
+            "  Remove-Item \"$dir\\_tmp\\AttachedContainer\\$_\"",
+            "}",
+            "(Get-ChildItem \"$dir\\_tmp\\AttachedContainer\\*.msi\").FullName | ForEach-Object {",
+            "  Expand-MsiArchive $_ \"$dir\"",
+            "}",
             "Remove-Item \"$dir\\_tmp\", \"$dir\\setup.exe\" -Force -Recurse",
-            "Invoke-ExternalCommand \"gsudo.exe\" -Args @(\"$dir\\python.exe\", \"$dir\\pyreg.py\", $(if ($global) {'-wg'} else {'-w'})) | Out-Null"
+            "& gsudo.exe \"$dir\\python.exe\" \"$dir\\pyreg.py\" $(if ($global) {'-wg'} else {'-w'})) | Out-Null"
         ]
     },
-    "uninstaller": {
-        "script": "if ($cmd -eq 'uninstall') { Invoke-ExternalCommand \"gsudo.exe\" -Args @(\"$dir\\python.exe\", \"$dir\\pyreg.py\", $(if ($global) {'-rg'} else {'-r'})) | Out-Null }"
-    },
-    "post_install": "& \"$dir\\python.exe\" -E -s -m ensurepip -U --default-pip | Out-Null",
+    "post_install": "& \"$dir\\python.exe\" -Es -m ensurepip -U --default-pip | Out-Null",
+    "pre_uninstall": [
+        "if ($cmd -eq 'uninstall') {",
+        "  & gsudo.exe \"$dir\\python.exe\" \"$dir\\pyreg.py\" $(if ($global) {'-rg'} else {'-r'})) | Out-Null",
+        "}"
+    ],
     "bin": [
         [
             "python.exe",
