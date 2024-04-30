@@ -14,7 +14,7 @@
                 "https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
             ],
             "hash": [
-                "edfc6c84dc47eebd4fae9167e96ff5d9c27f8abaa779ee1deab9c3d964d0de3c",
+                "md5:c86949710e0471a065db970290819489",
                 "fb650e99f203e5fff14ff2952387ef191ecb189d194dfe25f6c3bec43825fb59"
             ]
         },
@@ -24,7 +24,17 @@
                 "https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
             ],
             "hash": [
-                "a9f37c55f9922d00ef25af40d5017e86c2d98abd7d599307bccf0f2b3d055983",
+                "md5:a95c4fbdce0b6a22ca7cfb450f57c616",
+                "fb650e99f203e5fff14ff2952387ef191ecb189d194dfe25f6c3bec43825fb59"
+            ]
+        },
+        "arm64": {
+            "url": [
+                "https://www.python.org/ftp/python/3.12.3/python-3.12.3-arm64.exe#/setup.exe",
+                "https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
+            ],
+            "hash": [
+                "md5:ef016521b5a147f3ded730801d36a350",
                 "fb650e99f203e5fff14ff2952387ef191ecb189d194dfe25f6c3bec43825fb59"
             ]
         }
@@ -74,6 +84,9 @@
             },
             "32bit": {
                 "url": "https://www.python.org/ftp/python/$version/python-$version.exe#/setup.exe"
+            },
+            "arm64": {
+                "url": "https://www.python.org/ftp/python/$version/python-$version-arm64.exe#/setup.exe"
             }
         },
         "hash": {
