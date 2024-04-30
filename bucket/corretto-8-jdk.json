@@ -23,26 +23,20 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://github.com/corretto/corretto-downloads/raw/main/latest_links/indexmap_with_checksum.json",
-        "jsonpath": "$.windows.x64.jdk.8.zip.resource",
-        "regex": "/([\\d.]+)/"
+        "github": "https://github.com/corretto/corretto-8"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://corretto.aws/downloads/resources/$version/amazon-corretto-$version-windows-x64-jdk.zip",
-                "hash": {
-                    "url": "https://github.com/corretto/corretto-downloads/raw/main/latest_links/indexmap_with_checksum.json",
-                    "jsonpath": "$.windows.x64.jdk.8.zip.checksum_sha256"
-                }
+                "url": "https://corretto.aws/downloads/resources/$version/amazon-corretto-$version-windows-x64-jdk.zip"
             },
             "32bit": {
-                "url": "https://corretto.aws/downloads/resources/$version/amazon-corretto-$version-windows-x86-jdk.zip",
-                "hash": {
-                    "url": "https://github.com/corretto/corretto-downloads/raw/main/latest_links/indexmap_with_checksum.json",
-                    "jsonpath": "$.windows.x86.jdk.8.zip.checksum_sha256"
-                }
+                "url": "https://corretto.aws/downloads/resources/$version/amazon-corretto-$version-windows-x86-jdk.zip"
             }
+        },
+        "hash": {
+            "url": "https://github.com/corretto/corretto-8/releases/tag/$version",
+            "regex": ">$basename<[\\s\\S]*?>$sha256<"
         },
         "extract_dir": "jdk1.8.0_$minorVersion"
     }
