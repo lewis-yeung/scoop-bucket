@@ -40,13 +40,13 @@
             "  Expand-MsiArchive $_ \"$dir\"",
             "}",
             "Remove-Item \"$dir\\_tmp\", \"$dir\\setup.exe\" -Force -Recurse",
-            "& gsudo.exe \"$dir\\python.exe\" \"$dir\\pyreg.py\" $(if ($global) {'-wg'} else {'-w'})) | Out-Null"
+            "& gsudo.exe \"$dir\\python.exe\" \"$dir\\pyreg.py\" $(if ($global) {'-wg'} else {'-w'}) | Out-Null"
         ]
     },
     "post_install": "& \"$dir\\python.exe\" -Es -m ensurepip -U --default-pip | Out-Null",
     "pre_uninstall": [
         "if ($cmd -eq 'uninstall') {",
-        "  & gsudo.exe \"$dir\\python.exe\" \"$dir\\pyreg.py\" $(if ($global) {'-rg'} else {'-r'})) | Out-Null",
+        "  & gsudo.exe \"$dir\\python.exe\" \"$dir\\pyreg.py\" $(if ($global) {'-rg'} else {'-r'}) | Out-Null",
         "}"
     ],
     "bin": [
