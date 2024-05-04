@@ -19,18 +19,7 @@
             "extract_dir": "node-v16.20.2-win-x86"
         }
     },
-    "persist": [
-        "bin",
-        "cache"
-    ],
-    "env_add_path": [
-        ".",
-        "bin"
-    ],
-    "post_install": [
-        "# Set npm prefix to install modules inside bin and npm cache so they persist",
-        "Set-Content -Value \"prefix=$persist_dir\\bin`ncache=$persist_dir\\cache\" -Path \"$dir\\node_modules\\npm\\npmrc\""
-    ],
+    "env_add_path": ".",
     "checkver": {
         "url": "https://nodejs.org/dist/latest-v16.x/",
         "regex": "node-v([\\d.]+)-win-x64\\.7z"
