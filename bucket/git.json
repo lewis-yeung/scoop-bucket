@@ -17,6 +17,7 @@
             "hash": "652b5d6cb381ee9df6d6d411d8e6c02284d3b84ac6c5b5ced50a1d167d9f825a"
         }
     },
+    "post_install": "& \"$dir\\bin\\bash.exe\" -c 'cmd //c /post-install.bat' >$null 2>$null",
     "env_add_path": "bin",
     "persist": "etc\\gitconfig",
     "checkver": {
