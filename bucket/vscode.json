@@ -4,7 +4,7 @@
     "description": "A lightweight but powerful source code editor.",
     "homepage": "https://code.visualstudio.com/",
     "license": {
-        "identifier": "Proprietary|MIT",
+        "identifier": "Proprietary,MIT",
         "url": "https://code.visualstudio.com/License"
     },
     "architecture": {
