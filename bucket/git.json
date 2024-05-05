@@ -4,7 +4,7 @@
     "description": "The Windows port of Git, a free and open source distributed version control system.",
     "homepage": "https://gitforwindows.org/",
     "license": {
-        "identifier": "GPL-2.0-or-later",
+        "identifier": "GPL-2.0-only",
         "url": "https://github.com/git-for-windows/git/blob/main/COPYING"
     },
     "architecture": {
