@@ -23,7 +23,6 @@
             "LX Music"
         ]
     ],
-    "persist": "portable",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
