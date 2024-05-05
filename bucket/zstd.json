@@ -4,8 +4,8 @@
     "description": "A fast lossless compression algorithm, targeting real-time compression scenarios at zlib-level and better compression ratios.",
     "homepage": "https://facebook.github.io/zstd/",
     "license": {
-        "identifier": "BSD-3-Clause|GPL-2.0-only",
-        "url": "https://github.com/xmake-io/xmake/blob/master/LICENSE.md"
+        "identifier": "BSD-3-Clause|GPL-2.0-or-later",
+        "url": "https://github.com/facebook/zstd/blob/dev/LICENSE"
     },
     "architecture": {
         "64bit": {
