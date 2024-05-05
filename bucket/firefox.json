@@ -26,15 +26,16 @@
         ]
     ],
     "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\defaults\\pref\\channel-prefs.js\")) {",
-        "  Set-Content -Encoding Ascii -Path \"$dir\\defaults\\pref\\channel-prefs.js\" -Value 'pref(\"app.update.channel\", \"default\");'",
-        "  Write-Host -ForegroundColor Green \"The auto-update will be disabled. You can change the update channel in '$persist_dir\\defaults\\pref\\channel-prefs.js'.\"",
+        "'defaults\\pref\\channel-prefs.js' | ForEach-Object {",
+        "  if (!(Test-Path \"$persist_dir\\$_\")) {",
+        "    Write-Host -ForegroundColor Green \"Disabling the auto-update...\"",
+        "    Set-Content -Encoding Ascii -Path \"$dir\\$_\" -Value 'pref(\"app.update.channel\", \"default\");'",
+        "  }",
         "}"
     ],
     "persist": [
         "defaults\\pref\\channel-prefs.js",
-        "distribution",
-        "profile"
+        "distribution"
     ],
     "checkver": {
         "url": "https://www.mozilla.org/en-US/firefox/notes/",
