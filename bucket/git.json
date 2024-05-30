@@ -19,7 +19,10 @@
     },
     "post_install": "& \"$dir\\bin\\bash.exe\" -c 'cmd //c /post-install.bat' *>$null",
     "env_add_path": "bin",
-    "persist": "etc\\gitconfig",
+    "persist": [
+        "etc\\fstab",
+        "etc\\gitconfig"
+    ],
     "checkver": {
         "url": "https://api.github.com/repos/git-for-windows/git/releases/latest",
         "jsonpath": "$.tag_name",
