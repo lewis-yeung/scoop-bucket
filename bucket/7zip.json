@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "24.06",
+    "version": "24.07",
     "description": "A multi-format file archiver with a high compression ratio.",
     "homepage": "https://www.7-zip.org/",
     "license": {
@@ -11,32 +11,32 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://www.7-zip.org/a/7z2406-x64.exe#/setup.exe",
+                "https://www.7-zip.org/a/7z2407-x64.exe#/setup.exe",
                 "https://www.7-zip.org/a/7zr.exe"
             ],
             "hash": [
-                "6220bbe6c26d87fc343e0ffa4e20ccfafeca7dab2742e41963c40b56fb884807",
-                "06654d17334fa342f62d42bd805c8bc6da8105612d9ff45c45b8f092a7c46e17"
+                "ad12cec3a3957ff73a689e0d65a05b6328c80fd76336a1b1a6285335f8dab1ba",
+                "9d182f421381429fd77598feb609fefb54dcaef722ddbf5aa611b68a706c10d3"
             ]
         },
         "32bit": {
             "url": [
-                "https://www.7-zip.org/a/7z2406.exe#/setup.exe",
+                "https://www.7-zip.org/a/7z2407.exe#/setup.exe",
                 "https://www.7-zip.org/a/7zr.exe"
             ],
             "hash": [
-                "1ea62e6b152e4b7dbadf45289e04bf4ea7431c7928a9b3c6ba5e4c06fe368085",
-                "06654d17334fa342f62d42bd805c8bc6da8105612d9ff45c45b8f092a7c46e17"
+                "151261d221ba0f6120c7f16700ab0724b92ff3230f05a89ef15dbcd8198678bb",
+                "9d182f421381429fd77598feb609fefb54dcaef722ddbf5aa611b68a706c10d3"
             ]
         },
         "arm64": {
             "url": [
-                "https://www.7-zip.org/a/7z2406-arm64.exe#/setup.exe",
+                "https://www.7-zip.org/a/7z2407-arm64.exe#/setup.exe",
                 "https://www.7-zip.org/a/7zr.exe"
             ],
             "hash": [
-                "43ac4903ac5ba7219c665637e71917c6a2c2f8e515344e1ee04c263b8f5c934d",
-                "06654d17334fa342f62d42bd805c8bc6da8105612d9ff45c45b8f092a7c46e17"
+                "ffd49da0ca77d5376d9040d6ccd3a9963f6355f3e796455812569b4c61593f34",
+                "9d182f421381429fd77598feb609fefb54dcaef722ddbf5aa611b68a706c10d3"
             ]
         }
     },
