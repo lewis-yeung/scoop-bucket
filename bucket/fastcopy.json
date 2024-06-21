@@ -1,14 +1,14 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "5.7.12",
+    "version": "5.7.14",
     "description": "The fastest copy/backup software on Windows.",
     "homepage": "https://fastcopy.jp",
     "license": {
         "identifier": "Freeware",
         "url": "https://fastcopy.jp/help/fastcopy_eng.htm#license"
     },
-    "url": "https://raw.githubusercontent.com/FastCopyLab/FastCopyDist2/main/FastCopy5.7.12_installer.exe",
-    "hash": "a3ec50bc0379ac37e093570610f74df93c51cc9b012cdb63d77b073995c5f677",
+    "url": "https://raw.githubusercontent.com/FastCopyLab/FastCopyDist2/main/FastCopy5.7.14_installer.exe",
+    "hash": "422980824d5e1236cf6661cf4d7277b188c06f1714f4eab56ed3de81e380e480",
     "pre_install": [
         "Invoke-ExternalCommand \"$dir\\$fname\" \"/EXTRACT$($architecture.Substring(0, 2))\" | Out-Null",
         "\"$(if ($architecture -eq '64bit') { '_x64' } else { '' })\" | ForEach-Object {",
