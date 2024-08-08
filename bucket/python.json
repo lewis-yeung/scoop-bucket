@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "3.12.4",
+    "version": "3.12.5",
     "description": "A programming language that lets you work quickly and integrate systems more effectively.",
     "homepage": "https://www.python.org/",
     "license": {
@@ -10,31 +10,31 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe#/setup.exe",
+                "https://www.python.org/ftp/python/3.12.5/python-3.12.5-amd64.exe#/setup.exe",
                 "https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
             ],
             "hash": [
-                "md5:f3df1be26cc7cbd8252ab5632b62d740",
+                "md5:bbcb2fcf9d739f776fb6414afc12c80d",
                 "fb650e99f203e5fff14ff2952387ef191ecb189d194dfe25f6c3bec43825fb59"
             ]
         },
         "32bit": {
             "url": [
-                "https://www.python.org/ftp/python/3.12.4/python-3.12.4.exe#/setup.exe",
+                "https://www.python.org/ftp/python/3.12.5/python-3.12.5.exe#/setup.exe",
                 "https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
             ],
             "hash": [
-                "md5:d9c98b529889aba04ca5ec1c6b5f986f",
+                "md5:d151f5f116e11c4d40021527f51ddf67",
                 "fb650e99f203e5fff14ff2952387ef191ecb189d194dfe25f6c3bec43825fb59"
             ]
         },
         "arm64": {
             "url": [
-                "https://www.python.org/ftp/python/3.12.4/python-3.12.4-arm64.exe#/setup.exe",
+                "https://www.python.org/ftp/python/3.12.5/python-3.12.5-arm64.exe#/setup.exe",
                 "https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
             ],
             "hash": [
-                "md5:f3c2064f11c5f4eee475928a0fc62199",
+                "md5:365d59eff83dfea9af528df4ebd060cb",
                 "fb650e99f203e5fff14ff2952387ef191ecb189d194dfe25f6c3bec43825fb59"
             ]
         }
