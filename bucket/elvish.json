@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "0.20.1",
+    "version": "0.21.0",
     "description": "An expressive programming language and a versatile interactive shell, combined into one seamless package.",
     "homepage": "https://elv.sh",
     "license": {
@@ -9,12 +9,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.tuna.tsinghua.edu.cn/elvish/windows-amd64/elvish-v0.20.1.exe#/elvish.exe",
-            "hash": "05dbc52d08350ccc1e1108c2cfcadcef454cb147a32e14e0bff2bc036585c42b"
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/elvish/windows-amd64/elvish-v0.21.0.exe#/elvish.exe",
+            "hash": "6602524caf66816529f5cfce57eec81518e21422cd21dc3167523cfe63cbd54b"
         },
         "32bit": {
-            "url": "https://mirrors.tuna.tsinghua.edu.cn/elvish/windows-386/elvish-v0.20.1.exe#/elvish.exe",
-            "hash": "3765e7fcc565f6e535ce62f622320ac43477c5e5fb0477487ba255705346cd58"
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/elvish/windows-386/elvish-v0.21.0.exe#/elvish.exe",
+            "hash": "9cf7fe0fa6efc509f867b4c8c42ea02b6a30e481e002ecba9a34b7862de4adce"
         }
     },
     "bin": "elvish.exe",
