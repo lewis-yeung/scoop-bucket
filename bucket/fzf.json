@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "0.54.3",
+    "version": "0.55.0",
     "description": "A general-purpose command-line fuzzy finder.",
     "homepage": "https://github.com/junegunn/fzf",
     "license": {
@@ -9,8 +9,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/junegunn/fzf/releases/download/v0.54.3/fzf-0.54.3-windows_amd64.zip",
-            "hash": "604d11b1c36d03675de80d598dfe8a3eba4f8607e0d8bbcc63734effde209bb6"
+            "url": "https://github.com/junegunn/fzf/releases/download/v0.55.0/fzf-0.55.0-windows_amd64.zip",
+            "hash": "48fea906ed9914e2e9482055b7e8bbb90cba23ef34c0473110b64ebd65352df1"
         }
     },
     "bin": "fzf.exe",
