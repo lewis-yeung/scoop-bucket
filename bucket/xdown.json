@@ -1,11 +1,11 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "2.0.8.7",
+    "version": "2.0.8.9",
     "description": "A free and adless file downloading/sharing tool.",
     "homepage": "https://xdown.org/",
     "license": "Freeware",
-    "url": "https://dl.xdown.dev/windows/i386/xdown-2.0.8.7.zip",
-    "hash": "c35a641d52667488152d4bab1990dc293d48c6714d3987d53df3b807f2ffd185",
+    "url": "https://raw.githubusercontent.com/xdown-dev/dl/main/dl/windows/i386/xdown-2.0.8.9.zip",
+    "hash": "eb851d94c9ad78fa8f7443c28a0a3cce7c0136c82f15e2e3aa9326d201946a21",
     "extract_dir": "xdown",
     "post_install": "Remove-Item \"$dir\\XDownUpdate.exe\" -Force -ErrorAction SilentlyContinue",
     "shortcuts": [
@@ -15,9 +15,10 @@
         ]
     ],
     "checkver": {
-        "regex": "Latest update version number:([\\d.]+)"
+        "url": "https://xdown.org/Updatelog/",
+        "regex": "([\\d.]+).*\\[windows\\]"
     },
     "autoupdate": {
-        "url": "https://dl.xdown.dev/windows/i386/xdown-$version.zip"
+        "url": "https://raw.githubusercontent.com/xdown-dev/dl/main/dl/windows/i386/xdown-$version.zip"
     }
 }
