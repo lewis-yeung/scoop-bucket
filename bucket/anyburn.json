@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "6.2",
+    "version": "6.3",
     "description": "A light weight software that provides complete solution for CD/DVD/Blu-ray burning and disc imaging.",
     "homepage": "http://www.anyburn.com/",
     "license": {
@@ -8,7 +8,7 @@
         "url": "http://www.anyburn.com/tutorials/eula.htm"
     },
     "url": "http://www.anyburn.com/anyburn.zip",
-    "hash": "md5:9f5ab5eb7c16e40c76b5eeeebacdaa50",
+    "hash": "md5:35e24137f2b9a7fcbaae808b10c0259d",
     "architecture": {
         "64bit": {
             "extract_dir": "AnyBurn(64-bit)"
