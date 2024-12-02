@@ -78,7 +78,7 @@
             }
         },
         "hash": {
-            "url": "$url.sha256"
+            "url": "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$version/checksums.txt"
         }
     }
 }
