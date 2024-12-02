@@ -31,7 +31,7 @@
             }
         },
         "hash": {
-            "url": "https://download.dbeaver.com/community/$version/checksum/$basename.sha256"
+            "url": "https://dbeaver.io/files/$version/checksum/$basename.sha256"
         }
     }
 }
