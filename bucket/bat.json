@@ -1,7 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "0.25.0",
-    "description": "A cat(1) clone with syntax highlighting and Git integration",
+    "description": "A cat(1) clone with syntax highlighting and Git integration.",
     "homepage": "https://github.com/sharkdp/bat",
     "license": "Apache-2.0|MIT",
     "suggest": {
