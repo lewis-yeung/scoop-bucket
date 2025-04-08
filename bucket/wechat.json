@@ -1,22 +1,29 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "homepage": "https://pc.weixin.qq.com/",
-    "description": "Free messaging and calling app.",
+    "description": "Free messaging and calling app developed by Tencent.",
     "version": "nightly",
     "license": {
         "identifier": "Proprietary",
         "url": "https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=default"
     },
-    "url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
+    "architecture": {
+        "64bit": {
+            "url": "https://dldir1v6.qq.com/weixin/Universal/Windows/WeChatWin.exe#/dl.7z"
+        }
+    },
     "shortcuts": [
         [
-            "wechat.exe",
+            "Weixin.exe",
             "WeChat"
         ]
     ],
-    "post_install": [
-        "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
-        "Remove-Item \"$dir\\`$_15_\" -Force -Recurse",
-        "Remove-Item \"$dir\\`$R5\" -Force -Recurse"
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\install.7z\"",
+        "Remove-Item @(",
+        "  \"$dir\\`$*\"",
+        "  \"$dir\\install.7z\"",
+        "  \"$dir\\Uninstall.exe\"",
+        ") -Force -Recurse"
     ]
 }
