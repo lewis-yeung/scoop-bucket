@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "3.13.2",
+    "version": "3.13.3",
     "description": "A programming language that lets you work quickly and integrate systems more effectively.",
     "homepage": "https://www.python.org/",
     "license": {
@@ -10,31 +10,31 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://www.python.org/ftp/python/3.13.2/python-3.13.2-amd64.exe#/setup.exe",
+                "https://www.python.org/ftp/python/3.13.3/python-3.13.3-amd64.exe#/setup.exe",
                 "https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
             ],
             "hash": [
-                "md5:40d2c830eedee3dd78f4b707f04fd1d2",
+                "md5:be3264daeb8c5e08365492dd02908cfa",
                 "fb650e99f203e5fff14ff2952387ef191ecb189d194dfe25f6c3bec43825fb59"
             ]
         },
         "32bit": {
             "url": [
-                "https://www.python.org/ftp/python/3.13.2/python-3.13.2.exe#/setup.exe",
+                "https://www.python.org/ftp/python/3.13.3/python-3.13.3.exe#/setup.exe",
                 "https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
             ],
             "hash": [
-                "md5:91941eaa5086d500384cb55ad247be87",
+                "md5:fd83ec01f90a1a051f856044b152fb72",
                 "fb650e99f203e5fff14ff2952387ef191ecb189d194dfe25f6c3bec43825fb59"
             ]
         },
         "arm64": {
             "url": [
-                "https://www.python.org/ftp/python/3.13.2/python-3.13.2-arm64.exe#/setup.exe",
+                "https://www.python.org/ftp/python/3.13.3/python-3.13.3-arm64.exe#/setup.exe",
                 "https://raw.githubusercontent.com/lewis-yeung/scoop-bucket/main/scripts/python/pyreg.py"
             ],
             "hash": [
-                "md5:252c8265c8768e14f7eeee3e1fcc39fc",
+                "md5:18bb07bd65e768ae1ab1e8a969d8224a",
                 "fb650e99f203e5fff14ff2952387ef191ecb189d194dfe25f6c3bec43825fb59"
             ]
         }
