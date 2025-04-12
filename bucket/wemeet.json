@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "3.32.2.413",
+    "version": "3.32.3.431",
     "description": "An efficient and reliable video conferencing service powered by Tencent that is built for collaboration.",
     "homepage": "https://meeting.tencent.com/",
     "license": {
@@ -9,12 +9,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://updatecdn.meeting.qq.com/cos/2a15c280af093abad029dc0383d2f184/TencentMeeting_0300000000_3.32.2.413_x86_64.publish.exe#/dl.7z",
-            "hash": "69eff26ca26f78aeb526e50f46eaa9d6ff17af8bdcb5e644673884e86abd281d"
+            "url": "https://updatecdn.meeting.qq.com/cos/d7422ffd4f0d5f376fbac004a0ed4f80/TencentMeeting_0300000000_3.32.3.431_x86_64.publish.exe#/dl.7z",
+            "hash": "1e57809669726bce9a6ff8ddef2e1aa903d58da464fe9ad552efc0f454a84368"
         },
         "32bit": {
-            "url": "https://updatecdn.meeting.qq.com/cos/b79e7dc183ecee0e63cfa61c7073fc17/TencentMeeting_0300000000_3.32.2.413.publish.exe#/dl.7z",
-            "hash": "5422aa4e24776f3352e12231e1d64074e4744911e7f30d30827d6b75dbe8530c"
+            "url": "https://updatecdn.meeting.qq.com/cos/0403754c86efc263807ad9dc55f967fb/TencentMeeting_0300000000_3.32.3.431.publish.exe#/dl.7z",
+            "hash": "345192debeb0631af9573ffcce5ea9dac6de0d810d5954deb398d93aa108bf96"
         }
     },
     "post_install": [
