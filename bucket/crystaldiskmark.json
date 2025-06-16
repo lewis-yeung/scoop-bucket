@@ -1,14 +1,14 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "8.0.6",
+    "version": "9.0.0",
     "description": "A simple disk benchmark software.",
     "homepage": "https://crystalmark.info/en/software/crystaldiskmark/",
     "license": {
         "identifier": "MIT",
         "url": "https://crystalmark.info/en/software/crystaldiskmark/crystaldiskmark-license/"
     },
-    "url": "https://onboardcloud.dl.sourceforge.net/project/crystaldiskmark/8.0.6/CrystalDiskMark8_0_6.zip",
-    "hash": "sha1:a70a1526b5dae20f66cede1a4e9abad85e81460a",
+    "url": "https://onboardcloud.dl.sourceforge.net/project/crystaldiskmark/9.0.0/CrystalDiskMark9_0_0.zip",
+    "hash": "sha1:acff42a6dace94b174b16ef95d089a4266dba70f",
     "architecture": {
         "64bit": {
             "shortcuts": [
