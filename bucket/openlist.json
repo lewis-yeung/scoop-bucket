@@ -1,0 +1,23 @@
+{
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "nightly",
+    "description": "A file list program that supports multiple storage, powered by Gin and Solidjs.",
+    "homepage": "https://oplist.org/",
+    "license": {
+        "identifier": "AGPL-3.0-or-later",
+        "url": "https://github.com/OpenListTeam/OpenList/blob/main/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/OpenListTeam/OpenList/releases/download/beta/openlist-windows-amd64.zip"
+        },
+        "32bit": {
+            "url": "https://github.com/OpenListTeam/OpenList/releases/download/beta/openlist-windows-386.zip"
+        },
+        "arm64": {
+            "url": "https://github.com/OpenListTeam/OpenList/releases/download/beta/openlist-windows-arm64.zip"
+        }
+    },
+    "bin": "openlist.exe",
+    "persist": "data"
+}
