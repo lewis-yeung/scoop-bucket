@@ -1,7 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "3.45.0",
-    "description": "A file list program that supports multiple storage, powered by Gin and Solidjs.",
+    "description": "A file list program that supports multiple storages, powered by Gin and SolidJS.",
     "homepage": "https://alistgo.com/",
     "license": {
         "identifier": "AGPL-3.0-or-later",
@@ -22,24 +22,5 @@
         }
     },
     "bin": "alist.exe",
-    "persist": "data",
-    "checkver": {
-        "github": "https://github.com/AlistGo/alist"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/AlistGo/alist/releases/download/v$version/alist-windows-amd64.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/AlistGo/alist/releases/download/v$version/alist-windows-386.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/AlistGo/alist/releases/download/v$version/alist-windows-arm64.zip"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/md5.txt"
-        }
-    }
+    "persist": "data"
 }
