@@ -31,12 +31,5 @@
                 ]
             ]
         }
-    },
-    "checkver": {
-        "url": "http://www.yubsoft.com/imgdrive/portable.htm",
-        "regex": "ImgDrive Portable ([\\d.]+)"
-    },
-    "autoupdate": {
-        "url": "https://download.yubsoft.com/imgdriveportable_$version.zip"
     }
 }
