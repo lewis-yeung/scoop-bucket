@@ -1,0 +1,45 @@
+{
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "2025.7.17",
+    "description": "Polyglot runtime manager.",
+    "homepage": "https://mise.jdx.dev/",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/jdx/mise/blob/main/LICENSE"
+    },
+    "notes": "See documentation for notes on configuring your shell: https://mise.jdx.dev/installing-mise.html#shells",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/jdx/mise/releases/download/v2025.7.17/mise-v2025.7.17-windows-x64.zip",
+            "hash": "a67cd7c7706c8209206978b6e09bf0a07ca3857171aff5fcddc2b16bdbb4ea19"
+        },
+        "arm64": {
+            "url": "https://github.com/jdx/mise/releases/download/v2025.7.17/mise-v2025.7.17-windows-arm64.zip",
+            "hash": "44bc91fb4dba0ebbcd08b27c5d6e362110c9f6c0fe2837b6868e19fb8da22586"
+        }
+    },
+    "extract_dir": "mise",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir/lib/.disable-self-update\")) {",
+        "  New-Item -Force \"$dir/lib/.disable-self-update\" | Out-Null",
+        "}"
+    ],
+    "bin": "bin/mise.exe",
+    "persist": "lib/.disable-self-update",
+    "checkver": {
+        "github": "https://github.com/jdx/mise"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/jdx/mise/releases/download/v$version/mise-v$version-windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/jdx/mise/releases/download/v$version/mise-v$version-windows-arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHASUMS256.txt"
+        }
+    }
+}
