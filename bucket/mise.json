@@ -19,13 +19,8 @@
         }
     },
     "extract_dir": "mise",
-    "pre_install": [
-        "if (!(Test-Path \"$persist_dir/lib/.disable-self-update\")) {",
-        "  New-Item -Force \"$dir/lib/.disable-self-update\" | Out-Null",
-        "}"
-    ],
+    "pre_install": "New-Item -Force \"$dir/lib/.disable-self-update\" | Out-Null",
     "bin": "bin/mise.exe",
-    "persist": "lib/.disable-self-update",
     "checkver": {
         "github": "https://github.com/jdx/mise"
     },
