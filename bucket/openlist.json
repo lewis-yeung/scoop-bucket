@@ -2,7 +2,7 @@
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "4.0.9",
     "description": "A file list program that supports multiple storages, powered by Gin and SolidJS, fork of AList.",
-    "homepage": "https://docs.oplist.org/",
+    "homepage": "https://doc.oplist.org/",
     "license": {
         "identifier": "AGPL-3.0-or-later",
         "url": "https://github.com/OpenListTeam/OpenList/blob/main/LICENSE"
