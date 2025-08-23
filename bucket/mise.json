@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "2025.8.17",
+    "version": "2025.8.20",
     "description": "Polyglot runtime manager.",
     "homepage": "https://mise.jdx.dev/",
     "license": {
@@ -10,12 +10,12 @@
     "notes": "See documentation for notes on configuring your shell: https://mise.jdx.dev/installing-mise.html#shells",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jdx/mise/releases/download/v2025.8.17/mise-v2025.8.17-windows-x64.zip",
-            "hash": "c4681057efed6798b26af6214482e6e29e5de2ed38b64ec573bcae3e47299382"
+            "url": "https://github.com/jdx/mise/releases/download/v2025.8.20/mise-v2025.8.20-windows-x64.zip",
+            "hash": "812f2b005a27e742dcce7a27d43c09fba4c092674ff6ae885eb251d82d948ec3"
         },
         "arm64": {
-            "url": "https://github.com/jdx/mise/releases/download/v2025.8.17/mise-v2025.8.17-windows-arm64.zip",
-            "hash": "a4fcd0597f46215fa36950951dfde5fe8bc65a26e4d371e8b45bf1ef20d6e501"
+            "url": "https://github.com/jdx/mise/releases/download/v2025.8.20/mise-v2025.8.20-windows-arm64.zip",
+            "hash": "77e2738b3525a7763171a0f66ccdcecfd0e6d5a44b5507b961646bbbec249c00"
         }
     },
     "extract_dir": "mise",
