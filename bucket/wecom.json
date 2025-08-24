@@ -10,8 +10,19 @@
     "url": "https://work.weixin.qq.com/wework_admin/commdownload?platform=win&from=wwindex#/dl.7z",
     "installer": {
         "script": [
-            "Remove-Item \"$dir/`$*\" -Recurse -Force -ErrorAction SilentlyContinue",
-            "Remove-Item \"$dir/Uninstall*\" -Force -ErrorAction SilentlyContinue"
+            "@(",
+            "  'FlutterPlugins'",
+            "  'WeMeet'",
+            ") | ForEach-Object {",
+            "  $versionDir = Get-ChildItem \"$dir/*.*.*.*\"",
+            "  if (Test-Path \"$versionDir/$_.zip\") {",
+            "    Expand-ZipArchive \"$versionDir/$_.zip\" \"$versionDir/$_\"",
+            "  }",
+            "}",
+            "Remove-Item @(",
+            "  \"$dir/`$*\"",
+            "  \"$dir/Uninstall*\"",
+            ") -Force -Recurse -ErrorAction SilentlyContinue"
         ]
     },
     "shortcuts": [
