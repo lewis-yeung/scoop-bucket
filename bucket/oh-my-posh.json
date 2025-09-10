@@ -64,12 +64,6 @@
                     "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$version/themes.zip"
                 ]
             },
-            "32bit": {
-                "url": [
-                    "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$version/posh-windows-386.exe",
-                    "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$version/themes.zip"
-                ]
-            },
             "arm64": {
                 "url": [
                     "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$version/posh-windows-arm64.exe",
