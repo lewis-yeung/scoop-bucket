@@ -24,7 +24,7 @@
         "  \"$dir/uninstall*\"",
         ") -Force -Recurse -ErrorAction SilentlyContinue"
     ],
-    "pre_uninstall": "& gsudo.exe \"$dir/resources/uninstall-service.exe\" | Out-Null",
+    "pre_uninstall": "& gsudo.exe \"$dir/resources/uninstall-service.exe\" *>$null",
     "shortcuts": [
         [
             "clash-verge.exe",
