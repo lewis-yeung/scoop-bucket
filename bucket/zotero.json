@@ -1,15 +1,29 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "6.0.36",
+    "version": "7.0.24",
     "description": "Open-source reference management software to manage bibliographic data and related research materials.",
     "homepage": "https://www.zotero.org/",
     "license": {
         "identifier": "AGPL-3.0-only",
         "url": "https://github.com/zotero/zotero/blob/master/COPYING"
     },
-    "url": "https://download.zotero.org/client/release/6.0.36/Zotero-6.0.36_setup.exe#/dl.7z",
-    "hash": "9fd9d3167653d2b18ec0c507b40da4ac21fc3400ca8c0a97753c4211c969736a",
-    "extract_dir": "core",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.zotero.org/client/release/7.0.24/Zotero-7.0.24_win-x64.zip",
+            "hash": "ad3297c00c38609de53a1c01338e064d7f3db6638128290461998d369d710c41",
+            "extract_dir": "Zotero_win-x64"
+        },
+        "32bit": {
+            "url": "https://download.zotero.org/client/release/7.0.24/Zotero-7.0.24_win32.zip",
+            "hash": "1fade184e591b2d248165afe5924577669977c2bdd3263104a036e8cd40287df",
+            "extract_dir": "Zotero_win32"
+        },
+        "arm64": {
+            "url": "https://download.zotero.org/client/release/7.0.24/Zotero-7.0.24_win-arm64.zip",
+            "hash": "76dab4ba99a98bfb81f2c5c606a392ae34999037470e4e23d73e0b05377b1c76",
+            "extract_dir": "Zotero_win-arm64"
+        }
+    },
     "shortcuts": [
         [
             "zotero.exe",
@@ -21,6 +35,16 @@
         "xpath": "/updates/update/@appVersion"
     },
     "autoupdate": {
-        "url": "https://download.zotero.org/client/release/$version/Zotero-$version_setup.exe#/dl.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://download.zotero.org/client/release/$version/Zotero-$version_win-x64.zip"
+            },
+            "32bit": {
+                "url": "https://download.zotero.org/client/release/$version/Zotero-$version_win32.zip"
+            },
+            "arm64": {
+                "url": "https://download.zotero.org/client/release/$version/Zotero-$version_win-arm64.zip"
+            }
+        }
     }
 }
