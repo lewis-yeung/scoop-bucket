@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "26.23.4",
+    "version": "26.23.5",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v26.23.4/posh-windows-amd64.exe",
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v26.23.4/themes.zip"
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v26.23.5/posh-windows-amd64.exe",
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v26.23.5/themes.zip"
             ],
             "hash": [
-                "1b6220991a7ab4df8d5b708a97de160a9c3e2990c4e1add3e7b507da378c9b05",
-                "2ba3e2c4d89c936fa1191992717f9c8c8b13c97b7609e0a2fab073d57b9f0d1a"
+                "b8d5fe15b6e9f5931413932afc69af989e18065ba5aab3fde646e6aa9d9aa8cd",
+                "617c4f1f816bf28c39c1dd98426188b4d4ed9e260322cd0d622ef71900934d65"
             ]
         },
         "arm64": {
             "url": [
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v26.23.4/posh-windows-arm64.exe",
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v26.23.4/themes.zip"
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v26.23.5/posh-windows-arm64.exe",
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v26.23.5/themes.zip"
             ],
             "hash": [
-                "cfa4bcfde055f713d67f747700a95f4c2a15ff105dcd4184ac47b028bd3ae6b3",
-                "2ba3e2c4d89c936fa1191992717f9c8c8b13c97b7609e0a2fab073d57b9f0d1a"
+                "2283977b0d233b971e02c22cf98c73a95a50703145f3f0a24d6fee565f1b5937",
+                "617c4f1f816bf28c39c1dd98426188b4d4ed9e260322cd0d622ef71900934d65"
             ]
         }
     },
