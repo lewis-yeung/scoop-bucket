@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "2.51.0",
+    "version": "2.51.1",
     "description": "The Windows port of Git, a free and open source distributed version control system.",
     "homepage": "https://gitforwindows.org/",
     "license": {
@@ -9,12 +9,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/git-for-windows/git/releases/download/v2.51.0.windows.1/PortableGit-2.51.0-64-bit.7z.exe#/dl.7z",
-            "hash": "a09b275d51ed3e829128e04cf4168fb54896cf6234bb30fecb8dc96a2bd321fa"
+            "url": "https://github.com/git-for-windows/git/releases/download/v2.51.1.windows.1/PortableGit-2.51.1-64-bit.7z.exe#/dl.7z",
+            "hash": "2a1108dd87bd9d7fc168f76f0f2d7b77a44ca49f42c7a3a081b9fcbbbb75473b"
         },
         "arm64": {
-            "url": "https://github.com/git-for-windows/git/releases/download/v2.51.0.windows.1/PortableGit-2.51.0-arm64.7z.exe#/dl.7z",
-            "hash": "0aacd4edf0c1715334a18725a947584652e1b34bddab63ac3f4a82c9f7c78e38"
+            "url": "https://github.com/git-for-windows/git/releases/download/v2.51.1.windows.1/PortableGit-2.51.1-arm64.7z.exe#/dl.7z",
+            "hash": "0703b02416ff2dd7940a705fc078d04ebc7093889ecc798be4029ee9c5341e70"
         }
     },
     "post_install": "& \"$dir\\bin\\bash.exe\" -c 'cmd //c /post-install.bat' *>$null",
