@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "28.1.1",
+    "version": "28.2.0",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v28.1.1/posh-windows-amd64.exe",
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v28.1.1/themes.zip"
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v28.2.0/posh-windows-amd64.exe",
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v28.2.0/themes.zip"
             ],
             "hash": [
-                "8cb1874090cf44410dd98dfcde5da10e19e5f858e358887d00be811ceb4f56c8",
-                "385b50073f791dcc0ff4905b12156725498d9640aede8285e2380c172b5f4bd9"
+                "f56aa4b7597a786f4fa46f2d738464a0a7538e9126261eaa1d982d4d9c30023d",
+                "7586598695ff2eb426569eb3414af568bfbf7963ca2af2185e484eeb126504b2"
             ]
         },
         "arm64": {
             "url": [
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v28.1.1/posh-windows-arm64.exe",
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v28.1.1/themes.zip"
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v28.2.0/posh-windows-arm64.exe",
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v28.2.0/themes.zip"
             ],
             "hash": [
-                "2c1bd00a0714b2453b2479ac7e4c53bdee610196d93ad5203f885c82bd5595be",
-                "385b50073f791dcc0ff4905b12156725498d9640aede8285e2380c172b5f4bd9"
+                "4dd852c842b3962c53bf1b1ccf418902b1f9e150b94235365a92f1d323bc894d",
+                "7586598695ff2eb426569eb3414af568bfbf7963ca2af2185e484eeb126504b2"
             ]
         }
     },
