@@ -1,0 +1,50 @@
+{
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "1.16.9",
+    "description": "A sandbox-based isolation software for Windows NT-based operating systems.",
+    "homepage": "https://sandboxie-plus.com/",
+    "license": {
+        "identifier": "GPL-3.0-only",
+        "url": "https://github.com/sandboxie-plus/Sandboxie/blob/master/LICENSE.Classic"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.16.9/Sandboxie-Plus-x64-v1.16.9.exe",
+            "hash": "435202099f37aec373a9bbb6d734e71a7b567479a7a5aef9a0ac55e3237159a0"
+        },
+        "arm64": {
+            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.16.9/Sandboxie-Plus-ARM64-v1.16.9.exe",
+            "hash": "e05d4894e6c3ab51ff653cf2c8ace73018fd81f5d4a73b88d8f6022cfd3e8dc3"
+        }
+    },
+    "innosetup": true,
+    "pre_install": [
+        "ensure \"$persist_dir\" | Out-Null",
+        "Get-ChildItem \"$persist_dir/*.ini\" | Copy-Item -Destination \"$dir\" -Force -ErrorAction SilentlyContinue"
+    ],
+    "shortcuts": [
+        [
+            "SandMan.exe",
+            "Sandboxie Plus"
+        ]
+    ],
+    "pre_uninstall": [
+        "Get-ChildItem \"$dir/*\" -Include @(",
+        "  'Sandboxie.ini'",
+        "  'Sandboxie-Plus.ini'",
+        ") | Copy-Item -Destination \"$persist_dir\" -Force -ErrorAction SilentlyContinue"
+    ],
+    "checkver": {
+        "github": "https://github.com/sandboxie-plus/Sandboxie"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v$version/Sandboxie-Plus-x64-v$version.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v$version/Sandboxie-Plus-ARM64-v$version.exe"
+            }
+        }
+    }
+}
