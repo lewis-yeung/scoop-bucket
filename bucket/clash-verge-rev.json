@@ -17,14 +17,13 @@
             "hash": "7f522be46e6abae89a4905ba4914ad7a9d08a8b07c7c97ee45c6607f0abd02e5"
         }
     },
-    "depends": "gsudo",
     "pre_install": [
         "Remove-Item @(",
         "  \"$dir/`$*\"",
         "  \"$dir/uninstall*\"",
         ") -Force -Recurse -ErrorAction SilentlyContinue"
     ],
-    "pre_uninstall": "& gsudo.exe \"$dir/resources/uninstall-service.exe\" *>$null",
+    "pre_uninstall": "Start-Process -FilePath \"$dir/resources/uninstall-service.exe\" -Verb runas -Wait",
     "shortcuts": [
         [
             "clash-verge.exe",
