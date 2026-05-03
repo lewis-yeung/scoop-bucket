@@ -29,24 +29,29 @@
             ]
         }
     },
-    "depends": "gsudo",
     "installer": {
         "script": [
-            "Expand-DarkArchive \"$dir\\setup.exe\" \"$dir\\_tmp\"",
+            "Expand-DarkArchive \"$dir/setup.exe\" \"$dir/_tmp\"",
             "@('path.msi', 'pip.msi') | ForEach-Object {",
-            "  Remove-Item \"$dir\\_tmp\\AttachedContainer\\$_\"",
+            "  Remove-Item \"$dir/_tmp/AttachedContainer/$_\"",
             "}",
-            "(Get-ChildItem \"$dir\\_tmp\\AttachedContainer\\*.msi\").FullName | ForEach-Object {",
+            "(Get-ChildItem \"$dir/_tmp/AttachedContainer/*.msi\").FullName | ForEach-Object {",
             "  Expand-MsiArchive $_ \"$dir\"",
             "}",
-            "Remove-Item \"$dir\\_tmp\", \"$dir\\setup.exe\" -Force -Recurse",
-            "& gsudo.exe \"$dir\\python.exe\" \"$dir\\pyreg.py\" $(if ($global) {'-wg'} else {'-w'}) | Out-Null"
+            "Remove-Item \"$dir/_tmp\", \"$dir/setup.exe\" -Force -Recurse",
+            "Start-Process -FilePath \"$dir/python.exe\" -ArgumentList @(",
+            "  \"$dir/pyreg.py\"",
+            "  $(if ($global) { '-wg' } else { '-w' })",
+            ") -Verb runas -Wait"
         ]
     },
-    "post_install": "& \"$dir\\python.exe\" -Es -m ensurepip -U --default-pip | Out-Null",
+    "post_install": "& \"$dir/python.exe\" -Es -m ensurepip -U --default-pip | Out-Null",
     "pre_uninstall": [
         "if ($cmd -eq 'uninstall') {",
-        "  & gsudo.exe \"$dir\\python.exe\" \"$dir\\pyreg.py\" $(if ($global) {'-rg'} else {'-r'}) | Out-Null",
+        "  Start-Process -FilePath \"$dir/python.exe\" -ArgumentList @(",
+        "    \"$dir/pyreg.py\"",
+        "    $(if ($global) { '-rg' } else { '-r' })",
+        "  ) -Verb runas -Wait",
         "}"
     ],
     "bin": [
@@ -65,6 +70,6 @@
     ],
     "persist": [
         "Scripts",
-        "Lib\\site-packages"
+        "Lib/site-packages"
     ]
 }
