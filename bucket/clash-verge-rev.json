@@ -23,7 +23,7 @@
         "  \"$dir/uninstall*\"",
         ") -Force -Recurse -ErrorAction SilentlyContinue"
     ],
-    "pre_uninstall": "Start-Process -FilePath \"$dir/resources/uninstall-service.exe\" -Verb runas -Wait",
+    "pre_uninstall": "Start-Process -FilePath \"$dir/resources/clash-verge-service-uninstall.exe\" -Verb runas -Wait",
     "shortcuts": [
         [
             "clash-verge.exe",
