@@ -1,15 +1,15 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "1.1.15",
+    "version": "1.1.16",
     "description": "An open source tool to create bootable USB drives for various image files.",
     "homepage": "https://www.ventoy.net/",
     "license": {
         "identifier": "GPL-3.0-or-later",
         "url": "https://github.com/ventoy/Ventoy/blob/master/COPYING"
     },
-    "url": "https://github.com/ventoy/Ventoy/releases/download/v1.1.15/ventoy-1.1.15-windows.zip",
-    "hash": "d5af29281ba8b57d7c398f452d31a5d031f6dcb460bdb0a67b2115dfef372b76",
-    "extract_dir": "ventoy-1.1.15",
+    "url": "https://github.com/ventoy/Ventoy/releases/download/v1.1.16/ventoy-1.1.16-windows.zip",
+    "hash": "7db5b3a1e23af39d0a648843c263eb5cf51493ccbf2a38c6a4315db80a4f9b58",
+    "extract_dir": "ventoy-1.1.16",
     "pre_install": [
         "@('log.txt', 'Ventoy2Disk.ini', 'VentoyPlugson.log', 'VentoyVlnk.log') | ForEach-Object {",
         "  if (!(Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" | Out-Null }",
