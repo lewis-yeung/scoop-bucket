@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "26.01",
+    "version": "26.02",
     "description": "A multi-format file archiver with a high compression ratio.",
     "homepage": "https://www.7-zip.org/",
     "license": {
@@ -11,32 +11,32 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://www.7-zip.org/a/7z2601-x64.exe#/setup.exe",
+                "https://www.7-zip.org/a/7z2602-x64.exe#/setup.exe",
                 "https://www.7-zip.org/a/7zr.exe"
             ],
             "hash": [
-                "d64a0468f5b5b0b0fc5b2188450bcd655b70809d97b1c4535f2884635094377d",
-                "abcf64ae1cbafddb5395e4cdd3bdc7e3e0561d54a0c6380e3dd43bdbffe519a2"
+                "6745fa76dc2ea031596d8678f6f6b99c3c1b435b4164a63485adbbc7b8d82ef0",
+                "56b8cc9f4971cef253644fafe54063ed7fdca551d4dee0f8c6baa81b855acd72"
             ]
         },
         "32bit": {
             "url": [
-                "https://www.7-zip.org/a/7z2601.exe#/setup.exe",
+                "https://www.7-zip.org/a/7z2602.exe#/setup.exe",
                 "https://www.7-zip.org/a/7zr.exe"
             ],
             "hash": [
-                "615976598f800c70827c5a47e68c2b0d2b17d048b9721ba071c8af825d2476bd",
-                "abcf64ae1cbafddb5395e4cdd3bdc7e3e0561d54a0c6380e3dd43bdbffe519a2"
+                "17d894c17b04984b6ffcc1b31926b39c42d315cd861c3adbf7f34bd941d529ac",
+                "56b8cc9f4971cef253644fafe54063ed7fdca551d4dee0f8c6baa81b855acd72"
             ]
         },
         "arm64": {
             "url": [
-                "https://www.7-zip.org/a/7z2601-arm64.exe#/setup.exe",
+                "https://www.7-zip.org/a/7z2602-arm64.exe#/setup.exe",
                 "https://www.7-zip.org/a/7zr.exe"
             ],
             "hash": [
-                "1fecf4e3407950939c8ffcc3e42e3039821997dea155301c75369474e5f15175",
-                "abcf64ae1cbafddb5395e4cdd3bdc7e3e0561d54a0c6380e3dd43bdbffe519a2"
+                "7c6fde79ed5e11b81c7bb6573b7962d3b6322aa5fce69c33ed19f672b55173ab",
+                "56b8cc9f4971cef253644fafe54063ed7fdca551d4dee0f8c6baa81b855acd72"
             ]
         }
     },
