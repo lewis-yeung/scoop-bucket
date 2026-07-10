@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "29.24.0",
+    "version": "29.25.0",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.24.0/posh-windows-amd64.exe",
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.24.0/themes.zip"
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.25.0/posh-windows-amd64.exe",
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.25.0/themes.zip"
             ],
             "hash": [
-                "7873c0e371c0d3f9182745d34f4e1c1ac7b771be8300d99c87156f747fb3c6d3",
-                "5d46ba31dfb3cdd76151152de32ab6553d5529af5a027483b9fd70fb1b206105"
+                "0bf037c6242e2994bb9536da5b9decf0d72afb84244b1e932934c60725436aaf",
+                "dd5a6b51e6ada816c1612504385c0bd60ae8e80d6e18687e6a1deb7232cb3cdf"
             ]
         },
         "arm64": {
             "url": [
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.24.0/posh-windows-arm64.exe",
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.24.0/themes.zip"
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.25.0/posh-windows-arm64.exe",
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.25.0/themes.zip"
             ],
             "hash": [
-                "1a6c4f0e433d78578cf45c1e955193c09c5fb830a8f4575bccfa6ed48f1d1688",
-                "5d46ba31dfb3cdd76151152de32ab6553d5529af5a027483b9fd70fb1b206105"
+                "f390baaa9a207e4c5504d3a388229a7b73dba30bc3c0a09e339fa98a9835a613",
+                "dd5a6b51e6ada816c1612504385c0bd60ae8e80d6e18687e6a1deb7232cb3cdf"
             ]
         }
     },
