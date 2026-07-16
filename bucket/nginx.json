@@ -1,15 +1,15 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "1.31.2",
+    "version": "1.31.3",
     "description": "An HTTP web server, reverse proxy, content cache, load balancer, TCP/UDP proxy server, and mail proxy server.",
     "homepage": "https://nginx.org/",
     "license": {
         "identifier": "BSD-2-Clause",
         "url": "https://nginx.org/LICENSE"
     },
-    "url": "https://github.com/nginx/nginx/releases/download/release-1.31.2/nginx-1.31.2.zip",
-    "hash": "e69cc6f99962ba0a75b55e5e72514a13e2e3d284a9728e4890ac1073f8f8ca6a",
-    "extract_dir": "nginx-1.31.2",
+    "url": "https://github.com/nginx/nginx/releases/download/release-1.31.3/nginx-1.31.3.zip",
+    "hash": "934a8fedd91646a4d7c51079ac9b71397d1caf7a6aeb81ccfd361250c04ace2c",
+    "extract_dir": "nginx-1.31.3",
     "bin": [
         [
             "nginx.exe",
