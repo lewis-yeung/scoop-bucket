@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "30.0.0",
+    "version": "30.1.0",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.0.0/posh-windows-amd64.exe",
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.0.0/themes.zip"
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.1.0/posh-windows-amd64.exe",
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.1.0/themes.zip"
             ],
             "hash": [
-                "271f0df7cd58ef5edfe1ec7aa35ef29b2bcc831cd791cb5c53275e23cbbf6e0c",
-                "a34da9f14490303ce222e607899b4c3702acd58bf7ad40095f821bb0f1add901"
+                "a363358b36611ad68cd346cb5b8eae800e2ea4894d0296fa228ff063d790e55d",
+                "88a4845525e6729adb29dffd9805e51d79cfb27fce8d08c73dd8b71269c59eff"
             ]
         },
         "arm64": {
             "url": [
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.0.0/posh-windows-arm64.exe",
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.0.0/themes.zip"
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.1.0/posh-windows-arm64.exe",
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.1.0/themes.zip"
             ],
             "hash": [
-                "2dd24ae8be0a165a25170eacabc43250a141231351cb29944925b5ef4b274124",
-                "a34da9f14490303ce222e607899b4c3702acd58bf7ad40095f821bb0f1add901"
+                "cd028c75b4da7fc4e96980be7c7eb7c871a5e6f139322054419b5843d7a336db",
+                "88a4845525e6729adb29dffd9805e51d79cfb27fce8d08c73dd8b71269c59eff"
             ]
         }
     },
