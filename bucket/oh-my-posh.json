@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "30.5.0",
+    "version": "30.6.2",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.5.0/posh-windows-amd64.exe",
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.5.0/themes.zip"
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.6.2/posh-windows-amd64.exe",
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.6.2/themes.zip"
             ],
             "hash": [
-                "cf162b539646aed6a2de0c5f2e2b8794f26ef7e91f9d2cf2cc8783ceadaec80e",
-                "04f525dbaf679fa4028c5ddbdf81fed342896fc7002d225222d50e7f6cee83ee"
+                "2765eca7b6c0abdf104c591137205f88185b1871c9f8f44da8d6e14ae14cceed",
+                "e37d849dd8fa70017c3a27b974fcb5d5a249c5f66385e24b71faf7076cd63ef0"
             ]
         },
         "arm64": {
             "url": [
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.5.0/posh-windows-arm64.exe",
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.5.0/themes.zip"
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.6.2/posh-windows-arm64.exe",
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.6.2/themes.zip"
             ],
             "hash": [
-                "90fd5717f123a4c94022610fcd9c4c434aabffabf5be82ba62c0d3eb376c4f6c",
-                "04f525dbaf679fa4028c5ddbdf81fed342896fc7002d225222d50e7f6cee83ee"
+                "204a1470c3428d9ca36af4116d2cec8496b9c88229aa8a8c6f822ef7fe54acf9",
+                "e37d849dd8fa70017c3a27b974fcb5d5a249c5f66385e24b71faf7076cd63ef0"
             ]
         }
     },
