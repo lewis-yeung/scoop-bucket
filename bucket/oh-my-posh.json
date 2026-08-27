@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "30.8.0",
+    "version": "30.8.1",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.8.0/posh-windows-amd64.exe",
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.8.0/themes.zip"
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.8.1/posh-windows-amd64.exe",
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.8.1/themes.zip"
             ],
             "hash": [
-                "f5709d0f7d2a844a3f449d59d93dbce42c0a2f52a3dd666117ab2f62dba94fd3",
-                "66881ffb24680934c61a04febbe8be6a2cbb239cca276aece1a97c50124256ea"
+                "d7908880ae21b7b7d1c10294a839dd5f660758d845cf57041dedfed21ca51483",
+                "f5e93b9417910183dde1efa18d0746ba8c4bd1cfb6b3c4cb3d64d236fd6a60d9"
             ]
         },
         "arm64": {
             "url": [
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.8.0/posh-windows-arm64.exe",
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.8.0/themes.zip"
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.8.1/posh-windows-arm64.exe",
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.8.1/themes.zip"
             ],
             "hash": [
-                "ecf997828cddb8f058d40842e0b87e8a3fdcf4be379c8281dad40e84e2e1e62d",
-                "66881ffb24680934c61a04febbe8be6a2cbb239cca276aece1a97c50124256ea"
+                "c6bc747c9620f7a8929a8a7cebf311b67500e83642ddab6f795f921cc40222c0",
+                "f5e93b9417910183dde1efa18d0746ba8c4bd1cfb6b3c4cb3d64d236fd6a60d9"
             ]
         }
     },
