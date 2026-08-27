@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "30.8.1",
+    "version": "30.9.0",
     "description": "A prompt theme engine for any shell.",
     "homepage": "https://ohmyposh.dev/",
     "license": {
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.8.1/posh-windows-amd64.exe",
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.8.1/themes.zip"
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.9.0/posh-windows-amd64.exe",
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.9.0/themes.zip"
             ],
             "hash": [
-                "d7908880ae21b7b7d1c10294a839dd5f660758d845cf57041dedfed21ca51483",
-                "f5e93b9417910183dde1efa18d0746ba8c4bd1cfb6b3c4cb3d64d236fd6a60d9"
+                "f32908269839f60c22b0f6062bfb4681148232a88e696b55cb61a58f56f8a315",
+                "27039fc9ff68de93bbccc4143582cc13931beb42d32d29acf25892c6961bba07"
             ]
         },
         "arm64": {
             "url": [
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.8.1/posh-windows-arm64.exe",
-                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.8.1/themes.zip"
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.9.0/posh-windows-arm64.exe",
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.9.0/themes.zip"
             ],
             "hash": [
-                "c6bc747c9620f7a8929a8a7cebf311b67500e83642ddab6f795f921cc40222c0",
-                "f5e93b9417910183dde1efa18d0746ba8c4bd1cfb6b3c4cb3d64d236fd6a60d9"
+                "8070c35b96e9ef30c931699e57488b8317c313af000e5ddd3e4fb916cff5503a",
+                "27039fc9ff68de93bbccc4143582cc13931beb42d32d29acf25892c6961bba07"
             ]
         }
     },
