@@ -5,7 +5,7 @@
     "homepage": "https://www.rathlev-home.de/tools/prog-e.html#unpack",
     "license": "GPL-3.0-only",
     "url": "https://raw.githubusercontent.com/jrathlev/InnoUnpacker-Windows-GUI/refs/heads/master/innounp-2/bin/innounp-2.zip",
-    "hash": "13cfd5494997d3591a5e374809abca104c13b48bfd6ff518942eef3a141d19a9",
+    "hash": "5100ca787c6f0f0b3bfbebdfec1ac473d44e7074e3c3a925edaca9283a42b5f2",
     "bin": "innounp.exe",
     "checkver": {
         "url": "https://raw.githubusercontent.com/jrathlev/InnoUnpacker-Windows-GUI/refs/heads/master/innounp-2/docs/innounp.htm",
