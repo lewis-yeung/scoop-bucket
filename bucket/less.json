@@ -1,21 +1,21 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "692",
+    "version": "704",
     "description": "A terminal pager program used to view (but not change) the contents of a text file one screen at a time.",
     "homepage": "https://www.greenwoodsoftware.com/less/",
     "license": "GPL-3.0-only|BSD-2-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jftuga/less-Windows/releases/download/less-v692/less-x64.zip",
-            "hash": "22a8a61c025d86b3c973d5f692a49d4660b9beb11620c04f18567c635e755bd4"
+            "url": "https://github.com/jftuga/less-Windows/releases/download/less-v704/less-x64.zip",
+            "hash": "9f5cfcc2452e5e06916f75077cfdbf331a85a3cbd249f93b2b4449216984d7bc"
         },
         "32bit": {
-            "url": "https://github.com/jftuga/less-Windows/releases/download/less-v692/less-x86.zip",
-            "hash": "53523910f031837921585efbec84b81305e5ae1e08d70953440efb816a9110ad"
+            "url": "https://github.com/jftuga/less-Windows/releases/download/less-v704/less-x86.zip",
+            "hash": "9f849494e9b162f76f95bd9faa95383282e361e58b2d67ba5240622ba8015a48"
         },
         "arm64": {
-            "url": "https://github.com/jftuga/less-Windows/releases/download/less-v692/less-arm64.zip",
-            "hash": "8e12f61a4af55e2de9b03285e702e101c877f73458fb594463f96c1856b90448"
+            "url": "https://github.com/jftuga/less-Windows/releases/download/less-v704/less-arm64.zip",
+            "hash": "bec9d445ed45bad10df399336b52f56c1c6302f12dbd6b81abb159cc0e37af78"
         }
     },
     "bin": [
