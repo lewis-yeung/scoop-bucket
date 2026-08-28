@@ -21,8 +21,9 @@
     },
     "bin": "aria2c.exe",
     "checkver": {
-        "github": "https://github.com/aria2/aria2",
-        "regex": "/release-(?:[\\d.]+)/aria2-(?<version>[\\d.]+)-win-64bit-build(?<build>[\\d]+)\\.zip",
+        "github": "https://api.github.com/repos/aria2/aria2/releases/latest",
+        "jsonpath": "$.assets[*].name",
+        "regex": "aria2-(?<version>[\\d.]+)-win-64bit-build(?<build>[\\d]+)\\.zip",
         "replace": "${version}-${build}"
     },
     "autoupdate": {
