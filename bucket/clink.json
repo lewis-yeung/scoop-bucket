@@ -1,18 +1,19 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "1.9.20",
+    "version": "1.9.32",
     "description": "Powerful Bash-style command line editing for cmd.exe.",
     "homepage": "https://chrisant996.github.io/clink/",
     "license": {
         "identifier": "GPL-3.0-only",
         "url": "https://github.com/chrisant996/clink/blob/master/LICENSE"
     },
-    "url": "https://github.com/chrisant996/clink/releases/download/v1.9.20/clink.1.9.20.a1a88b.zip",
-    "hash": "756891cef5bcb9374f69a916fc32f9f447a64dad55854969192f6632b14c6b95",
+    "url": "https://github.com/chrisant996/clink/releases/download/v1.9.32/clink.1.9.32.43da05.zip",
+    "hash": "6b10ce87ec0d3c3b8509912316509966971c29fa156d05a95b8efcab184d2585",
     "bin": "clink.bat",
     "checkver": {
-        "github": "https://github.com/chrisant996/clink",
-        "regex": "/v([\\d.]+)/clink\\.([\\d.]+)\\.(?<commit>[\\w.]+)\\.zip"
+        "github": "https://api.github.com/repos/chrisant996/clink/releases/latest",
+        "jsonpath": "$.assets[*].name",
+        "regex": "clink\\.([\\d.]+)\\.(?<commit>[\\w.]+)\\.zip"
     },
     "autoupdate": {
         "url": "https://github.com/chrisant996/clink/releases/download/v$version/clink.$version.$matchCommit.zip"
