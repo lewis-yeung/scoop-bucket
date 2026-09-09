@@ -29,10 +29,10 @@
     ],
     "checkver": {
         "url": "https://systeminformer.io/canary",
-        "regex": "systeminformer-([\\d.]+)-.*\\.zip"
+        "regex": "Build:\\s*.+?>\\s*([\\d.]+)\\s*<"
     },
     "autoupdate": {
-        "url": "https://github.com/winsiderss/si-builds/releases/download/$version/systeminformer-$version-canary-bin.zip",
+        "url": "https://github.com/winsiderss/si-builds/releases/download/$version/systeminformer-build-bin.zip",
         "hash": {
             "url": "https://systeminformer.io/canary",
             "regex": "(?sm)Binaries [^\\(]*?\\(SHA-256\\).*?>$sha256<"
