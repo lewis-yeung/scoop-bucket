@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "description": "Cross platform shell management.",
     "homepage": "https://aliae.dev/",
     "license": {
@@ -13,12 +13,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/JanDeDobbeleer/aliae/releases/download/v1.5.0/aliae-windows-amd64.exe",
-            "hash": "620709e71b1bd77ad778788946e429cf20fb32cbfb4dcc4ab420f44fe286a4bf"
+            "url": "https://github.com/JanDeDobbeleer/aliae/releases/download/v1.6.0/aliae-windows-amd64.exe",
+            "hash": "542f56c9db862063de2718b5e378047124c14099dee6c4a333e7a1ce857a489e"
         },
         "arm64": {
-            "url": "https://github.com/JanDeDobbeleer/aliae/releases/download/v1.5.0/aliae-windows-arm64.exe",
-            "hash": "2585fa7a4177e905dc83a5c62744a9f26408bbbe8fc7313e6ec2092b1e92ad28"
+            "url": "https://github.com/JanDeDobbeleer/aliae/releases/download/v1.6.0/aliae-windows-arm64.exe",
+            "hash": "78edaa5877042707c3380a7b7d3e869912beb6a3b3ddce25ccfdcce17c8a08ad"
         }
     },
     "pre_install": [
