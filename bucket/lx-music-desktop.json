@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "2.12.2",
+    "version": "2.12.4",
     "description": "A music software developed on Electron and Vue.",
     "homepage": "https://github.com/lyswhut/lx-music-desktop",
     "license": {
@@ -9,12 +9,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.2/lx-music-desktop-v2.12.2-win_x64-green.7z",
-            "hash": "md5:bcb3d63d6bffd8f575bd14d849587b59"
+            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.4/lx-music-desktop-v2.12.4-win_x64-green.7z",
+            "hash": "md5:4536c1764a111a72f0ffd1b6bc26b291"
         },
         "32bit": {
-            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.2/lx-music-desktop-v2.12.2-win7_x86-green.7z",
-            "hash": "md5:d1708a9efd7f7387653ef18c6d507589"
+            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.4/lx-music-desktop-v2.12.4-win7_x86-green.7z",
+            "hash": "md5:8e113992fd5840170fda8104e78450e7"
         }
     },
     "shortcuts": [
