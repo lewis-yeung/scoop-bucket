@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "2.56.0",
+    "version": "2.56.0-2",
     "description": "The Windows port of Git, a free and open source distributed version control system.",
     "homepage": "https://gitforwindows.org/",
     "license": {
@@ -9,12 +9,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.1/PortableGit-2.56.0-64-bit.7z.exe#/dl.7z",
-            "hash": "eceb5e061aa90df2f69ddd3e90f0030e1b8037a7829934bc40e4be1caa1accc1"
+            "url": "https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.2/PortableGit-2.56.0.2-64-bit.7z.exe#/dl.7z",
+            "hash": "075e158ef8e1f0ab80b347e245405d3eca735c2dc88fd8e032e137d0ca61f61b"
         },
         "arm64": {
-            "url": "https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.1/PortableGit-2.56.0-arm64.7z.exe#/dl.7z",
-            "hash": "edd9bd32aefa5d2bd4b938c38c18ceca306a7f6b29a6951cd6a4bb16d9d28d8f"
+            "url": "https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.2/PortableGit-2.56.0.2-arm64.7z.exe#/dl.7z",
+            "hash": "0f21e681bd33e006e0348dfa1a2be6769efd77e3bfdb247320314facde23a46c"
         }
     },
     "post_install": "& \"$dir\\bin\\bash.exe\" -c 'cmd //c /post-install.bat' *>$null",
@@ -26,15 +26,16 @@
     "checkver": {
         "url": "https://api.github.com/repos/git-for-windows/git/releases/latest",
         "jsonpath": "$.tag_name",
-        "regex": "(?<tag>v([\\d.]+)\\.windows\\.\\d)"
+        "regex": "(?<tag>v(?<version>[\\d.]+)\\.windows\\.(?<build>[\\d]+))",
+        "replace": "${version}-${build}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/git-for-windows/git/releases/download/$matchTag/PortableGit-$version-64-bit.7z.exe#/dl.7z"
+                "url": "https://github.com/git-for-windows/git/releases/download/$matchTag/PortableGit-$matchVersion.$matchBuild-64-bit.7z.exe#/dl.7z"
             },
             "arm64": {
-                "url": "https://github.com/git-for-windows/git/releases/download/$matchTag/PortableGit-$version-arm64.7z.exe#/dl.7z"
+                "url": "https://github.com/git-for-windows/git/releases/download/$matchTag/PortableGit-$matchVersion.$matchBuild-arm64.7z.exe#/dl.7z"
             }
         },
         "hash": {
