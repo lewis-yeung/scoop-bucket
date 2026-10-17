@@ -2,15 +2,25 @@
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "homepage": "https://pc.weixin.qq.com/",
     "description": "Free messaging and calling app developed by Tencent.",
-    "version": "nightly",
+    "version": "4.1.15.53",
     "license": {
         "identifier": "Proprietary",
-        "url": "https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=default"
+        "url": "https://weixin.qq.com/agreement/service_agreement"
     },
     "architecture": {
         "64bit": {
-            "url": "https://dldir1v6.qq.com/weixin/Universal/Windows/WeChatWin.exe#/dl.7z"
+            "url": "https://github.com/cscnk52/wechat-windows-versions/releases/download/v4.1.15.53/weixin_4.1.15.53.exe#/dl.7z",
+            "hash": "aa727e6cc74cd7c4e101c350d125508b0230a8a19c1f5304bf6f33dde2e758c5"
         }
+    },
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir/install.7z\" -Removal",
+            "Remove-Item @(",
+            "  \"$dir/`$*\"",
+            "  \"$dir/Uninstall.exe\"",
+            ") -Force -Recurse"
+        ]
     },
     "shortcuts": [
         [
@@ -18,12 +28,14 @@
             "WeChat"
         ]
     ],
-    "pre_install": [
-        "Expand-7zipArchive \"$dir\\install.7z\"",
-        "Remove-Item @(",
-        "  \"$dir\\`$*\"",
-        "  \"$dir\\install.7z\"",
-        "  \"$dir\\Uninstall.exe\"",
-        ") -Force -Recurse"
-    ]
+    "checkver": {
+        "github": "https://github.com/cscnk52/wechat-windows-versions"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/cscnk52/wechat-windows-versions/releases/download/v$version/weixin_$version.exe#/dl.7z"
+            }
+        }
+    }
 }
