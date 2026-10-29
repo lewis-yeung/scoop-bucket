@@ -1,0 +1,40 @@
+{
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "5.82",
+    "description": "A proxy designed to add TLS encryption functionality to existing clients and servers without changing their code.",
+    "homepage": "https://www.stunnel.org",
+    "license": {
+        "identifier": "GPL-2.0-or-later",
+        "url": "https://github.com/mtrojnar/stunnel/blob/master/COPYING.md"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://www.stunnel.org/downloads/stunnel-5.82-win64-installer.exe#/dl.7z",
+            "hash": "722c1ad626919af2b0034666b4d19cc4795e925c32f60e8f3c59af4fb3ad2dfc"
+        }
+    },
+    "uninstaller": {
+        "script": [
+            "stunnel -stop -quiet",
+            "stunnel -exit -quiet"
+        ]
+    },
+    "bin": [
+        "bin/stunnel.exe",
+        "bin/tstunnel.exe"
+    ],
+    "checkver": {
+        "url": "https://www.stunnel.org/downloads.html",
+        "regex": "stunnel-([\\d.]+)-win64"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.stunnel.org/downloads/stunnel-$version-win64-installer.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
