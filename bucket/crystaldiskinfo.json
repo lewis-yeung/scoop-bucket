@@ -1,14 +1,14 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "9.9.4",
+    "version": "9.9.5",
     "description": "An HDD/SSD utility software which supports a part of USB, Intel RAID and NVMe.",
     "homepage": "https://crystalmark.info/en/software/crystaldiskinfo/",
     "license": {
         "identifier": "MIT",
         "url": "https://crystalmark.info/en/software/crystaldiskinfo/crystaldiskinfo-license/"
     },
-    "url": "https://onboardcloud.dl.sourceforge.net/project/crystaldiskinfo/9.9.4/CrystalDiskInfo9_9_4.zip",
-    "hash": "sha1:84c43de6e5d29750cc8b9485dee6b14539464e19",
+    "url": "https://onboardcloud.dl.sourceforge.net/project/crystaldiskinfo/9.9.5/CrystalDiskInfo9_9_5.zip",
+    "hash": "sha1:6c85acbe5dc60c5015d5d8b0966a8185b79e5fa4",
     "architecture": {
         "64bit": {
             "shortcuts": [
