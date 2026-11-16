@@ -19,6 +19,7 @@
             "Remove-Item @(",
             "  \"$dir/`$*\"",
             "  \"$dir/Uninstall.exe\"",
+            "  \"$dir/$version/WeixinUpdate.exe\"",
             ") -Force -Recurse"
         ]
     },
