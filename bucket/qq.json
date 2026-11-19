@@ -1,20 +1,20 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "9.9.33.52230",
+    "version": "9.9.37.261103",
     "description": "An instant messaging software built with Electron and developed by Tencent.",
-    "homepage": "https://im.qq.com/pcqq/index.shtml",
+    "homepage": "https://im.qq.com/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://ti.qq.com/agreement/index.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://qqdl.gtimg.cn/qqfile/QQNT/9.9.33/release/497e2f1f/QQ_9.9.33_260813_x64_01.exe#/dl.7z",
-            "hash": "b25c0d3ce9df764074a9118d0ded927e1b2d7ebf60e306112e8df18a040ec492"
+            "url": "https://github.com/ExLei/Software-Mirror/releases/download/v9.9.37.261103/QQ_9.9.37.261103_x64.exe#/dl.7z",
+            "hash": "5cd7c13e36b391f88b2ad272fa870d74f476135b64244844ec0ad7ac7b411b48"
         },
         "32bit": {
-            "url": "https://qqdl.gtimg.cn/qqfile/QQNT/9.9.33/release/497e2f1f/QQ_9.9.33_260813_x86_01.exe#/dl.7z",
-            "hash": "fd7214c7a70a6e0eb46781e0d653d5c56b0d496d2f710b4d5c07939c40b73be6"
+            "url": "https://github.com/ExLei/Software-Mirror/releases/download/v9.9.37.261103/QQ_9.9.37.261103_x86.exe#/dl.7z",
+            "hash": "7313318a45602e21bd293ee49d4780af55f400ad31c7b76a7f8a6d4b0eb37a4f"
         }
     },
     "extract_dir": "Files",
@@ -26,44 +26,18 @@
         ]
     ],
     "checkver": {
-        "script": [
-            "$uri = 'https://api.github.com/repos/microsoft/winget-pkgs/contents/manifests/t/Tencent/QQ/NT'",
-            "$prevProgressPreference = $global:ProgressPreference",
-            "$global:ProgressPreference = 'SilentlyContinue'",
-            "$latestVersion = ((Invoke-WebRequest -Uri $uri).Content |",
-            "  ConvertFrom-Json |",
-            "  ForEach-Object { $_.name } |",
-            "  Where-Object { $_ -notmatch '^\\.' } |",
-            "  Sort-Object -Descending { try { [version]$_ } catch {} })[0]",
-            "\"version:$latestVersion\"",
-            "$uri = \"https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/t/Tencent/QQ/NT/$latestVersion/Tencent.QQ.NT.installer.yaml\"",
-            "$installerInfo = (Invoke-WebRequest -Uri $uri).Content",
-            "$global:ProgressPreference = $prevProgressPreference",
-            "$installerInfo -split '[\\r\\n]+' | ForEach-Object {",
-            "  if ($_ -cmatch '^\\s+InstallerUrl:\\s*https://(.+_x86_.+)$') {",
-            "    \"url_x86:$($Matches[1])\"",
-            "  } elseif ($_ -cmatch '^\\s+InstallerUrl:\\s*https://(.+_x64_.+)$') {",
-            "    \"url_x64:$($Matches[1])\"",
-            "  }",
-            "}"
-        ],
-        "regex": "^version:(?<version>\\S+)\\s+url_x86:(?<URLX86>\\S+)\\s+url_x64:(?<URLX64>\\S+)$"
+        "github": "https://github.com/ExLei/Software-Mirror"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://$matchURLX64#/dl.7z",
-                "hash": {
-                    "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/t/Tencent/QQ/NT/$version/Tencent.QQ.NT.installer.yaml",
-                    "regex": "- Architecture:\\s*x64[\\s\\S]+?InstallerSha256:\\s*$sha256"
-                }
+                "url": "https://github.com/ExLei/Software-Mirror/releases/download/v$version/QQ_$version_x64.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://$matchURLX86#/dl.7z",
-                "hash": {
-                    "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/t/Tencent/QQ/NT/$version/Tencent.QQ.NT.installer.yaml",
-                    "regex": "- Architecture:\\s*x86[\\s\\S]+?InstallerSha256:\\s*$sha256"
-                }
+                "url": "https://github.com/ExLei/Software-Mirror/releases/download/v$version/QQ_$version_x86.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/ExLei/Software-Mirror/releases/download/v$version/QQ_$version_arm64.exe#/dl.7z"
             }
         }
     }
